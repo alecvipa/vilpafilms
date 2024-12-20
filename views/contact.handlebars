@@ -1,0 +1,80 @@
+<div class="contactoDiv">
+    <div class="container centered titleSiguenos">
+        <div class="row">
+
+            <h3>Let's keep in touch!</h3>
+            <p style="font-style: italic; font-size: 1.5rem">You can also reach me through e-mail:
+                alecvipa@gmail.com
+            </p>
+
+        </div>
+        <div class="row">
+            <form class="col s12" action="/ajax/email" method="POST" onsubmit="return submitEmailForm(this);">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input name="name" placeholder="Nombre" id="first_name" type="text" class="validate formInput"
+                            required="" aria-required="true">
+                        <label for="first_name">Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input name="email" id="email" type="text" class="validate formInput" required=""
+                            aria-required="true">
+                        <label for="email">E-mail</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input name="message" id="input_text" type="text" data-length="10" required=""
+                            aria-required="true" class="formInput">
+                        <label for="input_text">Message</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <label>
+                        <input type="checkbox" required="" aria-required="true" />
+                        <span>I agree with the <a href="/privacy">privacy policy</a></span>
+                    </label>
+                </div>
+                <button class="btn waves-effect waves-light #212121 grey darken-4">Send
+                    <i class="material-icons right" style="color: white !important;">send</i>
+                </button>
+            </form>
+        </div>
+    </div> <br>
+    <div class="awardsDiv ">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card ">
+                        <div class="card-image" onclick="location.href='#';">
+                            <img src="/assets/images/blue.jpg">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card ">
+                        <div class="card-image" onclick="location.href='#';">
+                            <img src="/assets/images/kreativaMontreal.jpg">
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card ">
+                        <div class="card-image" onclick="location.href='#';">
+                            <img src="/assets/images/davidjansenpost.jpg">
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div> <br>
+</div>

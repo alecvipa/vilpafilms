@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <meta name="description" content="Escritor de novela de crimen">
+    <meta name="keywords"
+        content="Impresión, vinil, backlite, Publicidad impresa, Medios impresos, Stoppers, espectaculares, Valla publicitarias, Material pop, Banners, Lonas, Viniles, Imprenta, Cenefa, Mupi, Posters, Danglers, Standees, Mantas, Faldones, Signs, Anuncios espectaculares, Anuncios impresos, Precio de espectaculares, Medios masivos">
+    <link rel="shortcut icon" href="assets/images/logoVilpaLetras.jpg">
+    <script src="https://kit.fontawesome.com/a077a0470e.js" crossorigin="anonymous"></script>
+    <title>Vilpa Films</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter&family=Josefin+Sans:ital,wght@1,600&family=Nunito+Sans:wght@200&family=Work+Sans:wght@300&display=swap"
+        rel="stylesheet">
+
+    <!-- Lato Font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Stylesheet -->
+    <link href="/assets/css/gallery-materialize.min.css" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/materialize.min.css" rel="stylesheet">
+    <link href="/assets/css/gallery-materialize.css" rel="stylesheet">
+
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, options);
+        });
+    </script>
+
+    <script>
+        function submitEmailForm(form) {
+
+            var obj = new XMLHttpRequest();
+            obj.onreadystatechange = function () {
+                if (obj.readyState == 4) {
+                    if (obj.status == 200) {
+                        var res = JSON.parse(obj.responseText);
+                        alert(res.message);
+                    }
+                    else {
+                        console.log("XMLHttp status " + obj.status + ": " + obj.statusText);
+                    }
+                }
+            };
+            obj.open("post", form.action, true);
+            obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
+            obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, message: form.message.value }));
+            alert("¡Mensaje enviado con éxito!");
+            $(".formInput").val(" ");
+            return false;
+        }
+    </script>
+    <script>
+        function submitClubForm(form) {
+
+            var obj = new XMLHttpRequest();
+            obj.onreadystatechange = function () {
+                if (obj.readyState == 4) {
+                    if (obj.status == 200) {
+                        var res = JSON.parse(obj.responseText);
+                        alert(res.message);
+                    }
+                    else {
+                        console.log("XMLHttp status " + obj.status + ": " + obj.statusText);
+                    }
+                }
+            };
+            obj.open("post", form.action, true);
+            obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
+            obj.send(JSON.stringify({ name: form.nameClub.value, email: form.emailClub.value, country: form.countryClub.value }));
+            alert("¡Bienvenido a la comunidad. Tu registro ha sido hecho con éxito!");
+            $(".formInput").val(" ");
+            return false;
+        }
+    </script>
+    <script>
+        function submitSmirnovForm(form) {
+
+            var obj = new XMLHttpRequest();
+            obj.onreadystatechange = function () {
+                if (obj.readyState == 4) {
+                    if (obj.status == 200) {
+                        var res = JSON.parse(obj.responseText);
+                        alert(res.message);
+                    }
+                    else {
+                        console.log("XMLHttp status " + obj.status + ": " + obj.statusText);
+                    }
+                }
+            };
+            obj.open("post", form.action, true);
+            obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
+            obj.send(JSON.stringify({ name: form.nameSmirnov.value, email: form.emailSmirnov.value, country: form.countrySmirnov.value, zipCode: form.zipSmirnov.value, phoneNumber: form.phoneSmirnov.value, dedica: form.dedicaSmirnov.value, address: form.addreSmirnov.value }));
+            alert("¡Tu copia de La otra vida de Rebecca Smirnov, está en camino!");
+            $(".formInput").val(" ");
+            window.location.href = "https://www.alejandrovilpa.com/gracias";
+            return false;
+        }
+    </script>
+    <script>
+        function submitInocentesForm(form) {
+
+            var obj = new XMLHttpRequest();
+            obj.onreadystatechange = function () {
+                if (obj.readyState == 4) {
+                    if (obj.status == 200) {
+                        var res = JSON.parse(obj.responseText);
+                        alert(res.message);
+                    }
+                    else {
+                        console.log("XMLHttp status " + obj.status + ": " + obj.statusText);
+                    }
+                }
+            };
+            obj.open("post", form.action, true);
+            obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
+            obj.send(JSON.stringify({ name: form.nameInocentes.value, email: form.emailInocentes.value, country: form.countryInocentes.value, zipCode: form.zipInocentes.value, phoneNumber: form.phoneInocentes.value, dedica: form.dedicaInocentes.value, address: form.addreInocentes.value }));
+            alert("¡Tu copia de 'El aliento de los inocentes', está en camino!");
+            $(".formInput").val(" ");
+            window.location.href = "https://www.alejandrovilpa.com/gracias";
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="bodyPrincipal fonts">
+        <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="/david-jansen" class="black-text">The undertone of David Jansen</a></li>
+            <li class="divider"></li>
+        </ul>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="/blue-shades" class="black-text">Blue Shades</a></li>
+            <li class="divider"></li>
+            <li><a href="/kreativa-chronicles" class="black-text">Kreativa Chronicles</a></li>
+            <li class="divider"></li>
+        </ul>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown3" class="dropdown-content">
+            <li><a href="/david-jansen" class="black-text">The undertone of David Jansen</a></li>
+            <li class="divider"></li>
+        </ul>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown4" class="dropdown-content">
+            <li><a href="/blue-shades" class="black-text">Blue Shades</a></li>
+            <li class="divider"></li>
+            <li><a href="/kreativa-chronicles" class="black-text">Kreativa Chronicles</a></li>
+            <li class="divider"></li>
+        </ul>
+        <nav class="white navDiv fonts" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="/" class="brand-logo "><img src="/assets/images/logo1.png" alt="logoIdm"
+                        class="imageLogo"></a>
+                <ul class="right hide-on-med-and-down navUl">
+                    <li><a href="/" class="navItems navBarD">Home</a></li>
+                    <!-- Dropdown Trigger -->
+                    {{!-- <li><a class="dropdown-trigger black-text" href="#!" data-target="dropdown1">Film<i
+                                class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a class="dropdown-trigger black-text" href="#!" data-target="dropdown2">TV<i
+                                class="material-icons right">arrow_drop_down</i></a></li> --}}
+                    <li><a href="/contact" class="navItems navBarD">Contact</a></li>
+                    <li><a href="/privacy" class="navItems navBarD">Privacy policy</a></li>
+                    <li><a href="#" class="navItems" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" class="navItems" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    {{!-- <li><a href="/privacidad" class="navItems"><i class="fab fa-whatsapp-square"></i></a></li>
+                    --}}
+                </ul>
+
+
+                <ul id="nav-mobile" class="sidenav">
+                    <li><a class="sidenav-close" href="#!"><i class="material-icons" style="color: black;">menu</i></a>
+                    </li>
+                    <li><a href="/" class="navItems navBarD">Home</a></li>
+                    <!-- Dropdown Trigger -->
+                    {{!-- <li><a class="dropdown-trigger black-text" href="#!" data-target="dropdown3">Film<i
+                                class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a class="dropdown-trigger black-text" href="#!" data-target="dropdown4">TV<i
+                                class="material-icons right">arrow_drop_down</i></a></li> --}}
+                    <li><a href="/contact" class="navItems navBarD">Contact</a></li>
+                    <li><a href="/privacy" class="navItems navBarD">Privacy Policy</a></li>
+                    <li><a href="#" class="navItems" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" class="navItems" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    {{!-- <li><a href="/privacidad" class="navItems"><i class="fab fa-whatsapp-square"></i></a></li>
+                    --}}
+                </ul>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+        {{{body}}}
+        <footer class="page-footer #424242 grey darken-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col m6 s12"> <br>
+                        <a id="logo-container" href="/" class="brand-logo centerArt"><img src="/assets/images/logo2.png"
+                                alt="logoIdm" class="imageLogo"></a>
+                    </div>
+                    <div class="col m6 s12">
+                        <h5 class="white-text navBarD">Site map</h5>
+                        <ul>
+                            <li><a href="/" class="white-text navBarD">Home</a></li>
+                            <li><a href="/contact" class="navItems navBarD white-text">Contact</a></li>
+                            <li><a href="/privacy" class="navItems navBarD white-text">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright #616161 grey darken-2">
+                <div class="container centered">
+                    Copyright © <a href="/" style="color: lightgrey;">2024 Vilpa Films - All rights reserved.</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <!-- Core Javascript -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            var button = document.getElementById('clickButton');
+            button.click();
+        };
+    </script>
+    <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/js/masonry.pkgd.min.js"></script>
+    <script src="/assets/js/materialize.min.js"></script>
+    <script src="/assets/js/color-thief.min.js"></script>
+    <script src="/assets/js/galleryExpand.js"></script>
+    <script src="/assets/js/init.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').slider({ full_width: true });
+        });
+        $('.carousel.carousel-slider').carousel({
+            fullWidth: true,
+            indicators: true
+        });
+    </script>
+
+
+</body>
+
+</html>
