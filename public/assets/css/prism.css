@@ -32,6 +32,7 @@ pre[class*="language-"]::before {
   border-left: none;
 }
 
+
 code[class*="language-"],
 pre[class*="language-"] {
 	color: black;

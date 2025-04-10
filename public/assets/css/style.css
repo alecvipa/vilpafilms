@@ -27,6 +27,16 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.imageCannes{
+    height: 72rem;
+    background-image: url("/assets/images/Cannes2025.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sforzandoTitlesHome{
+    margin-left: 3%;
+}
 .bannerStory1{
     height: 58rem;
     background-image: url("/assets/images/blueShades2.jpg");
@@ -164,6 +174,9 @@ p {
     }
     .titleVilpa{
         width: 90%;
+    }
+    .imageCannes{
+        height: 45rem;
     }
     
     
