@@ -14,6 +14,11 @@ nav {
 .centerArt{
     margin: auto;
 }
+.divProducts{
+    background-color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
 .awardsDiv{
     background-color: white;
     padding-top: 5%;
@@ -22,7 +27,7 @@ nav {
 .pointer {cursor: pointer;}
 .divBannerMovies{
     height: 58rem;
-    background-image: url("/assets/images/bannerInicio.jpg");
+    background-image: url("/assets/images/bannerInicio2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -162,6 +167,10 @@ p {
     }
 }
 @media only screen and (max-width : 992px) {
+    .divBannerMovies{
+        height: 16rem;
+       
+    }
     .bannerStory1,.bannerStory2 {
         display: block;
     }

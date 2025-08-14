@@ -42,10 +42,34 @@ app.get('/', function (req, res) {
 //     res.render('inicio');
 
 // });
-app.get('/:params?', function (req, res) {
+app.get('/home', function (req, res) {
     var params = req.params.params;
-    res.render(params);
-})
+    res.render('home');
+});
+
+app.get('/contact', function (req, res) {
+    var params = req.params.params;
+    res.render('contact');
+});
+
+app.get('/privacy', function (req, res) {
+    var params = req.params.params;
+    res.render('privacy');
+});
+app.get('/popkrn', function (req, res) {
+    var params = req.params.params;
+    res.render('popkrn');
+});
+app.get('/koverage', function (req, res) {
+    var params = req.params.params;
+    res.render('koverage');
+});
+app.get('/broadkst', function (req, res) {
+    var params = req.params.params;
+    res.render('broadkst');
+});
+
+
 
 
 // Nodemailer route
