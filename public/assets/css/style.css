@@ -54,6 +54,13 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.bannerLiveC{
+    height: 45rem;
+    background-image: url("/assets/images/checkout-submission.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .imageCannes {
     height: 72rem;
     background-image: url("/assets/images/Cannes2025.jpg");
@@ -211,7 +218,7 @@ p {
     .broadkstBanner{
         height: 19rem;
     }
-    .divBannerMovies {
+    .divBannerMovies,.bannerLiveC {
         height: 16rem;
 
     }

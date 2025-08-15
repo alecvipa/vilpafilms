@@ -68,9 +68,23 @@ app.get('/broadkst', function (req, res) {
     var params = req.params.params;
     res.render('broadkst');
 });
+app.get('/broadkst-checkout-liveaction', function (req, res) {
+    var params = req.params.params;
+    res.render('broadkst-checkout-liveaction');
+});
+app.get('/broadkst-checkout-animation', function (req, res) {
+    var params = req.params.params;
+    res.render('broadkst-checkout-animation');
+});
+app.get('/broadkst-checkout-documentary', function (req, res) {
+    var params = req.params.params;
+    res.render('broadkst-checkout-documentary');
+});
 
-
-
+app.get('/broadkst-checkout-experimental', function (req, res) {
+    var params = req.params.params;
+    res.render('broadkst-checkout-experimental');
+});
 
 // Nodemailer route
 
