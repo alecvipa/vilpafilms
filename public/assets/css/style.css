@@ -1,48 +1,72 @@
 nav {
-    background-color: white !important ;
-    
+    background-color: white !important;
+
 }
-.buttonHide{
+
+.buttonHide {
     display: none !important;
 }
-.navItems{
+
+.navItems {
     color: black !important;
 }
-.material-icons{
+
+.material-icons {
     color: black !important;
 }
-.centerArt{
+
+.centerArt {
     margin: auto;
 }
-.divProducts{
+
+.serviceCard:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.divProducts {
     background-color: white;
     padding-top: 1%;
     padding-bottom: 1%;
 }
-.awardsDiv{
+
+.awardsDiv {
     background-color: white;
     padding-top: 5%;
     padding-bottom: 5%;
 }
-.pointer {cursor: pointer;}
-.divBannerMovies{
+
+.pointer {
+    cursor: pointer;
+}
+
+.divBannerMovies {
     height: 58rem;
     background-image: url("/assets/images/bannerInicio2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.imageCannes{
+.broadkstBanner{
+    height: 45rem;
+    background-image: url("/assets/images/broadkstBanner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.imageCannes {
     height: 72rem;
     background-image: url("/assets/images/Cannes2025.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.sforzandoTitlesHome{
+
+.sforzandoTitlesHome {
     margin-left: 3%;
 }
-.bannerStory1{
+
+.bannerStory1 {
     height: 58rem;
     background-image: url("/assets/images/blueShades2.jpg");
     background-position: center;
@@ -51,7 +75,7 @@ nav {
     display: none;
 }
 
-.bannerStory2{
+.bannerStory2 {
     height: 58rem;
     background-image: url("/assets/images/kreativa.jpg");
     background-position: center;
@@ -59,151 +83,177 @@ nav {
     background-size: cover;
     display: none;
 }
-.titleVilpa{
+
+.titleVilpa {
     width: 60%;
     margin: auto;
     text-align: center;
     margin-top: 3%;
     margin-bottom: 3%;
 }
-.bannerPrivacidad{
+
+.bannerPrivacidad {
     background-image: url("/assets/images/sal.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
 }
-.overlayPrivacidad{
+
+.overlayPrivacidad {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.438);
 }
-.privacidadDiv{
+
+.privacidadDiv {
     margin-bottom: 0%;
 }
-.avisoDiv{
+
+.avisoDiv {
     padding-top: 3%;
 }
-.centered{
+
+.centered {
     text-align: center !important;
 }
-.fonts{
+
+.fonts {
     font-family: 'Inter', sans-serif;
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Nunito Sans', sans-serif;
     font-family: 'Work Sans', sans-seri
 }
 
-.contInicioNosotros{
+.contInicioNosotros {
     background-color: white;
     padding-top: 3%;
     margin-top: 3%;
 }
 
-.overlayParallax{
+.overlayParallax {
     background-color: rgba(0, 0, 0, 0.514);
     height: 100%;
     width: 100%;
     padding-top: 10%;
 }
-.containerParallax{
+
+.containerParallax {
     height: 20rem !important;
 }
-.instaOption:hover{
+
+.instaOption:hover {
     opacity: .5;
     transition: 0.5s;
 }
 
-.colorSieteTeal{
+.colorSieteTeal {
     color: #73B598 !important;
 }
 
 nav ul a,
 nav .brand-logo {
-   color: #444;
+    color: #444;
 }
-.centered{
-   text-align: center;
+
+.centered {
+    text-align: center;
 }
-.boldL{
-   font-weight: bold;
+
+.boldL {
+    font-weight: bold;
 }
- 
+
 p {
-   line-height: 2rem;
+    line-height: 2rem;
 }
- 
+
 .sidenav-trigger {
-   color: #26a69a;
+    color: #26a69a;
 }
- 
+
 .parallax-container {
-   min-height: 380px;
-   line-height: 0;
-   height: auto;
-   color: rgba(255,255,255,.9);
+    min-height: 380px;
+    line-height: 0;
+    height: auto;
+    color: rgba(255, 255, 255, .9);
 }
+
 .parallax-container .section {
-     width: 100%;
+    width: 100%;
 }
-.imageLogo{
-   height: 7rem;
+
+.imageLogo {
+    height: 7rem;
 }
-.navDiv{
-   height: 7rem;
+
+.navDiv {
+    height: 7rem;
 }
-.sidenav-overlay{
+
+.sidenav-overlay {
     display: none !important;
 }
-.parallax-container{
+
+.parallax-container {
     min-width: 350px !important;
 }
 
 
 
 @media only screen and (min-width : 992px) {
-    .navUl{
+    .navUl {
         padding-top: 3%;
     }
 }
+
 @media only screen and (max-width : 992px) {
-    .divBannerMovies{
-        height: 16rem;
-       
+    .broadkstBanner{
+        height: 19rem;
     }
-    .bannerStory1,.bannerStory2 {
+    .divBannerMovies {
+        height: 16rem;
+
+    }
+
+    .bannerStory1,
+    .bannerStory2 {
         display: block;
     }
-    .margin-top-7{
+
+    .margin-top-7 {
         margin-top: 7%;
     }
-    
-    .gallery-bodies{
+
+    .gallery-bodies {
         margin-top: 320px !important;
     }
-    .titleVilpa{
+
+    .titleVilpa {
         width: 90%;
     }
-    .imageCannes{
+
+    .imageCannes {
         height: 45rem;
     }
-    
-    
+
+
 }
-  
+
 @media only screen and (max-width : 600px) {
     #index-banner .section {
-      top: 0;
+        top: 0;
     }
 }
-  
+
 .icon-block {
     padding: 0 15px;
 }
+
 .icon-block .material-icons {
     font-size: inherit;
 }
-  
+
 footer.page-footer {
     margin: 0;
 }
