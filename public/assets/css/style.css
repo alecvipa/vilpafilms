@@ -54,6 +54,20 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.koverageBanner{
+    height: 45rem;
+    background-image: url("/assets/images/koverageBanner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.koverageTermsBanner{
+    height: 45rem;
+    background-image: url("/assets/images/koverageTerms.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .bannerLiveC{
     height: 45rem;
     background-image: url("/assets/images/checkout-submission.jpg");
@@ -126,10 +140,8 @@ nav {
 }
 
 .fonts {
-    font-family: 'Inter', sans-serif;
-    font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Nunito Sans', sans-serif;
-    font-family: 'Work Sans', sans-seri
+    font-family: Arial, Helvetica, sans-serif;
+   
 }
 
 .contInicioNosotros {
@@ -215,7 +227,7 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
-    .broadkstBanner{
+    .broadkstBanner,.koverageBanner, .koverageTermsBanner{
         height: 19rem;
     }
     .divBannerMovies,.bannerLiveC {

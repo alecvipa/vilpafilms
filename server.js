@@ -85,6 +85,10 @@ app.get('/broadkst-checkout-experimental', function (req, res) {
     var params = req.params.params;
     res.render('broadkst-checkout-experimental');
 });
+app.get('/terms-koverage', function (req, res) {
+    var params = req.params.params;
+    res.render('terms-koverage');
+});
 
 // Nodemailer route
 
