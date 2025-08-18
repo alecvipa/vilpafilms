@@ -234,7 +234,7 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
-    .broadkstBanner,.koverageBanner, .koverageTermsBanner{
+    .broadkstBanner,.koverageBanner, .koverageTermsBanner, .popkrnBanner{
         height: 19rem;
     }
     .divBannerMovies,.bannerLiveC {
