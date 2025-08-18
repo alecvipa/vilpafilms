@@ -47,6 +47,13 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.popkrnBanner{
+    height: 58rem;
+    background-image: url("/assets/images/popkrnComingSoon.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .broadkstBanner{
     height: 45rem;
     background-image: url("/assets/images/broadkstBanner.jpg");
