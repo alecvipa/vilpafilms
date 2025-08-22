@@ -68,6 +68,13 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.broadkstTermsBanner{
+    height: 45rem;
+    background-image: url("/assets/images/broadkstTerms.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .koverageTermsBanner{
     height: 45rem;
     background-image: url("/assets/images/koverageTerms.jpg");
@@ -234,7 +241,7 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
-    .broadkstBanner,.koverageBanner, .koverageTermsBanner, .popkrnBanner{
+    .broadkstBanner,.koverageBanner, .koverageTermsBanner, .popkrnBanner, .broadkstTermsBanner{
         height: 19rem;
     }
     .divBannerMovies,.bannerLiveC {

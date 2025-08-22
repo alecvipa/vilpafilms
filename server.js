@@ -85,9 +85,29 @@ app.get('/broadkst-checkout-experimental', function (req, res) {
     var params = req.params.params;
     res.render('broadkst-checkout-experimental');
 });
+app.get('/koverage-checkout-basic', function (req, res) {
+    var params = req.params.params;
+    res.render('koverage-checkout-basic');
+});
+app.get('/koverage-checkout-premium', function (req, res) {
+    var params = req.params.params;
+    res.render('koverage-checkout-premium');
+});
+app.get('/koverage-checkout-books', function (req, res) {
+    var params = req.params.params;
+    res.render('koverage-checkout-books');
+});
+app.get('/koverage-checkout-women', function (req, res) {
+    var params = req.params.params;
+    res.render('koverage-checkout-women');
+});
 app.get('/terms-koverage', function (req, res) {
     var params = req.params.params;
     res.render('terms-koverage');
+});
+app.get('/terms-broadkst', function (req, res) {
+    var params = req.params.params;
+    res.render('terms-broadkst');
 });
 
 // Nodemailer route
