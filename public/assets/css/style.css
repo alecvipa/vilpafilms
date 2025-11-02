@@ -41,8 +41,8 @@ nav {
 }
 
 .divBannerMovies {
-    height: 58rem;
-    background-image: url("/assets/images/bannerInicio2.jpg");
+    height: 40rem;
+    background-image: url("/assets/images/davidJansenBannerMini.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -231,8 +231,16 @@ p {
 .parallax-container {
     min-width: 350px !important;
 }
-
-
+.crowsWebHome{
+    margin: auto;
+    width: 100%;
+    margin-bottom: 1.7%;
+    
+}
+.nocturneFooterBanner{
+    margin: auto;
+    width: 100%;
+}
 
 @media only screen and (min-width : 992px) {
     .navUl {
@@ -241,6 +249,9 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
+    .nocturneFooterBanner{
+       margin-top: -6%;
+    }
     .broadkstBanner, .koverageTermsBanner, .popkrnBanner, .broadkstTermsBanner{
         height: 19rem;
     }
@@ -248,7 +259,7 @@ p {
         height: 19rem;
     }
     .divBannerMovies,.bannerLiveC {
-        height: 16rem;
+        height: 10rem;
 
     }
 
