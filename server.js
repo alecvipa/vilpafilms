@@ -56,9 +56,9 @@ app.get('/privacy', function (req, res) {
     var params = req.params.params;
     res.render('privacy');
 });
-app.get('/popkrn', function (req, res) {
+app.get('/vilpamax', function (req, res) {
     var params = req.params.params;
-    res.render('popkrn');
+    res.render('vilpamax');
 });
 app.get('/koverage', function (req, res) {
     var params = req.params.params;

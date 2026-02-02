@@ -40,9 +40,9 @@ nav {
     cursor: pointer;
 }
 
-.divBannerMovies {
-    height: 40rem;
-    background-image: url("/assets/images/davidJansenBannerMini.jpg");
+.divBannerMovies , .vilpaMaxBanner {
+    height: 50rem;
+    background-image: url("/assets/images/vilpaMaxBanner.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -258,8 +258,8 @@ p {
     .koverageBanner{
         height: 19rem;
     }
-    .divBannerMovies,.bannerLiveC {
-        height: 10rem;
+    .divBannerMovies,.bannerLiveC, .vilpaMaxBanner {
+        height: 22rem;
         margin-top: 10%;
 
     }
