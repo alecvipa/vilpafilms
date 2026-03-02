@@ -14,6 +14,9 @@ nav {
 .material-icons {
     color: black !important;
 }
+.bodyPrincipal{
+    background-color: white !important;
+}
 
 .centerArt {
     margin: auto;
@@ -29,6 +32,10 @@ nav {
     padding-top: 1%;
     padding-bottom: 1%;
 }
+.imgGuide{
+    width: 80% !important;
+    margin: auto;
+}
 
 .awardsDiv {
     background-color: white;
@@ -39,6 +46,8 @@ nav {
 .pointer {
     cursor: pointer;
 }
+
+
 
 .divBannerMovies , .vilpaMaxBanner {
     height: 50rem;
@@ -55,7 +64,7 @@ nav {
     background-size: cover;
 }
 .broadkstBanner{
-    height: 45rem;
+    height: 50rem;
     background-image: url("/assets/images/broadkstBanner.jpg");
     background-position: center;
     background-repeat: no-repeat;

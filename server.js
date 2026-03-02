@@ -46,6 +46,18 @@ app.get('/home', function (req, res) {
     var params = req.params.params;
     res.render('home');
 });
+app.get('/submissions', function (req, res) {
+    var params = req.params.params;
+    res.render('submissions');
+});
+app.get('/short-submissions', function (req, res) {
+    var params = req.params.params;
+    res.render('short-submissions');
+});
+app.get('/feature-submissions', function (req, res) {
+    var params = req.params.params;
+    res.render('feature-submissions');
+});
 
 app.get('/contact', function (req, res) {
     var params = req.params.params;
@@ -64,10 +76,7 @@ app.get('/koverage', function (req, res) {
     var params = req.params.params;
     res.render('koverage');
 });
-app.get('/broadkst', function (req, res) {
-    var params = req.params.params;
-    res.render('broadkst');
-});
+
 app.get('/broadkst-checkout-liveaction', function (req, res) {
     var params = req.params.params;
     res.render('broadkst-checkout-liveaction');
@@ -105,9 +114,9 @@ app.get('/terms-koverage', function (req, res) {
     var params = req.params.params;
     res.render('terms-koverage');
 });
-app.get('/terms-broadkst', function (req, res) {
+app.get('/terms-creatives', function (req, res) {
     var params = req.params.params;
-    res.render('terms-broadkst');
+    res.render('terms-creatives');
 });
 
 // Nodemailer route
