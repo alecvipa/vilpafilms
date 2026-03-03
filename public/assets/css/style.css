@@ -49,6 +49,7 @@ nav {
 
 
 
+
 .divBannerMovies , .vilpaMaxBanner {
     height: 50rem;
     background-image: url("/assets/images/vilpaMaxBanner.jpg");
@@ -271,6 +272,13 @@ p {
         height: 22rem;
         margin-top: 10%;
 
+    }
+    .responsiveTitle{
+        font-size: 1.92rem;
+    
+    }
+    .imgGuide{
+        width: 100% !important;
     }
 
     .bannerStory1,
