@@ -285,7 +285,7 @@ p {
     .koverageBanner{
         height: 19rem;
     }
-    .divBannerMovies,.bannerLiveC, .vilpaMaxBanner {
+    .divBannerMovies,.bannerLiveC, .vilpaMaxBanner, .divBannerAds {
         height: 22rem;
         margin-top: 10%;
 
