@@ -17,6 +17,10 @@ nav {
 .bodyPrincipal{
     background-color: white !important;
 }
+.divOutreach{
+    background-color: ghostwhite;
+    padding: 5%;
+}
 
 .centerArt {
     margin: auto;
@@ -42,6 +46,9 @@ nav {
     padding-top: 5%;
     padding-bottom: 5%;
 }
+.elevateTitle{
+
+}
 
 .pointer {
     cursor: pointer;
@@ -53,6 +60,13 @@ nav {
 .divBannerMovies , .vilpaMaxBanner {
     height: 50rem;
     background-image: url("/assets/images/vilpaMaxBanner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.divBannerAds{
+    height: 50rem;
+    background-image: url("/assets/images/advertiseBanner.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -259,6 +273,9 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
+    .contactButAds{
+        margin-top: 5%;
+    }
     .nocturneFooterBanner{
        margin-top: -6%;
     }

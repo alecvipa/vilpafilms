@@ -46,6 +46,10 @@ app.get('/home', function (req, res) {
     var params = req.params.params;
     res.render('home');
 });
+app.get('/advertising', function (req, res) {
+    var params = req.params.params;
+    res.render('advertising');
+});
 app.get('/submissions', function (req, res) {
     var params = req.params.params;
     res.render('submissions');
