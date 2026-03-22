@@ -85,6 +85,13 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.fundBanner{
+    height: 50rem;
+    background-image: url("/assets/images/fundBanner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .koverageBanner{
     height: 45rem;
     background-image: url("/assets/images/koverageBanner.jpg");
