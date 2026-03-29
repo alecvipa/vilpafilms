@@ -60,28 +60,11 @@ nav {
 /* Creamos una clase para el contenedor del video */
 .video-vignette {
     padding: 2% 0 0 0;
-    position: relative;
-    overflow: hidden;
+    /* position: relative;
+    overflow: hidden; */
     /* Asegura que el difuminado no se salga de la caja */
 }
 
-/* Esta es la capa mágica que se pone encima del video */
-.video-vignette::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    /* Degradado radial: Transparente en el centro, Negro en las esquinas */
-    /* Ajusta el 40% y el 90% si quieres que el centro negro empiece antes o después */
-    background: radial-gradient(ellipse, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 90%);
-
-    /* ¡SÚPER IMPORTANTE! Esto permite que el ratón "atraviese" la sombra 
-       para poder usar los controles de Vimeo */
-    pointer-events: none;
-}
 
 
 .divBannerMovies,
