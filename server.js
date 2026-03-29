@@ -54,6 +54,10 @@ app.get('/max/redsuitcase', function (req, res) {
     var params = req.params.params;
     res.render('redsuitcase');
 });
+app.get('/max/thetalent', function (req, res) {
+    var params = req.params.params;
+    res.render('thetalent');
+});
 app.get('/postproduction-fund', function (req, res) {
     var params = req.params.params;
     res.render('postproduction-fund');
