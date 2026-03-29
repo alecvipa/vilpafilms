@@ -46,6 +46,10 @@ app.get('/home', function (req, res) {
     var params = req.params.params;
     res.render('home');
 });
+app.get('/max/redsea', function (req, res) {
+    var params = req.params.params;
+    res.render('redsea');
+});
 app.get('/postproduction-fund', function (req, res) {
     var params = req.params.params;
     res.render('postproduction-fund');
@@ -80,6 +84,7 @@ app.get('/vilpamax', function (req, res) {
     var params = req.params.params;
     res.render('vilpamax');
 });
+
 app.get('/koverage', function (req, res) {
     var params = req.params.params;
     res.render('koverage');

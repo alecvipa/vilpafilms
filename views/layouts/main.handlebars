@@ -136,31 +136,8 @@
 
 <body>
     <div class="bodyPrincipal fonts">
-        <!-- Dropdown Structure -->
-        <ul id="dropdown1" class="dropdown-content">
-            <li><a href="/david-jansen" class="black-text">The undertone of David Jansen</a></li>
-            <li class="divider"></li>
-        </ul>
-        <!-- Dropdown Structure -->
-        <ul id="dropdown2" class="dropdown-content">
-            <li><a href="/blue-shades" class="black-text">Blue Shades</a></li>
-            <li class="divider"></li>
-            <li><a href="/kreativa-chronicles" class="black-text">Kreativa Chronicles</a></li>
-            <li class="divider"></li>
-        </ul>
-        <!-- Dropdown Structure -->
-        <ul id="dropdown3" class="dropdown-content">
-            <li><a href="/david-jansen" class="black-text">The undertone of David Jansen</a></li>
-            <li class="divider"></li>
-        </ul>
-        <!-- Dropdown Structure -->
-        <ul id="dropdown4" class="dropdown-content">
-            <li><a href="/blue-shades" class="black-text">Blue Shades</a></li>
-            <li class="divider"></li>
-            <li><a href="/kreativa-chronicles" class="black-text">Kreativa Chronicles</a></li>
-            <li class="divider"></li>
-        </ul>
-        <div class="navbar-fixed">
+
+        <div class="navbar-fixed theSuperNav">
             <nav class="white navDiv fonts" role="navigation">
                 <div class="nav-wrapper container">
                     <a id="logo-container" href="/" class="brand-logo "><img src="/assets/images/logo1.png"
@@ -175,8 +152,10 @@
                         <li><a href="/contact" class="navItems navBarD">Contact</a></li>
                         <li><a href="/advertising" class="navItems navBarD">Advertise With Us</a></li>
                         <li><a href="/privacy" class="navItems navBarD">Privacy Policy</a></li>
-                        {{!-- <li><a href="#" class="navItems" target="_blank"><i class="fab fa-facebook"></i></a></li> --}}
-                        <li><a href="https://www.instagram.com/vilpafilms/" class="navItems" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        {{!-- <li><a href="#" class="navItems" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        --}}
+                        <li><a href="https://www.instagram.com/vilpafilms/" class="navItems" target="_blank"><i
+                                    class="fab fa-instagram"></i></a></li>
 
                     </ul>
 
@@ -194,8 +173,10 @@
                         <li><a href="/contact" class="navItems navBarD">Contact</a></li>
                         <li><a href="/advertising" class="navItems navBarD">Advertise With Us</a></li>
                         <li><a href="/privacy" class="navItems navBarD">Privacy Policy</a></li>
-                        {{!-- <li><a href="#" class="navItems" target="_blank"><i class="fab fa-facebook"></i></a></li> --}}
-                        <li><a href="https://www.instagram.com/vilpafilms/" class="navItems" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        {{!-- <li><a href="#" class="navItems" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        --}}
+                        <li><a href="https://www.instagram.com/vilpafilms/" class="navItems" target="_blank"><i
+                                    class="fab fa-instagram"></i></a></li>
 
                     </ul>
                     <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -208,14 +189,16 @@
                 <div class="row">
                     <div class="col m6 s12">
                         <br>
-                        <h6 class="white-text navBarD">Meydan Grandstand, 6th floor, <br> Nad Al Sheba, Dubai, U.A.E. <br> <br> business@vilpafilms.com <br> +971 58 591 3901</h6>
-                        
+                        <h6 class="white-text navBarD">Meydan Grandstand, 6th floor, <br> Nad Al Sheba, Dubai, U.A.E.
+                            <br> <br> business@vilpafilms.com <br> +971 58 591 3901
+                        </h6>
+
                     </div>
                     <div class="col m6 s12"> <br>
                         <a id="logo-container" href="/" class="brand-logo centerArt"><img src="/assets/images/logo1.png"
                                 alt="logoIdm" class="imageLogo"></a>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="footer-copyright #616161 grey darken-2">
@@ -251,6 +234,38 @@
         $('.carousel.carousel-slider').carousel({
             fullWidth: true,
             indicators: true
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const rutaActual = window.location.pathname;
+
+            // Solo ejecutamos esto si estamos en la ruta correcta
+            if (rutaActual === "/max/redsea" || rutaActual === "/max/redsea/") {
+
+                // 1. Ocultar la navegación y el footer
+                const elementosAOcultar = [
+                    
+                    document.querySelector(".theSuperNav"),
+                    document.querySelector("footer")
+                ];
+
+                elementosAOcultar.forEach(elemento => {
+                    if (elemento) {
+                        elemento.style.display = "none";
+                    }
+                });
+
+                // 2. Inyectar CSS para forzar fondo negro
+                const estiloInyectado = document.createElement('style');
+                estiloInyectado.textContent = `
+        /* Aplicamos el negro al body, divs, y a bodyPrincipal (ya sea clase o ID) */
+        body, div, .bodyPrincipal, #bodyPrincipal {
+          background-color: #000000 !important;
+        }
+      `;
+                document.head.appendChild(estiloInyectado);
+            }
         });
     </script>
 

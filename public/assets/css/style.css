@@ -14,10 +14,12 @@ nav {
 .material-icons {
     color: black !important;
 }
-.bodyPrincipal{
+
+.bodyPrincipal {
     background-color: white !important;
 }
-.divOutreach{
+
+.divOutreach {
     background-color: ghostwhite !important;
     padding: 5%;
 }
@@ -36,7 +38,8 @@ nav {
     padding-top: 1%;
     padding-bottom: 1%;
 }
-.imgGuide{
+
+.imgGuide {
     width: 80% !important;
     margin: auto;
 }
@@ -46,80 +49,114 @@ nav {
     padding-top: 5%;
     padding-bottom: 5%;
 }
-.elevateTitle{
 
-}
+.elevateTitle {}
 
 .pointer {
     cursor: pointer;
 }
 
 
+/* Creamos una clase para el contenedor del video */
+.video-vignette {
+    padding: 2% 0 0 0;
+    position: relative;
+    overflow: hidden;
+    /* Asegura que el difuminado no se salga de la caja */
+}
+
+/* Esta es la capa mágica que se pone encima del video */
+.video-vignette::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Degradado radial: Transparente en el centro, Negro en las esquinas */
+    /* Ajusta el 40% y el 90% si quieres que el centro negro empiece antes o después */
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 90%);
+
+    /* ¡SÚPER IMPORTANTE! Esto permite que el ratón "atraviese" la sombra 
+       para poder usar los controles de Vimeo */
+    pointer-events: none;
+}
 
 
-.divBannerMovies , .vilpaMaxBanner {
+.divBannerMovies,
+.vilpaMaxBanner {
     height: 50rem;
     background-image: url("/assets/images/vilpaMaxBanner.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.divBannerAds{
+
+.divBannerAds {
     height: 50rem;
     background-image: url("/assets/images/advertiseBanner.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.popkrnBanner{
+
+.popkrnBanner {
     height: 58rem;
     background-image: url("/assets/images/popkrnComingSoon.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.broadkstBanner{
+
+.broadkstBanner {
     height: 50rem;
     background-image: url("/assets/images/broadkstBanner.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.fundBanner{
+
+.fundBanner {
     height: 50rem;
     background-image: url("/assets/images/fundBanner.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.koverageBanner{
+
+.koverageBanner {
     height: 45rem;
     background-image: url("/assets/images/koverageBanner.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.broadkstTermsBanner{
+
+.broadkstTermsBanner {
     height: 45rem;
     background-image: url("/assets/images/broadkstTerms.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.koverageTermsBanner{
+
+.koverageTermsBanner {
     height: 45rem;
     background-image: url("/assets/images/koverageTerms.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.bannerLiveC{
+
+.bannerLiveC {
     height: 45rem;
     background-image: url("/assets/images/checkout-submission.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .imageCannes {
     height: 72rem;
     background-image: url("/assets/images/Cannes2025.jpg");
@@ -186,7 +223,7 @@ nav {
 
 .fonts {
     font-family: Arial, Helvetica, sans-serif;
-   
+
 }
 
 .contInicioNosotros {
@@ -262,13 +299,15 @@ p {
 .parallax-container {
     min-width: 350px !important;
 }
-.crowsWebHome{
+
+.crowsWebHome {
     margin: auto;
     width: 100%;
     margin-bottom: 1.7%;
-    
+
 }
-.nocturneFooterBanner{
+
+.nocturneFooterBanner {
     margin: auto;
     width: 100%;
 }
@@ -280,28 +319,49 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
-    .contactButAds{
+    .redTitleMobile{
+        font-size: 20px;
+    }
+    .imageLogoMax{
+        height: 5rem !important;
+        margin-top: 11% !important;
+    
+    }
+    .contactButAds {
         margin-top: 5%;
     }
-    .nocturneFooterBanner{
-       margin-top: -6%;
+
+    .nocturneFooterBanner {
+        margin-top: -6%;
     }
-    .broadkstBanner, .koverageTermsBanner, .popkrnBanner, .broadkstTermsBanner, .fundBanner{
+
+    .broadkstBanner,
+    .koverageTermsBanner,
+    .popkrnBanner,
+    .broadkstTermsBanner,
+    .fundBanner {
         height: 19rem;
     }
-    .koverageBanner{
+
+    .koverageBanner {
         height: 19rem;
     }
-    .divBannerMovies,.bannerLiveC, .vilpaMaxBanner, .divBannerAds {
+
+    .divBannerMovies,
+    .bannerLiveC,
+    .vilpaMaxBanner,
+    .divBannerAds {
         height: 22rem;
         margin-top: 10%;
 
     }
-    .responsiveTitle{
+
+    .responsiveTitle {
         font-size: 1.92rem;
-    
+
     }
-    .imgGuide{
+
+    .imgGuide {
         width: 100% !important;
     }
 
