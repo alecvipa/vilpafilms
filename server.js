@@ -58,6 +58,10 @@ app.get('/max/thetalent', function (req, res) {
     var params = req.params.params;
     res.render('thetalent');
 });
+app.get('/max/starling', function (req, res) {
+    var params = req.params.params;
+    res.render('starling');
+});
 app.get('/postproduction-fund', function (req, res) {
     var params = req.params.params;
     res.render('postproduction-fund');
