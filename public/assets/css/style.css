@@ -102,7 +102,7 @@ nav {
 
 .fundBanner {
     height: 50rem;
-    background-image: url("/assets/images/fundBanner.jpg");
+    background-image: url("/assets/images/bannerFinancing.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -321,9 +321,12 @@ p {
     .broadkstBanner,
     .koverageTermsBanner,
     .popkrnBanner,
-    .broadkstTermsBanner,
-    .fundBanner {
+    .broadkstTermsBanner {
         height: 19rem;
+    }
+    .fundBanner {
+        height: 14rem;
+        margin-top: 3%;
     }
 
     .koverageBanner {
