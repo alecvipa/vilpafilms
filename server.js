@@ -50,6 +50,26 @@ app.get('/max/redsea', function (req, res) {
     var params = req.params.params;
     res.render('redsea');
 });
+app.get('/inflight', function (req, res) {
+    var params = req.params.params;
+    res.render('inflight');
+});
+app.get('/inflight/comedy', function (req, res) {
+    var params = req.params.params;
+    res.render('comedy');
+});
+app.get('/inflight/animation', function (req, res) {
+    var params = req.params.params;
+    res.render('animation');
+});
+app.get('/inflight/cannes', function (req, res) {
+    var params = req.params.params;
+    res.render('cannes');
+});
+app.get('/inflight/drama', function (req, res) {
+    var params = req.params.params;
+    res.render('drama');
+});
 app.get('/max/redsuitcase', function (req, res) {
     var params = req.params.params;
     res.render('redsuitcase');
