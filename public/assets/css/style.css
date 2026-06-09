@@ -67,9 +67,16 @@ nav {
 
 
 
-.divBannerMovies,
+
 .vilpaMaxBanner {
     height: 50rem;
+    background-image: url("/assets/images/vilpaMaxBanner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.divBannerMovies{
+    height: 58rem;
     background-image: url("/assets/images/vilpaMaxBanner.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -344,13 +351,17 @@ p {
         height: 19rem;
     }
 
-    .divBannerMovies,
+
     .bannerLiveC,
     .vilpaMaxBanner,
     .divBannerAds {
         height: 22rem;
         margin-top: 10%;
 
+    }
+    .divBannerMovies{
+        height: 32rem;
+        margin-top: 10%;
     }
 
     .responsiveTitle {
