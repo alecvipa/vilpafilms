@@ -86,10 +86,7 @@ app.get('/postproduction-fund', function (req, res) {
     var params = req.params.params;
     res.render('postproduction-fund');
 });
-app.get('/advertising', function (req, res) {
-    var params = req.params.params;
-    res.render('advertising');
-});
+
 app.get('/submissions', function (req, res) {
     var params = req.params.params;
     res.render('submissions');
@@ -162,6 +159,10 @@ app.get('/terms-koverage', function (req, res) {
 app.get('/terms-creatives', function (req, res) {
     var params = req.params.params;
     res.render('terms-creatives');
+});
+app.get('/partners', function (req, res) {
+    var params = req.params.params;
+    res.render('partners');
 });
 
 // Nodemailer route
