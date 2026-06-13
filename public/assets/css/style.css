@@ -355,13 +355,13 @@ p {
     .bannerLiveC,
     .vilpaMaxBanner,
     .divBannerAds {
-        height: 22rem;
-        margin-top: 10%;
+        height: 19rem;
+        
 
     }
     .divBannerMovies{
         height: 32rem;
-        margin-top: 10%;
+       
     }
 
     .responsiveTitle {
