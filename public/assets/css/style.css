@@ -6,9 +6,25 @@ nav {
 .buttonHide {
     display: none !important;
 }
+.colorRose{
+    color:   #ee141c  !important;
+}
 
 .navItems {
     color: black !important;
+}
+.textPromo{
+    padding: 1%;
+    margin-top: -1%;
+}
+.promoDiv{
+    background-color:   #f0eeee !important;
+    
+}
+.masterclassDiv{
+    background-color: black;
+    
+    padding-bottom: 3%;
 }
 
 .material-icons {
@@ -267,7 +283,7 @@ p {
 }
 
 .sidenav-trigger {
-    color: #26a69a;
+    color: white !important;
 }
 
 .parallax-container {
@@ -286,7 +302,9 @@ p {
 }
 
 .navDiv {
-    height: 7rem;
+    height: 10rem;
+    background-color: #171717  !important;
+    padding-top: 1.5%;
 }
 
 .sidenav-overlay {
@@ -301,7 +319,15 @@ p {
     margin: auto;
     width: 100%;
     margin-bottom: 1.7%;
-
+    
+}
+.vilpaWebHome{
+    margin: auto;
+    width: 81%;
+    margin-bottom: 1.7%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .nocturneFooterBanner {
@@ -316,6 +342,9 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
+    .textfontPromo{
+        font-size: 22px !important;
+    }
     .redTitleMobile{
         font-size: 20px;
     }
@@ -326,6 +355,10 @@ p {
     }
     .contactButAds {
         margin-top: 5%;
+    }
+    .navDiv {
+        height: 8rem;
+        padding-top: 2%;
     }
 
     .nocturneFooterBanner {

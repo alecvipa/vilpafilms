@@ -164,6 +164,10 @@ app.get('/partners', function (req, res) {
     var params = req.params.params;
     res.render('partners');
 });
+app.get('/masterclass', function (req, res) {
+    var params = req.params.params;
+    res.render('masterclass');
+});
 
 // Nodemailer route
 
