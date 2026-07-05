@@ -8,6 +8,9 @@ const email = process.env.email;
 const superSecretPwd = process.env.superSecretPwd;
 const tokenFb = process.env.tokenAccesoFB
 
+// 1. IMPORTA TU ARCHIVO JSON AQUÍ
+const catalogData = require('./catalog.json');
+
 // Create an instance of the express app.
 var app = express();
 
@@ -167,6 +170,11 @@ app.get('/partners', function (req, res) {
 app.get('/masterclass', function (req, res) {
     var params = req.params.params;
     res.render('masterclass');
+});
+
+// 2. NUEVA RUTA PARA TU API DE PELÍCULAS
+app.get('/api/catalog', function (req, res) {
+    res.json(catalogData);
 });
 
 // Nodemailer route
