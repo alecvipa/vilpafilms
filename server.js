@@ -163,13 +163,25 @@ app.get('/terms-creatives', function (req, res) {
     var params = req.params.params;
     res.render('terms-creatives');
 });
-app.get('/partners', function (req, res) {
+app.get('/vilpa-talents', function (req, res) {
     var params = req.params.params;
-    res.render('partners');
+    res.render('vilpa-talents');
 });
 app.get('/masterclass', function (req, res) {
     var params = req.params.params;
     res.render('masterclass');
+});
+app.get('/talents/alejandrovilpa', function (req, res) {
+    var params = req.params.params;
+    res.render('alejandrovilpa');
+});
+app.get('/talents/dimitrifontaine', function (req, res) {
+    var params = req.params.params;
+    res.render('dimitrifontaine');
+});
+app.get('/talents/carlaaguilarlopez', function (req, res) {
+    var params = req.params.params;
+    res.render('carlaaguilarlopez');
 });
 
 // 2. NUEVA RUTA PARA TU API DE PELÍCULAS

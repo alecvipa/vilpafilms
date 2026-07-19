@@ -9,7 +9,9 @@ nav {
 .colorRose{
     color:   #ee141c  !important;
 }
-
+.justified{
+    text-align: justify;
+}
 .navItems {
     color: black !important;
 }
@@ -100,8 +102,8 @@ nav {
 }
 
 .divBannerAds {
-    height: 50rem;
-    background-image: url("/assets/images/advertiseBanner.jpg");
+    height: 55rem;
+    background-image: url("/assets/images/vilpaTalents.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -118,6 +120,27 @@ nav {
 .broadkstBanner {
     height: 50rem;
     background-image: url("/assets/images/broadkstBanner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.dimitriBanner{
+    height: 57rem;
+    background-image: url("/assets/images/dimitriBanner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carlaBanner{
+    height: 57rem;
+    background-image: url("/assets/images/carlaBanner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.alejandroBanner{
+    height: 57rem;
+    background-image: url("/assets/images/alejandroBanner.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -238,6 +261,10 @@ nav {
     font-family: Arial, Helvetica, sans-serif;
 
 }
+.fontTalent{
+font-family: "Raleway", sans-serif !important;
+ 
+}
 
 .contInicioNosotros {
     background-color: white;
@@ -260,6 +287,12 @@ nav {
     opacity: .5;
     transition: 0.5s;
 }
+.lightVilpaColor{
+    color:  #f2dabb !important;
+}
+.redVilpaColor{
+    color:  #ec141c !important;
+}
 
 .colorSieteTeal {
     color: #73B598 !important;
@@ -273,9 +306,15 @@ nav .brand-logo {
 .centered {
     text-align: center;
 }
+.paragraphTalents{
+    font-size: 1.5rem;
+}
 
 .boldL {
     font-weight: bold;
+}
+.bolderFont{
+    font-weight: bolder !important;
 }
 
 p {
@@ -342,6 +381,9 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
+    .dimitriBanner, .carlaBanner, .alejandroBanner{
+        height: 39rem;
+    }
     .textfontPromo{
         font-size: 22px !important;
     }
@@ -388,7 +430,7 @@ p {
     .bannerLiveC,
     .vilpaMaxBanner,
     .divBannerAds {
-        height: 19rem;
+        height: 25rem;
         
 
     }
