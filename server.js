@@ -192,10 +192,14 @@ app.get('/articles/vilpa-talents-launch', function (req, res) {
     var params = req.params.params;
     res.render('vilpa-talents-launch');
 });
+app.get('/terms', function (req, res) {
+    var params = req.params.params;
+    res.render('terms');
+});
 app.get('/sitemap.xml', function (req, res) {
     res.header('Content-Type', 'application/xml');
     res.sendFile(path.join(__dirname, 'sitemap.xml'));
-  });
+});
 
 
 // 2. NUEVA RUTA PARA TU API DE PELÍCULAS
