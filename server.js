@@ -7,6 +7,7 @@ const nodemailer = require("nodemailer");
 const email = process.env.email;
 const superSecretPwd = process.env.superSecretPwd;
 const tokenFb = process.env.tokenAccesoFB
+const path = require('path');
 
 // 1. IMPORTA TU ARCHIVO JSON AQUÍ
 const catalogData = require('./catalog.json');
@@ -191,6 +192,10 @@ app.get('/articles/vilpa-talents-launch', function (req, res) {
     var params = req.params.params;
     res.render('vilpa-talents-launch');
 });
+app.get('/sitemap.xml', function (req, res) {
+    res.header('Content-Type', 'application/xml');
+    res.sendFile(path.join(__dirname, 'sitemap.xml'));
+  });
 
 
 // 2. NUEVA RUTA PARA TU API DE PELÍCULAS
