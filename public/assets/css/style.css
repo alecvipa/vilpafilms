@@ -23,12 +23,37 @@ nav {
     background-color:   #f0eeee !important;
     
 }
+
 .masterclassDiv{
     background-color: black;
     
     padding-bottom: 3%;
 }
+.zoom:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transition: transform 0.5s; /* Animation */
 
+}
+.zoom:not(:hover){
+    transform: scale(1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transition: transform 0.5s; /* Animation */
+}
+.lineStyle{
+    border: 1px solid white;
+}
+.latestNewsBorderStyle{
+    border-radius: 25px;
+    margin-top: 4%;
+}
+.newsDivLatest{
+    height: 30rem;
+    padding-top: 2%;
+    background-color: rgb(27, 27, 27);
+    color: white !important;
+}
+.overflowHidden{
+    overflow: hidden !important; /* Keeps the zoomed image inside the box */
+}
 .material-icons {
     color: black !important;
 }
@@ -41,6 +66,26 @@ nav {
     background-color: ghostwhite !important;
     padding: 5%;
 }
+.borderCardsNews{
+    border-radius: 25px !important;
+}
+.borderCardsNews2{
+    border-radius: 0 0 25px 25px !important;
+}
+.imageBorderNews{
+    border-radius: 25px 25px 0 0 !important;
+}
+.dateAesteticTitle{
+    color: rgb(170, 169, 169) !important;
+    font-size: 15px;
+}
+.dateAesteticTitle2{
+    color: rgb(121, 119, 119) !important;
+}
+.paragraphStyleNews{
+    font-size: 20px !important;
+    color: rgb(95, 93, 93);
+}
 
 .centerArt {
     margin: auto;
@@ -49,6 +94,10 @@ nav {
 .serviceCard:hover {
     opacity: 0.7;
     transition: 0.3s;
+}
+
+.hoverColorYellow:hover{
+    color: yellow !important;
 }
 
 .divProducts {

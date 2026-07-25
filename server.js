@@ -183,6 +183,15 @@ app.get('/talents/carlaaguilarlopez', function (req, res) {
     var params = req.params.params;
     res.render('carlaaguilarlopez');
 });
+app.get('/news', function (req, res) {
+    var params = req.params.params;
+    res.render('news');
+});
+app.get('/articles/vilpa-talents-launch', function (req, res) {
+    var params = req.params.params;
+    res.render('vilpa-talents-launch');
+});
+
 
 // 2. NUEVA RUTA PARA TU API DE PELÍCULAS
 app.get('/api/catalog', function (req, res) {
