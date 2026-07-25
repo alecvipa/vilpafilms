@@ -46,11 +46,14 @@ nav {
     margin-top: 4%;
 }
 .newsDivLatest{
-    height: 30rem;
+    height: 41rem;
     padding-top: 2%;
     background-color: rgb(27, 27, 27);
     color: white !important;
+    
+    
 }
+
 .overflowHidden{
     overflow: hidden !important; /* Keeps the zoomed image inside the box */
 }
@@ -517,6 +520,7 @@ p {
     .imageCannes {
         height: 45rem;
     }
+   
 
 
 }
@@ -537,4 +541,5 @@ p {
 
 footer.page-footer {
     margin: 0;
+   
 }
