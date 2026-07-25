@@ -192,6 +192,18 @@ app.get('/articles/vilpa-talents-launch', function (req, res) {
     var params = req.params.params;
     res.render('vilpa-talents-launch');
 });
+app.get('/articles/skin-premiered-vilpamax', function (req, res) {
+    var params = req.params.params;
+    res.render('skin-premiered-vilpamax');
+});
+app.get('/articles/rock-paper-scissors', function (req, res) {
+    var params = req.params.params;
+    res.render('rock-paper-scissors');
+});
+app.get('/articles/inside-blue-shades', function (req, res) {
+    var params = req.params.params;
+    res.render('inside-blue-shades');
+});
 app.get('/terms', function (req, res) {
     var params = req.params.params;
     res.render('terms');
