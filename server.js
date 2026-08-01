@@ -204,6 +204,10 @@ app.get('/articles/inside-blue-shades', function (req, res) {
     var params = req.params.params;
     res.render('inside-blue-shades');
 });
+app.get('/articles/vilpa-influencial-actors', function (req, res) {
+    var params = req.params.params;
+    res.render('vilpa-influencial-actors');
+});
 app.get('/terms', function (req, res) {
     var params = req.params.params;
     res.render('terms');
