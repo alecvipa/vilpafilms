@@ -212,9 +212,17 @@ app.get('/articles/vilpa-talents-grammys', function (req, res) {
     var params = req.params.params;
     res.render('vilpa-talents-grammys');
 });
+app.get('/ads', function (req, res) {
+    var params = req.params.params;
+    res.render('ads');
+});
 app.get('/terms', function (req, res) {
     var params = req.params.params;
     res.render('terms');
+});
+app.get('/articles/dimitri-interview-blueshades', function (req, res) {
+    var params = req.params.params;
+    res.render('dimitri-interview-blueshades');
 });
 app.get('/sitemap.xml', function (req, res) {
     res.header('Content-Type', 'application/xml');

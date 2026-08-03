@@ -197,7 +197,7 @@
             });
         });
     </script>
-    
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7874577050139514"
         crossorigin="anonymous"></script>
 
@@ -441,6 +441,32 @@
       `;
                 document.head.appendChild(estiloInyectado);
             }
+        });
+    </script>
+
+    <script>
+        const video = document.getElementById("bannerVideo");
+        const soundButton = document.getElementById("soundButton");
+
+        soundButton.addEventListener("click", async () => {
+            video.muted = !video.muted;
+
+            if (video.paused) {
+                try {
+                    await video.play();
+                } catch (error) {
+                    console.error("The video could not be played:", error);
+                }
+            }
+
+            soundButton.textContent = video.muted
+                ? "🔇 Unmute"
+                : "🔊 Mute";
+
+            soundButton.setAttribute(
+                "aria-label",
+                video.muted ? "Unmute video" : "Mute video"
+            );
         });
     </script>
 

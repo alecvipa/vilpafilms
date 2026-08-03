@@ -6,57 +6,73 @@ nav {
 .buttonHide {
     display: none !important;
 }
-.colorRose{
-    color:   #ee141c  !important;
+
+.colorRose {
+    color: #ee141c !important;
 }
-.justified{
+
+.justified {
     text-align: justify;
 }
+
 .navItems {
     color: black !important;
 }
-.textPromo{
+
+.textPromo {
     padding: 1%;
     margin-top: -1%;
 }
-.promoDiv{
-    background-color:   #f0eeee !important;
-    
+
+.promoDiv {
+    background-color: #f0eeee !important;
+
 }
 
-.masterclassDiv{
+.masterclassDiv {
     background-color: black;
-    
+
     padding-bottom: 3%;
 }
+
 .zoom:hover {
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    transition: transform 0.5s; /* Animation */
+    transform: scale(1.1);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transition: transform 0.5s;
+    /* Animation */
 
 }
-.zoom:not(:hover){
-    transform: scale(1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    transition: transform 0.5s; /* Animation */
+
+.zoom:not(:hover) {
+    transform: scale(1);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transition: transform 0.5s;
+    /* Animation */
 }
-.lineStyle{
+
+.lineStyle {
     border: 1px solid white;
 }
-.latestNewsBorderStyle{
+
+.latestNewsBorderStyle {
     border-radius: 25px;
     margin-top: 4%;
 }
-.newsDivLatest{
-    
+
+.newsDivLatest {
+
     padding: 2%;
     background-color: rgb(27, 27, 27);
     color: white !important;
-    
-    
+
+
 }
 
-.overflowHidden{
-    overflow: hidden !important; /* Keeps the zoomed image inside the box */
+.overflowHidden {
+    overflow: hidden !important;
+    /* Keeps the zoomed image inside the box */
 }
+
 .material-icons {
     color: black !important;
 }
@@ -69,23 +85,29 @@ nav {
     background-color: ghostwhite !important;
     padding: 5%;
 }
-.borderCardsNews{
+
+.borderCardsNews {
     border-radius: 25px !important;
 }
-.borderCardsNews2{
+
+.borderCardsNews2 {
     border-radius: 0 0 25px 25px !important;
 }
-.imageBorderNews{
+
+.imageBorderNews {
     border-radius: 25px 25px 0 0 !important;
 }
-.dateAesteticTitle{
+
+.dateAesteticTitle {
     color: rgb(170, 169, 169) !important;
     font-size: 15px;
 }
-.dateAesteticTitle2{
+
+.dateAesteticTitle2 {
     color: rgb(121, 119, 119) !important;
 }
-.paragraphStyleNews{
+
+.paragraphStyleNews {
     font-size: 20px !important;
     color: rgb(95, 93, 93);
 }
@@ -99,7 +121,7 @@ nav {
     transition: 0.3s;
 }
 
-.hoverColorYellow:hover{
+.hoverColorYellow:hover {
     color: yellow !important;
 }
 
@@ -145,7 +167,8 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.divBannerMovies{
+
+.divBannerMovies {
     height: 55rem;
     background-image: url("/assets/images/vilpaMaxBanner.jpg");
     background-position: center;
@@ -176,21 +199,24 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.dimitriBanner{
+
+.dimitriBanner {
     height: 57rem;
     background-image: url("/assets/images/dimitriBanner.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.carlaBanner{
+
+.carlaBanner {
     height: 57rem;
     background-image: url("/assets/images/carlaBanner.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.alejandroBanner{
+
+.alejandroBanner {
     height: 57rem;
     background-image: url("/assets/images/alejandroBanner.jpg");
     background-position: center;
@@ -205,7 +231,8 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.inflightBanner{
+
+.inflightBanner {
     height: 50rem;
     background-image: url("/assets/images/inflightBanner.jpg");
     background-position: center;
@@ -313,9 +340,10 @@ nav {
     font-family: Arial, Helvetica, sans-serif;
 
 }
-.fontTalent{
-font-family: "Raleway", sans-serif !important;
- 
+
+.fontTalent {
+    font-family: "Raleway", sans-serif !important;
+
 }
 
 .contInicioNosotros {
@@ -339,11 +367,13 @@ font-family: "Raleway", sans-serif !important;
     opacity: .5;
     transition: 0.5s;
 }
-.lightVilpaColor{
-    color:  #f2dabb !important;
+
+.lightVilpaColor {
+    color: #f2dabb !important;
 }
-.redVilpaColor{
-    color:  #ec141c !important;
+
+.redVilpaColor {
+    color: #ec141c !important;
 }
 
 .colorSieteTeal {
@@ -358,14 +388,16 @@ nav .brand-logo {
 .centered {
     text-align: center;
 }
-.paragraphTalents{
+
+.paragraphTalents {
     font-size: 1.5rem;
 }
 
 .boldL {
     font-weight: bold;
 }
-.bolderFont{
+
+.bolderFont {
     font-weight: bolder !important;
 }
 
@@ -394,7 +426,7 @@ p {
 
 .navDiv {
     height: 10rem;
-    background-color: #171717  !important;
+    background-color: #171717 !important;
     padding-top: 1.5%;
 }
 
@@ -410,9 +442,10 @@ p {
     margin: auto;
     width: 100%;
     margin-bottom: 1.7%;
-    
+
 }
-.vilpaWebHome{
+
+.vilpaWebHome {
     margin: auto;
     width: 81%;
     margin-bottom: 1.7%;
@@ -426,6 +459,91 @@ p {
     width: 100%;
 }
 
+/* VIDEO BANNER */
+.adsDiv {
+    width: 100%;
+}
+
+.heroBannerAds {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.heroBannerAds video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.heroBannerAds .sound-button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+    padding: 10px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 999px;
+
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+/* Oscurece ligeramente el video para que se lea el título */
+.heroBannerAds::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+}
+
+/* Texto centrado */
+.heroBannerContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+
+    width: min(90%, 850px);
+    padding: 20px;
+
+    color: white;
+    text-align: center;
+
+    transform: translate(-50%, -50%);
+}
+
+.heroBannerContent h1 {
+    margin: 0 0 12px;
+    font-size: clamp(32px, 5vw, 72px);
+    font-weight: 700;
+    line-height: 1.05;
+}
+
+.heroBannerContent p {
+    margin: 0 auto 24px;
+    max-width: 650px;
+
+    font-size: clamp(15px, 1.8vw, 22px);
+    line-height: 1.4;
+}
+
 @media only screen and (min-width : 992px) {
     .navUl {
         padding-top: 3%;
@@ -433,96 +551,133 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
-    .dimitriBanner, .carlaBanner, .alejandroBanner{
-        height: 39rem;
-    }
-    .textfontPromo{
-        font-size: 22px !important;
-    }
-    .redTitleMobile{
-        font-size: 20px;
-    }
-    .imageLogoMax{
-        height: 5rem !important;
-        margin-top: 11% !important;
-    
-    }
-    .contactButAds {
-        margin-top: 5%;
-    }
-    .navDiv {
-        height: 8rem;
-        padding-top: 2%;
+    .heroBannerAds video {
+        width: 100%;
+        height: 65vh;
+        object-fit: cover;
     }
 
-    .nocturneFooterBanner {
-        margin-top: -6%;
+    .heroBannerContent {
+        width: 92%;
+        padding: 15px;
     }
 
-    .broadkstBanner,
-    .koverageTermsBanner,
-    .popkrnBanner,
-    .broadkstTermsBanner {
-        height: 19rem;
-    }
-    .fundBanner {
-        height: 14rem;
-        margin-top: 3%;
-    }
-    .inflightBanner{
-        height: 13rem;
-        margin-top: 3%;
+    .heroBannerContent h1 {
+        margin-bottom: 8px;
+        font-size: 32px;
     }
 
-    .koverageBanner {
-        height: 19rem;
+    .heroBannerContent p {
+        margin-bottom: 18px;
+        font-size: 14px;
     }
 
-
-    .bannerLiveC,
-    .vilpaMaxBanner,
-    .divBannerAds {
-        height: 25rem;
-        
-
-    }
-    .divBannerMovies{
-        height: 32rem;
-       
-    }
-
-    .responsiveTitle {
-        font-size: 1.92rem;
-
-    }
-
-    .imgGuide {
-        width: 100% !important;
-    }
-
-    .bannerStory1,
-    .bannerStory2 {
-        display: block;
-    }
-
-    .margin-top-7 {
-        margin-top: 7%;
-    }
-
-    .gallery-bodies {
-        margin-top: 320px !important;
-    }
-
-    .titleVilpa {
-        width: 90%;
-    }
-
-    .imageCannes {
-        height: 45rem;
-    }
    
 
+    .heroBannerAds .sound-button {
+        right: 12px;
+        bottom: 12px;
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+}
 
+.dimitriBanner,
+.carlaBanner,
+.alejandroBanner {
+    height: 39rem;
+}
+
+.textfontPromo {
+    font-size: 22px !important;
+}
+
+.redTitleMobile {
+    font-size: 20px;
+}
+
+.imageLogoMax {
+    height: 5rem !important;
+    margin-top: 11% !important;
+
+}
+
+.contactButAds {
+    margin-top: 5%;
+}
+
+.navDiv {
+    height: 10rem;
+    padding-top: 2%;
+}
+
+.nocturneFooterBanner {
+    margin-top: -6%;
+}
+
+.broadkstBanner,
+.koverageTermsBanner,
+.popkrnBanner,
+.broadkstTermsBanner {
+    height: 19rem;
+}
+
+.fundBanner {
+    height: 14rem;
+    margin-top: 3%;
+}
+
+.inflightBanner {
+    height: 13rem;
+    margin-top: 3%;
+}
+
+.koverageBanner {
+    height: 19rem;
+}
+
+
+.bannerLiveC,
+.vilpaMaxBanner,
+.divBannerAds {
+    height: 25rem;
+
+
+}
+
+.divBannerMovies {
+    height: 32rem;
+
+}
+
+.responsiveTitle {
+    font-size: 1.92rem;
+
+}
+
+.imgGuide {
+    width: 100% !important;
+}
+
+.bannerStory1,
+.bannerStory2 {
+    display: block;
+}
+
+.margin-top-7 {
+    margin-top: 7%;
+}
+
+.gallery-bodies {
+    margin-top: 320px !important;
+}
+
+.titleVilpa {
+    width: 90%;
+}
+
+.imageCannes {
+    height: 45rem;
 }
 
 @media only screen and (max-width : 600px) {
@@ -541,5 +696,5 @@ p {
 
 footer.page-footer {
     margin: 0;
-   
+
 }
