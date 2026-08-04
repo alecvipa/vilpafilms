@@ -169,8 +169,8 @@ nav {
 }
 
 .divBannerMovies {
-    height: 55rem;
-    background-image: url("/assets/images/vilpaMaxBanner.jpg");
+    height: 58rem;
+    background-image: url("/assets/images/vilpaMaxBanner.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -568,6 +568,9 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
+    .divBannerMovies{
+        height: 29rem;
+    }
     .heroBannerAds video {
         width: 100%;
         height: 65vh;
@@ -662,10 +665,6 @@ p {
 
 }
 
-.divBannerMovies {
-    height: 32rem;
-
-}
 
 .responsiveTitle {
     font-size: 1.92rem;
