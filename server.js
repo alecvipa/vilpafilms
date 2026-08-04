@@ -224,6 +224,10 @@ app.get('/articles/dimitri-interview-blueshades', function (req, res) {
     var params = req.params.params;
     res.render('dimitri-interview-blueshades');
 });
+app.get('/articles/carla-interview-blueshades', function (req, res) {
+    var params = req.params.params;
+    res.render('carla-interview-blueshades');
+});
 app.get('/sitemap.xml', function (req, res) {
     res.header('Content-Type', 'application/xml');
     res.sendFile(path.join(__dirname, 'sitemap.xml'));
