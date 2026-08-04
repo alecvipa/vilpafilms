@@ -23,6 +23,11 @@ nav {
     padding: 1%;
     margin-top: -1%;
 }
+.marginAuto {
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .promoDiv {
     background-color: #f0eeee !important;
@@ -33,6 +38,27 @@ nav {
     background-color: black;
 
     padding-bottom: 3%;
+}
+.brandedFilms{
+    height: 30rem;
+    background-image: url("/assets/images/jansenMusicVideo.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.brandedCars{
+    height: 30rem;
+    background-image: url("/assets/images/carLuxury.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.brandedFashion{
+    height: 30rem;
+    background-image: url("/assets/images/fashionLuxury.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .zoom:hover {
@@ -464,18 +490,31 @@ p {
     width: 100%;
 }
 
+.bgBlack{
+    background-color: #141414 !important;
+}
+.adsMaster{
+    margin-bottom: -30px;
+    padding-bottom: 5%;
+}
 .heroBannerAds {
     position: relative;
     width: 100%;
     overflow: hidden;
     background-color: #171717;
+    height: 40rem;
+    /* margin-bottom: -30px; */
+    background-image: url("/assets/images/bannerAds.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.heroBannerAds video {
+/* .heroBannerAds video {
     display: block;
     width: 100%;
     height: auto;
-}
+} */
 
 .heroBannerAds .sound-button {
     position: absolute;
@@ -571,10 +610,13 @@ p {
     .divBannerMovies{
         height: 29rem;
     }
-    .heroBannerAds video {
+    /* .heroBannerAds video {
         width: 100%;
         height: 65vh;
         object-fit: cover;
+    } */
+    .heroBannerAds{
+        height: 20rem;
     }
 
     .heroBannerContent {
