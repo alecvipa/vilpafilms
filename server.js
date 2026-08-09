@@ -188,9 +188,9 @@ app.get('/news', function (req, res) {
     var params = req.params.params;
     res.render('news');
 });
-app.get('/articles/vilpa-talents-launch', function (req, res) {
+app.get('/articles/vilpa-oracle-launch', function (req, res) {
     var params = req.params.params;
-    res.render('vilpa-talents-launch');
+    res.render('vilpa-oracle-launch');
 });
 app.get('/articles/skin-premiered-vilpamax', function (req, res) {
     var params = req.params.params;
