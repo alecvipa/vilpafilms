@@ -28,6 +28,10 @@ nav {
     margin-left: auto;
     margin-right: auto;
 }
+.grayBgSteps{
+    background-color: rgb(233, 232, 232);
+    padding: 5%;
+}
 
 .promoDiv {
     background-color: #f0eeee !important;
@@ -607,6 +611,9 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
+    .titleStreamingProgram{
+        font-size: 2rem !important
+    }
     .divBannerMovies{
         height: 29rem;
     }
