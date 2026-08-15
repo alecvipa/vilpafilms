@@ -414,7 +414,9 @@ nav ul a,
 nav .brand-logo {
     color: #444;
 }
-
+.notSoWhite{
+    color: rgb(129, 129, 129);
+}
 .centered {
     text-align: center;
 }
