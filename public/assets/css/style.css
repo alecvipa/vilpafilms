@@ -263,7 +263,7 @@ nav {
 }
 
 .inflightBanner {
-    height: 50rem;
+    height: 30rem;
     background-image: url("/assets/images/inflightBanner.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -613,6 +613,9 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
+    .inflightBanner {
+        height: 13rem;
+    }
     .titleStreamingProgram{
         font-size: 2rem !important
     }
@@ -698,10 +701,7 @@ p {
     margin-top: 3%;
 }
 
-.inflightBanner {
-    height: 13rem;
-    margin-top: 3%;
-}
+
 
 .koverageBanner {
     height: 19rem;
