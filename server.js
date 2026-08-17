@@ -212,6 +212,10 @@ app.get('/articles/vilpa-talents-grammys', function (req, res) {
     var params = req.params.params;
     res.render('vilpa-talents-grammys');
 });
+app.get('/articles/contact-hours-interview', function (req, res) {
+    var params = req.params.params;
+    res.render('contact-hours-interview');
+});
 app.get('/ads', function (req, res) {
     var params = req.params.params;
     res.render('ads');
