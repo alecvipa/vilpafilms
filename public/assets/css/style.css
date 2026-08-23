@@ -605,6 +605,10 @@ p {
     margin: 0;
     padding: 0;
 }
+.videoSpaceYoutube{
+    height: 560px ;
+    width: 100%;
+}
 
 .hero-video iframe {
     position: absolute;
@@ -621,6 +625,10 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
+    .videoSpaceYoutube{
+        height: 235px ;
+        width: 400px;
+    }
     .spaceDiv {
         height: 16rem;
        
