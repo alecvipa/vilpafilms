@@ -245,6 +245,14 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.spaceDiv {
+    height: 50rem;
+    background-image: url("/assets/images/spaceVideoGame.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 3%;
+}
 
 .alejandroBanner {
     height: 57rem;
@@ -613,6 +621,10 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
+    .spaceDiv {
+        height: 16rem;
+       
+    }
     .inflightBanner {
         height: 13rem;
     }

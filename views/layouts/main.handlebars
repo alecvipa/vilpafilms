@@ -30,6 +30,7 @@
     <link href="/assets/css/style.css" rel="stylesheet">
     <link href="/assets/css/materialize.min.css" rel="stylesheet">
     <link href="/assets/css/gallery-materialize.css" rel="stylesheet">
+    
 
 
     <!-- Material Icons -->
@@ -37,6 +38,7 @@
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=currency_pound" />
+    
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -386,13 +388,14 @@
             const rutaActual = window.location.pathname;
 
             // Solo ejecutamos esto si estamos en la ruta correcta
-            if (rutaActual === "/max/thetalent" || rutaActual === "/max/thetalent/") {
+            if (rutaActual === "/games-edge-of-space" || rutaActual === "/games-edge-of-space") {
 
                 // 1. Ocultar la navegación y el footer
                 const elementosAOcultar = [
 
                     document.querySelector(".theSuperNav"),
-                    document.querySelector("footer")
+                    document.querySelector("footer"),
+                    document.querySelector(".drag-target")
                 ];
 
                 elementosAOcultar.forEach(elemento => {
@@ -477,6 +480,7 @@
             }
         });
     </script>
+
 
     <script>
         const video = document.getElementById("bannerVideo");

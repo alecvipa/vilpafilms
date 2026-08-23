@@ -228,6 +228,10 @@ app.get('/vilpa-games', function (req, res) {
     var params = req.params.params;
     res.render('vilpa-games');
 });
+app.get('/games-edge-of-space', function (req, res) {
+    var params = req.params.params;
+    res.render('games-edge-of-space');
+});
 app.get('/articles/dimitri-interview-blueshades', function (req, res) {
     var params = req.params.params;
     res.render('dimitri-interview-blueshades');
