@@ -625,10 +625,7 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
-    .videoSpaceYoutube{
-        height: 235px ;
-        width: 400px;
-    }
+    
     .spaceDiv {
         height: 16rem;
        

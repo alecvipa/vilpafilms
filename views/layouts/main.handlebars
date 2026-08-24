@@ -215,7 +215,7 @@
                 <div class="nav-wrapper container ">
                     <a id="logo-container" href="/" class="brand-logo "><img src="/assets/images/logo2.jpg"
                             alt="logoIdm" class="imageLogo"></a>
-                    <ul class="right hide-on-med-and-down navUl ">
+                    <ul class="right hide-on-med-and-down navUl menuWrapper">
                         <li><a href="/" class="hoverColorYellow navItems navBarD white-text boldL">Home</a></li>
                         <!-- Dropdown Trigger -->
                         {{!-- <li><a class="dropdown-trigger black-text" href="#!" data-target="dropdown1">Film<i
@@ -392,10 +392,11 @@
 
                 // 1. Ocultar la navegación y el footer
                 const elementosAOcultar = [
-
-                    document.querySelector(".theSuperNav"),
-                    document.querySelector("footer"),
-                    document.querySelector(".drag-target")
+                document.querySelector(".menuWrapper"),
+                document.querySelector("footer"),
+                document.querySelector(".sidenav"),
+                document.querySelector(".drag-target")
+                
                 ];
 
                 elementosAOcultar.forEach(elemento => {
@@ -409,7 +410,7 @@
                 estiloInyectado.textContent = `
         /* Aplicamos el negro al body, divs, y a bodyPrincipal (ya sea clase o ID) */
         body, div, .bodyPrincipal, #bodyPrincipal {
-          background-color: #000000 !important;
+          background-color:  #171717 !important;
         }
       `;
                 document.head.appendChild(estiloInyectado);
