@@ -88,6 +88,13 @@ nav {
     border-radius: 25px;
     margin-top: 4%;
 }
+.trailerEdgeImg{
+    border-radius: 50px;
+    -webkit-box-shadow: -40px 25px 55px 6px #000000;
+  box-shadow: 0px 0px 55px 0px #000000;
+  
+
+}
 
 .newsDivLatest {
 
@@ -609,6 +616,9 @@ p {
     height: 560px ;
     width: 100%;
 }
+.card-content{
+    background-color: #141414 !important;
+}
 
 .hero-video iframe {
     position: absolute;
@@ -617,6 +627,10 @@ p {
     height: 100%;
     border: 0;
 }
+.listInstructions{
+    font-size: 1.5rem;
+}
+
 
 @media only screen and (min-width : 992px) {
     .navUl {
@@ -625,6 +639,9 @@ p {
 }
 
 @media only screen and (max-width : 992px) {
+    .startMissionTitle{
+        font-size: 2.56rem;
+    }
     
     .spaceDiv {
         height: 16rem;

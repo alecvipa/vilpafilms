@@ -18,6 +18,24 @@
 </div>
 <div class="spaceDiv">
 </div>
+<div class="container">
+    <div class="row">
+        <h2 class="white-text center bolderFont startMissionTitle">
+            YOUR MISSION STARTS HERE
+        </h2>
+        <h5 class="listInstructions">
+            <ul class="center">
+                <li class="white-text  ">🚀 Navigate your spacecraft</li>
+                <li class="white-text  ">🪐 Travel from planet to planet</li>
+                <li class="white-text  ">☄️ Avoid the asteroids</li>
+            </ul>
+        </h5>
+        <h2 class="white-text center bolderFont startMissionTitle">
+            PLAY THE GAME
+        </h2>
+
+    </div>
+</div>
 <br>
 {{!-- <div class="container">
     <div class="row">
@@ -63,12 +81,13 @@
     </div>
 </div>
 <br> <br> <br>
-<div class="container">
-    <iframe class="videoSpaceYoutube" src="https://www.youtube.com/embed/Firw2By6Al4?si=tguNTyTMQ0XOhNsr"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div> <br>
+<div id="trailer-section" class="pointer" onclick="location.href='/vilpa-max-trailers';">
+    <div class="container">
+        <img class="responsive-img trailerEdgeImg" src="/assets/images/edgeTrailerImg.webp">
+    </div>
+
+</div>
+<br>
 <div class="container">
     <h4 class="white-text center">Download the Vilpa Max app and watch amazing films online</h4> <br>
     <div class="row" onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';">
@@ -177,3 +196,17 @@
         Copyright © <a href="/" style="color: lightgrey;">2025 Vilpa Films - All rights reserved.</a> <br><br>
     </div>
 </div>
+<script>
+    // Temporizador de 30 segundos (30,000 milisegundos)
+    setTimeout(function () {
+        const target = document.getElementById('trailer-section');
+
+        if (target) {
+            // El desplazamiento suave (cinematográfico) hacia el tráiler
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }, 30000);
+</script>

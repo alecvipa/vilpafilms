@@ -1,0 +1,287 @@
+<!-- CONTENEDOR PRINCIPAL DEL HERO (Estilo Netflix) -->
+<div style="position: relative; width: 100%; height: 85vh; background-color: #141414; overflow: hidden;">
+
+    <!-- CAPA 1: EL VIDEO DE VIMEO DE FONDO -->
+    <!-- Aquí está tu URL exacta con el hash de seguridad y el parámetro de background -->
+    <iframe
+        src="https://player.vimeo.com/video/1220882725?h=454c760269&background=1&autoplay=1&muted=1&loop=1&badge=0&autopause=0&player_id=0&app_id=58479"
+        frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        style="position: absolute; top: 50%; left: 50%; width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.77vh; transform: translate(-50%, -50%); z-index: 1;"
+        title="Edge of Space | Promo Trailer | Vilpa Max">
+    </iframe>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <!-- CAPA 2: EL DEGRADADO OSCURO (OVERLAY) -->
+    <div
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(20,20,20,0.95) 0%, rgba(20,20,20,0.4) 50%, transparent 100%), linear-gradient(to top, #141414 0%, transparent 20%); z-index: 2; pointer-events: none;">
+    </div>
+
+    <!-- CAPA 3: EL CONTENIDO (TEXTO Y BOTONES) -->
+    <div class="container"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; z-index: 3; padding-left: 20px;">
+
+        <div style="max-width: 600px;">
+            <!-- Logo o Título -->
+            <h1 class="white-text"
+                style="font-weight: 800; font-size: 4rem; margin-top: 0; line-height: 1; text-transform: uppercase;">
+                Edge of Space</h1>
+
+            <!-- Metadatos de la película -->
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                <span class="green-text text-accent-3" style="font-weight: bold;">99% Match</span>
+                <span class="white-text">2026</span>
+                <span style="border: 1px solid white; padding: 2px 6px; color: white; font-size: 0.8rem;">16+</span>
+            </div>
+
+            <!-- Sinopsis -->
+            <p class="white-text" style="font-size: 1.2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                Space forgives no mistakes. Survive zero gravity and uncover the hidden truth at the edge of orbit.
+            </p>
+
+            <!-- Botones de Acción -->
+            <div style="display: flex; gap: 15px; margin-top: 30px;">
+                <!-- Botón principal (Blanco) -->
+                <a href="#reproductor" class="btn white black-text waves-effect waves-light"
+                    style="font-weight: bold; padding: 0 32px; border-radius: 4px; display: flex; align-items: center; height: 45px;">
+                    <i class="material-icons left" style="color: black;">play_arrow</i>Watch Now
+                </a>
+                <!-- Botón secundario (Gris translúcido) -->
+                {{!-- <a href="#info" class="btn grey darken-3 white-text waves-effect waves-light"
+                    style="font-weight: bold; padding: 0 32px; border-radius: 4px; display: flex; align-items: center; height: 45px; opacity: 0.8;">
+                    <i class="material-icons left">info_outline</i>Más Info
+                </a> --}}
+            </div>
+        </div>
+    </div>
+
+</div>
+<div style="background-color: #141414; overflow: hidden; padding-bottom: 60px;">
+    <br><br>
+
+    <!-- Estilos personalizados para el efecto Netflix -->
+    <style>
+        .vilpa-trailer-card {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* Forza la proporción 16:9 perfecta */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            /* Bordes suaves */
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .vilpa-trailer-card iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: auto;
+        }
+
+        /* El salto visual al pasar el mouse */
+        .vilpa-trailer-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+            z-index: 10;
+        }
+
+        .section-title {
+            color: #e5e5e5;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+    </style>
+
+    <div class="container">
+        <!-- Título de la fila -->
+        <div class="row" style="margin-bottom: 5px;">
+            <div class="col s12">
+                <h5 class="section-title">Trending on Vilpa Max</h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Tráiler 1 -->
+            <div class="col m4 s12">
+                <div class="vilpa-trailer-card">
+                    <iframe src="https://www.youtube.com/embed/rNYaWm9y1RA?si=rXB4v9HCoKS8K_rg"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Tráiler 2 -->
+            <div class="col m4 s12">
+                <div class="vilpa-trailer-card">
+                    <iframe src="https://www.youtube.com/embed/H6gHN9-lj8o?si=PUoBDgfa2qvo9trz"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Tráiler 3 -->
+            <div class="col m4 s12">
+                <div class="vilpa-trailer-card">
+                    <iframe src="https://www.youtube.com/embed/YOEgFevDFMo?si=f62LNSar7gXGy6Fb"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="row">
+            <!-- Tráiler 1 -->
+            <div class="col m4 s12">
+                <div class="vilpa-trailer-card">
+                    <iframe src="https://www.youtube.com/embed/nC3QvEdhWKU?si=1Q7YomszqVv6HL1Z"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Tráiler 2 -->
+            <div class="col m4 s12">
+                <div class="vilpa-trailer-card">
+                    <iframe src="https://www.youtube.com/embed/eY6p9QdO3qk?si=EvQpxLYeilM-sigV"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Tráiler 3 -->
+            <div class="col m4 s12">
+                <div class="vilpa-trailer-card">
+                    <iframe src="https://www.youtube.com/embed/UR3mZbC1_qU?si=G9rdkEGGq3t9UvPN"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <h4 class="white-text center">Download the Vilpa Max app and watch amazing films online</h4> <br>
+            <div class="row" onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';">
+                <div class="col s6 m3">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/assets/images/cafeVertical.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator white-text centered">CAFE<i
+                                    class="material-icons right">more_vert</i></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col s6 m3">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/assets/images/starlingVertical.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator white-text centered">STARLING<i
+                                    class="material-icons right">more_vert</i></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col s6 m3">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/assets/images/manVertical.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator white-text centered">MAN OF THE HOUR<i
+                                    class="material-icons right">more_vert</i></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col s6 m3">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/assets/images/yardbirdVertical.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator white-text centered">YARDBIRD<i
+                                    class="material-icons right">more_vert</i></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row" onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';">
+                <div class="col s6 m3">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/assets/images/aDayVertical.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator white-text centered">A DAY<i
+                                    class="material-icons right">more_vert</i></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col s6 m3">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/assets/images/seahorseVertical.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator white-text centered">THE SEAHORSE TRAINER<i
+                                    class="material-icons right">more_vert</i></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col s6 m3">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/assets/images/wavesVertical.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator white-text centered">Waves 98<i
+                                    class="material-icons right">more_vert</i></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col s6 m3">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/assets/images/poofVertical.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator white-text centered">POOF<i
+                                    class="material-icons right">more_vert</i></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="container centered" style="color: lightgrey;">
+                Copyright © <a href="/" style="color: lightgrey;">2025 Vilpa Films - All rights reserved.</a> <br><br>
+            </div>
+        </div>
+    </div>
+</div>
