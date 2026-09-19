@@ -328,13 +328,13 @@
             const rutaActual = window.location.pathname;
 
             // Solo ejecutamos esto si estamos en la ruta correcta
-            if (rutaActual === "/max/redsea" || rutaActual === "/max/redsea/") {
+            if (rutaActual === "/vilpa-max-trailers" || rutaActual === "/vilpa-max-trailers") {
 
                 // 1. Ocultar la navegación y el footer
                 const elementosAOcultar = [
 
-                    document.querySelector(".theSuperNav"),
-                    document.querySelector("footer")
+
+                    document.querySelector(".navDiv")
                 ];
 
                 elementosAOcultar.forEach(elemento => {
@@ -343,15 +343,36 @@
                     }
                 });
 
-                // 2. Inyectar CSS para forzar fondo negro
-                const estiloInyectado = document.createElement('style');
-                estiloInyectado.textContent = `
-        /* Aplicamos el negro al body, divs, y a bodyPrincipal (ya sea clase o ID) */
-        body, div, .bodyPrincipal, #bodyPrincipal {
-          background-color: #000000 !important;
-        }
-      `;
-                document.head.appendChild(estiloInyectado);
+
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const rutaActual = window.location.pathname;
+
+            // Variables para los elementos
+            const navNormal = document.querySelector(".navDiv");
+            const navTrailers = document.getElementById("nav-trailers");
+
+            // Solo ejecutamos esto si estamos en la ruta de trailers (soporta con o sin slash final)
+            if (rutaActual === "/vilpa-max-trailers" || rutaActual === "/vilpa-max-trailers/") {
+
+                // 1. Ocultar la navegación normal
+                if (navNormal) {
+                    navNormal.style.display = "none";
+                }
+
+                // 2. Mostrar la nueva barra sticky (usamos flex para no romper el diseño)
+                if (navTrailers) {
+                    navTrailers.style.display = "flex";
+                }
+
+            } else {
+                // Regla de seguridad por si el script se carga en otras páginas
+                if (navTrailers) {
+                    navTrailers.style.display = "none";
+                }
             }
         });
     </script>

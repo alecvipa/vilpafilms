@@ -1,11 +1,34 @@
-<!-- CONTENEDOR PRINCIPAL DEL HERO (Estilo Netflix) -->
-<div style="position: relative; width: 100%; height: 85vh; background-color: #141414; overflow: hidden;">
+<!-- NAV BAR STICKY (Especial para Conversión) -->
+<div id="nav-trailers"
+    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 70px; background: linear-gradient(to bottom, rgba(20,20,20,0.95) 0%, rgba(20,20,20,0.7) 60%, transparent 100%); z-index: 100; justify-content: space-between; align-items: center; padding: 0 4%; box-sizing: border-box; transition: background-color 0.3s ease;">
+    <!-- Logo -->
+    <div style="display: flex; align-items: center; cursor: pointer;"
+        onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';">
+        <img src="/assets/images/vilpaMaxTransparent.png" alt="Vilpa Max Logo"
+            style="height: 50px; object-fit: contain;">
+    </div>
 
+    <!-- Botón -->
+    <div>
+        <a onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';"
+            class="waves-effect waves-light"
+            style="background-color: #E50914; color: white; padding: 8px 16px; border-radius: 4px; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.5px; text-decoration: none; display: inline-block; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+            Download The App
+        </a>
+    </div>
+</div>
+<!-- FIN NAV BAR STICKY -->
+
+
+<!-- CONTENEDOR PRINCIPAL DEL HERO (Estilo Netflix) -->
+<!-- Se añadió padding-top: 70px para que la nav bar y el Smart App Banner no tapen el contenido -->
+<div
+    style="position: relative; width: 100%; height: 85vh; background-color: #141414; overflow: hidden; padding-top: 70px; box-sizing: border-box;">
 
     <!-- CAPA 1: EL VIDEO DE VIMEO DE FONDO -->
     <!-- Aquí está tu URL exacta con el hash de seguridad y el parámetro de background -->
     <iframe
-        src="https://player.vimeo.com/video/1221546446?h=1c1af9cf19&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1"
+        src="https://player.vimeo.com/video/1228369738?h=1e8c4be865&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1"
         frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         style="position: absolute; top: 50%; left: 50%; width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.77vh; transform: translate(-50%, -50%); z-index: 1;"
@@ -26,20 +49,21 @@
             <!-- Logo o Título -->
             <h1 class="white-text"
                 style="font-weight: 800; font-size: 4rem; margin-top: 0; line-height: 1; text-transform: uppercase;">
-                Edge of Space</h1>
+                Watch Your Favorite Films</h1>
 
-            <!-- Metadatos de la película -->
-            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                <span class="green-text text-accent-3" style="font-weight: bold;">99% Match</span>
-                <span class="white-text">2026</span>
-                <span style="border: 1px solid white; padding: 2px 6px; color: white; font-size: 0.8rem;">16+</span>
+            <!-- Metadatos (Simples y reconocibles) -->
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px; flex-wrap: wrap;">
+                <span class="green-text text-accent-3" style="font-weight: bold;">New Releases</span>
+                <span class="white-text">Original Series</span>
+                <span
+                    style="border: 1px solid white; padding: 2px 6px; color: white; font-size: 0.8rem;">Exclusive Content</span>
             </div>
 
-            <!-- Sinopsis -->
-            <p class="white-text" style="font-size: 1.2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                Set in 1961, during the height of the US-Soviet space race, an ambitious USAF test pilot is recruited by
-                NASA for a daring suborbital mission in an X-15 hypersonic rocket-powered aircraft with astronomical
-                implications.
+            <!-- Sinopsis Clara y Directa -->
+            <p class="white-text"
+                style="font-size: 1.2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); margin-bottom: 30px;">
+                Enjoy a premium selection of movies, original series, and captivating short films. Stream it all
+                anytime, anywhere on the Vilpa Max app.
             </p>
 
             <!-- Botones de Acción -->
@@ -105,14 +129,14 @@
     </style>
 
     <div class="DivCards">
-        
+
         <div class="container">
             <!-- Título de la fila -->
-        <div class="row" style="margin-bottom: 5px;">
-            <div class="col s12">
-                <h5 class="section-title">Trending on Vilpa Max</h5>
+            <div class="row" style="margin-bottom: 5px;">
+                <div class="col s12">
+                    <h5 class="section-title">Trending on Vilpa Max</h5>
+                </div>
             </div>
-        </div>
             <div class="row">
                 <div class="col s12 m4">
                     <div class="card pointer">
@@ -145,6 +169,13 @@
                                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                             </h6>
+                            <div class="center">
+                                <a onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';"
+                                    class="waves-effect waves-light "
+                                    style="background-color: #E50914; color: white; padding: 8px 16px; border-radius: 4px; font-weight: 600; font-size: 1rem; letter-spacing: 0.5px; text-decoration: none; display: inline-block; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                                    Continue watching on Vilpa Max
+                                </a>
+                            </div>
 
                         </div>
                     </div>
@@ -179,8 +210,14 @@
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
-                            </h6>
-
+                            </h6> <br>
+                            <div class="center">
+                                <a onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';"
+                                    class="waves-effect waves-light "
+                                    style="background-color: #E50914; color: white; padding: 8px 16px; border-radius: 4px; font-weight: 600; font-size: 1rem; letter-spacing: 0.5px; text-decoration: none; display: inline-block; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                                    Continue watching on Vilpa Max
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -215,6 +252,13 @@
                                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                             </h6>
+                            <div class="center">
+                                <a onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';"
+                                    class="waves-effect waves-light "
+                                    style="background-color: #E50914; color: white; padding: 8px 16px; border-radius: 4px; font-weight: 600; font-size: 1rem; letter-spacing: 0.5px; text-decoration: none; display: inline-block; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                                    Continue watching on Vilpa Max
+                                </a>
+                            </div>
 
                         </div>
                     </div>
@@ -250,7 +294,14 @@
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
-                            </h6>
+                            </h6> <br>
+                            <div class="center">
+                                <a onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';"
+                                    class="waves-effect waves-light "
+                                    style="background-color: #E50914; color: white; padding: 8px 16px; border-radius: 4px; font-weight: 600; font-size: 1rem; letter-spacing: 0.5px; text-decoration: none; display: inline-block; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                                    Continue watching on Vilpa Max
+                                </a>
+                            </div>
 
                         </div>
                     </div>
@@ -287,6 +338,13 @@
                                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                             </h6>
+                            <div class="center">
+                                <a onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';"
+                                    class="waves-effect waves-light "
+                                    style="background-color: #E50914; color: white; padding: 8px 16px; border-radius: 4px; font-weight: 600; font-size: 1rem; letter-spacing: 0.5px; text-decoration: none; display: inline-block; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                                    Continue watching on Vilpa Max
+                                </a>
+                            </div>
 
                         </div>
                     </div>
@@ -322,6 +380,13 @@
                                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                             </h6>
+                            <div class="center">
+                                <a onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';"
+                                    class="waves-effect waves-light "
+                                    style="background-color: #E50914; color: white; padding: 8px 16px; border-radius: 4px; font-weight: 600; font-size: 1rem; letter-spacing: 0.5px; text-decoration: none; display: inline-block; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                                    Continue watching on Vilpa Max
+                                </a>
+                            </div>
 
                         </div>
                     </div>
@@ -332,7 +397,7 @@
         </div>
     </div>
 
-    
+
     <div>
         <div class="container">
             <h4 class="white-text center">Download the Vilpa Max app and watch amazing films online</h4> <br>
@@ -437,10 +502,6 @@
                 </div>
             </div>
         </div>
-        <div class="">
-            <div class="container centered" style="color: lightgrey;">
-                Copyright © <a href="/" style="color: lightgrey;">2025 Vilpa Films - All rights reserved.</a> <br><br>
-            </div>
-        </div>
+
     </div>
 </div>
