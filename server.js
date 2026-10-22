@@ -208,9 +208,9 @@ app.get('/articles/script-screen-winner-finalists', function (req, res) {
     var params = req.params.params;
     res.render('script-screen-winner-finalists');
 });
-app.get('/articles/vilpa-talents-grammys', function (req, res) {
+app.get('/articles/entre-les-mots', function (req, res) {
     var params = req.params.params;
-    res.render('vilpa-talents-grammys');
+    res.render('entre-les-mots');
 });
 app.get('/articles/contact-hours-interview', function (req, res) {
     var params = req.params.params;
