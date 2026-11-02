@@ -1,134 +1,288 @@
-<div class="broadkstDiv">
-    <div class="adsDiv">
-        <div class="heroBannerAds">
+<style>
+    /* VILPA MAX - PREMIUM STREAMING QUALIFYING PROGRAM STYLES */
+    .vilpa-sqp-wrapper {
+        background-color: #050505;
+        color: #e0e0e0;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        padding-bottom: 60px;
+        line-height: 1.6;
+    }
 
-            <div class="heroBannerContent">
-                <h3>Filmmakers</h3>
-                <h2 class="bolderFont titleStreamingProgram">Streaming Qualifying Program</h2>
+    .vilpa-sqp-hero {
+        text-align: center;
+        padding: 80px 20px 60px;
+        background: radial-gradient(circle at center, #1a1a24 0%, #050505 100%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
 
+    .vilpa-sqp-hero h3 {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: #8c8c9b;
+        margin-bottom: 10px;
+    }
 
-            </div>
-            {{!-- <button id="soundButton" class="sound-button" type="button" aria-label="Unmute video">
-                🔇 Unmute
-            </button> --}}
+    .vilpa-sqp-hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0 0 20px 0;
+        letter-spacing: -0.5px;
+    }
+
+    .vilpa-sqp-hero .premium-hook {
+        font-family: 'Georgia', serif; /* A touch of cinematic elegance */
+        font-size: 1.8rem;
+        font-style: italic;
+        color: #d1d1db;
+        max-width: 800px;
+        margin: 0 auto;
+        font-weight: 400;
+    }
+
+    .vilpa-sqp-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .vilpa-sqp-intro {
+        text-align: center;
+        max-width: 900px;
+        margin: 60px auto;
+        font-size: 1.1rem;
+        color: #b0b0b0;
+    }
+
+    .vilpa-sqp-status-box {
+        background: rgba(41, 121, 255, 0.05);
+        border: 1px solid rgba(41, 121, 255, 0.2);
+        border-radius: 8px;
+        padding: 25px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .vilpa-sqp-status-box .status-title {
+        color: #2979FF;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+
+    /* CSS Grid for Steps - Cards layout */
+    .vilpa-sqp-steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-bottom: 60px;
+    }
+
+    .vilpa-sqp-step-card {
+        background: #0f0f0f;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 30px 25px;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .vilpa-sqp-step-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(41, 121, 255, 0.5);
+    }
+
+    .vilpa-sqp-step-number {
+        font-size: 4rem;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.03);
+        position: absolute;
+        top: -10px;
+        right: 10px;
+        line-height: 1;
+    }
+
+    .vilpa-sqp-step-card h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 0 0 15px 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .vilpa-sqp-step-card p {
+        font-size: 0.95rem;
+        color: #9e9e9e;
+        margin: 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .vilpa-sqp-highlight {
+        color: #ffffff;
+        font-weight: 600;
+    }
+
+    .vilpa-sqp-submit-area {
+        background: #0a0a0f;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 60px 0;
+        margin-bottom: 60px;
+    }
+
+    .vilpa-sqp-stripe-grid {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .vilpa-sqp-terms-section {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .vilpa-sqp-btn-secondary {
+        display: inline-block;
+        background: transparent;
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 12px 30px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: background 0.3s, border-color 0.3s;
+        margin: 20px 0;
+        cursor: pointer;
+    }
+
+    .vilpa-sqp-btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: #ffffff;
+    }
+
+    .vilpa-sqp-disclaimer {
+        background: rgba(255, 60, 60, 0.05);
+        border-left: 3px solid #ff3c3c;
+        padding: 20px;
+        text-align: left;
+        font-size: 0.9rem;
+        color: #b0b0b0;
+        margin-top: 40px;
+        border-radius: 0 4px 4px 0;
+    }
+
+    .vilpa-sqp-disclaimer strong {
+        color: #ff3c3c;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+        .vilpa-sqp-hero h1 { font-size: 2.2rem; }
+        .vilpa-sqp-hero .premium-hook { font-size: 1.3rem; }
+        .vilpa-sqp-stripe-grid { flex-direction: column; align-items: center; gap: 20px; }
+    }
+</style>
+
+<div class="vilpa-sqp-wrapper">
+    <!-- Hero Section -->
+    <div class="vilpa-sqp-hero">
+        <div class="vilpa-sqp-container">
+            <h3>Filmmakers</h3>
+            <h1>Streaming Qualifying Program</h1>
+            <!-- The Hook: Positioned as a strong H2 -->
+            <h2 class="premium-hook">"Ensure your work shares the screen directly alongside Oscar-winning films and A-List talent."</h2>
         </div>
     </div>
-    <div class="">
-        <div class="container ">
-            <div class="row"> <br> <br>
 
-                <div class="col s12 m12 ">
-                    <h5>The Vilpa Max Streaming Qualifying Program supports independent filmmakers in their quest for
-                        premium global distribution. We carefully curate a highly exclusive lineup of independent
-                        feature films and shorts across all genres—documentary, narrative, and animation—to serve as our
-                        official qualifying streaming run. <br> <br>
+    <div class="vilpa-sqp-container">
+        <!-- Intro Description -->
+        <div class="vilpa-sqp-intro">
+            <p>The Vilpa Max Streaming Qualifying Program supports independent filmmakers in their quest for premium global distribution. We carefully curate a highly exclusive lineup of independent <strong>short films</strong> across all genres—documentary, narrative, and animation—to serve as our official qualifying streaming run.</p>
+            <p>All officially selected films will secure long-term placement on the Vilpa Max platform, gaining direct access to our global audience and robust distribution infrastructure starting with our official ecosystem launch in Q1 2027.</p>
+            <p>For questions about this qualifying program or other filmmaker services, please contact <a href="mailto:business@vilpafilms.com" style="color: #2979FF; text-decoration: none;">business@vilpafilms.com</a>.</p>
+        </div>
 
-                        Our program ensures your work shares the screen directly alongside Oscar-winning films and
-                        A-List talent. All officially selected films will secure long-term placement on the Vilpa Max
-                        platform, gaining direct access to our global audience and robust distribution infrastructure
-                        starting with our official ecosystem launch in Q1 2027. <br> <br>
+        <!-- Status Box -->
+        <div class="vilpa-sqp-status-box">
+            <div class="status-title">Current Season Status</div>
+            <p style="margin: 0; color: #e0e0e0;">We are actively finalizing the curated lineup for our Q1 2027 premiere catalog. Due to our rigorous curation standards and platform capacity, available slots are limited.</p>
+            <p style="margin: 10px 0 0 0; font-size: 0.9rem; color: #9e9e9e;">Any submissions received from <span style="color: #ffffff; font-weight: 600;">December 24th, 2026</span> onward will be considered for qualifying programs in the subsequent 2027 seasons.</p>
+        </div>
 
-                        If you have questions about this qualifying program or other filmmaker services, please get in
-                        touch with <span class="blue-text">business@vilpafilms.com.</span></h5>
-                </div>
+        <!-- Process Steps (Card Grid) -->
+        <div class="vilpa-sqp-steps-grid">
+            <div class="vilpa-sqp-step-card">
+                <div class="vilpa-sqp-step-number">1</div>
+                <h4>Application</h4>
+                <!-- Changed 'fee' to 'Application & Technical Review' -->
+                <p>Apply for the Streaming Qualifying Program by selecting your category below and submitting your secure Application & Technical Review.</p>
             </div>
-            <div class="row">
-                <div class="col s12 m12 ">
-                    <h5 class="bolderFont">Current Season Status:</h5>
-                    <h5>We are actively finalizing the curated lineup for our Q1 2027 premiere catalog. Due to our
-                        rigorous
-                        curation standards and platform capacity, available slots are limited. <br>
-                        <br>
-
-                        Any submissions received from <span class="blue-text">December 24th, 2026</span> onward will be
-                        considered for qualifying programs in
-                        the subsequent 2027 seasons.
-                    </h5>
-                </div>
-
-            </div>
-            <div class="row grayBgSteps">
-                <div class="col s12 m12 ">
-                    <ul>
-                        <li>
-                            <h5 class="bolderFont">Step 1: Application</h5>
-                            <h5>Apply for the Streaming Qualifying Program by selecting your category below and
-                                submitting your secure qualifying fee.</h5>
-                        </li>
-                        <li>
-                            <h5 class="bolderFont">Step 2: Curation</h5>
-                            <h5>Our selection committee reviews all entries. Officially selected films will be slated
-                                directly into our upcoming Q1 2027 premiere catalog.</h5>
-                        </li>
-                        <li>
-                            <h5 class="bolderFont">Step 3: Technical Deliverables</h5>
-                            <h5>If selected, you must provide a high-quality digital master for streaming (e.g., ProRes
-                                or high-bitrate H.264/MP4), along with closed captions/SRT files and official
-                                promotional artwork.</h5>
-                        </li>
-                       
-                        <li>
-                            <h5 class="bolderFont">Step 4: The Qualifying Run Terms</h5>
-                            <h5>To fulfill the program requirements, officially selected films are granted a <span
-                                    class="bolderFont">1-year
-                                    unpaid</span> promotional placement on the Vilpa Max platform. This non-exclusive
-                                window serves
-                                as your official qualifying streaming run, positioning your work directly alongside our
-                                premium A-List catalog.</h5>
-                        </li>
-                        <li>
-                            <h5 class="bolderFont">Step 5: Onboarding</h5>
-                            <h5>Once your streaming placement is confirmed, our team will send you the official
-                                placement agreement and the technical checklist to securely upload your materials.</h5>
-                        </li>
-                    </ul>
-                </div>
+            
+            <div class="vilpa-sqp-step-card">
+                <div class="vilpa-sqp-step-number">2</div>
+                <h4>Curation</h4>
+                <p>Our selection committee reviews all entries. Officially selected films will be slated directly into our upcoming Q1 2027 premiere catalog.</p>
             </div>
 
+            <div class="vilpa-sqp-step-card">
+                <div class="vilpa-sqp-step-number">3</div>
+                <h4>Deliverables</h4>
+                <p>If selected, provide a high-quality digital master (ProRes or high-bitrate H.264/MP4), closed captions/SRT files, and official promotional artwork.</p>
+            </div>
+
+            <div class="vilpa-sqp-step-card">
+                <div class="vilpa-sqp-step-number">4</div>
+                <h4>The Run</h4>
+                <p>Selected films are granted a <span class="vilpa-sqp-highlight">1-year unpaid</span> promotional placement. This window serves as your official streaming run, alongside our premium catalog.</p>
+            </div>
+
+            <div class="vilpa-sqp-step-card">
+                <div class="vilpa-sqp-step-number">5</div>
+                <h4>Onboarding</h4>
+                <p>Once confirmed, our team will send the official placement agreement and the technical checklist to securely upload your materials.</p>
+            </div>
         </div>
     </div>
 
-
-    <div class="bannerSubmit">
-        <div class="container">
-            <div class="row centered">
-                <div class="col s12 m6">
-                    <script async src="https://js.stripe.com/v3/buy-button.js">
-                    </script>
-
-                    <stripe-buy-button buy-button-id="buy_btn_1T6bmWGyOvmlXVnJCh55fiiK"
-                        publishable-key="pk_live_ir7Yaz9X1yMc2ByMqMsArvkI00FliCA43t">
-                    </stripe-buy-button>
+    <!-- Submit Area (Stripe Buttons) -->
+    <div class="vilpa-sqp-submit-area">
+        <div class="vilpa-sqp-container">
+            <div class="vilpa-sqp-stripe-grid">
+                <div>
+                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                    <stripe-buy-button buy-button-id="buy_btn_1T6bmWGyOvmlXVnJCh55fiiK" publishable-key="pk_live_ir7Yaz9X1yMc2ByMqMsArvkI00FliCA43t"></stripe-buy-button>
                 </div>
-                <div class="col s12 m6">
-                    <script async src="https://js.stripe.com/v3/buy-button.js">
-                    </script>
-
-                    <stripe-buy-button buy-button-id="buy_btn_1T6c1MGyOvmlXVnJnbsM3FIR"
-                        publishable-key="pk_live_ir7Yaz9X1yMc2ByMqMsArvkI00FliCA43t">
-                    </stripe-buy-button>
+                <div>
+                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                    <stripe-buy-button buy-button-id="buy_btn_1T6c1MGyOvmlXVnJnbsM3FIR" publishable-key="pk_live_ir7Yaz9X1yMc2ByMqMsArvkI00FliCA43t"></stripe-buy-button>
                 </div>
-
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row centered">
-            <p class="boldL" style="color: blue;">*By applying, you state that you have read and agreed to the terms
-                and conditions of this program*</p>
-            <a class=" centered waves-effect waves-light btn-large #263238 blue-grey darken-4"
-                onclick="location.href='/terms-creatives';">See the terms and conditions first</a>
+
+    <!-- Terms & Disclaimer -->
+    <div class="vilpa-sqp-container">
+        <div class="vilpa-sqp-terms-section">
+            <p style="font-size: 0.9rem; color: #9e9e9e;"><em>*By applying, you state that you have read and agreed to the terms and conditions of this program.</em></p>
+            <a class="vilpa-sqp-btn-secondary" onclick="location.href='/terms-creatives';">Review Terms & Conditions</a>
+            
+            <!-- Elevated, less aggressive disclaimer -->
+            <div class="vilpa-sqp-disclaimer">
+                <strong>Placement Disclaimer</strong>
+                Due to our rigorous curation standards and the platform's commitment to sharing the screen exclusively with Oscar and Cannes-caliber works, the application & technical review costs are definitive and non-refundable. If a submission is not selected for this season, it cannot be reapplied in the future. We highly encourage you to review your materials carefully to ensure your project is presented at its absolute best.
+            </div>
         </div>
     </div>
-
-    <div class="container">
-        <p class="boldL" style="color: red;">
-            Disclaimer:
-            Please note that if your submission is not accepted, you will not be able to reapply with
-            the same film in the future. The submission fee is non-refundable under any circumstances. We encourage
-            you to carefully review your materials before submitting to ensure your project is presented at its
-            best.
-        </p>
-    </div>
-</div> <br>
 </div>
