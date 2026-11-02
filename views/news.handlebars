@@ -1,197 +1,355 @@
-<div class="newsDiv ">
-    <div class="container ">
-        <div class="row">
-            <div class="borderCardsNews card #212121 grey darken-4 pointer"
-                onclick="location.href='/articles/vilpa-oracle-launch';">
-                <div class="card-content white-text">
-                    <span class="card-title orange-text bolderFont " style="font-size: 20px;">Breaking News</span>
-                    <hr>
-                    <h4 class=" center">Vilpa Films to Launch "Vilpa Oracle." <br> </h4>
-                    <h5 class=" center orange-text">The next generation intelligence for film production</h5> <br>
-                    <hr>
-                    <p style="font-size: 20px;">Read More...</p>
-                </div>
+<style>
+    /* --- ESTÉTICA PREMIUM PARA NEWSROOM (VILPA) --- */
+    .newsDiv {
+        background-color: #030305;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        padding: 60px 0;
+    }
 
+    /* Noticia Principal (Breaking News) - Estilo Banner Ejecutivo */
+    .breaking-news-card {
+        background: linear-gradient(135deg, #0a0a0f 0%, #101015 100%);
+        border: 1px solid rgba(229, 9, 20, 0.2); /* Rojo corporativo Vilpa */
+        border-radius: 12px;
+        padding: 50px 40px;
+        text-align: center;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        margin-bottom: 40px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .breaking-news-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+        border-color: rgba(229, 9, 20, 0.5); /* Rojo más intenso al hover */
+    }
+
+    .breaking-news-tag {
+        color: #E50914; /* Rojo corporativo Vilpa */
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    .breaking-news-card h4 {
+        font-family: 'Georgia', serif;
+        font-size: 2.8rem;
+        color: #ffffff;
+        margin: 0 0 15px 0;
+        line-height: 1.2;
+    }
+
+    .breaking-news-card h5 {
+        font-size: 1.2rem;
+        color: #a0a0b0;
+        font-weight: 300;
+        margin: 0 0 30px 0;
+    }
+    
+    .read-more-link {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        border-bottom: 1px solid #E50914; /* Subrayado rojo */
+        padding-bottom: 4px;
+        transition: color 0.3s;
+    }
+
+    /* Tarjetas de Grilla (Noticias Regulares) */
+    .editorial-card {
+        background: transparent;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        box-shadow: none;
+    }
+
+    .editorial-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .editorial-img-container {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        margin-bottom: 15px;
+    }
+
+    .editorial-img-container img {
+        width: 100%;
+        display: block;
+        transition: transform 0.6s ease;
+    }
+
+    .editorial-card:hover .editorial-img-container img {
+        transform: scale(1.05);
+    }
+
+    .editorial-content {
+        padding: 5px 10px;
+    }
+
+    .editorial-tag {
+        color: #E50914; /* Rojo corporativo Vilpa */
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .editorial-title {
+        font-family: 'Georgia', serif;
+        font-size: 1.3rem;
+        color: #ffffff;
+        margin: 0 0 5px 0;
+        line-height: 1.3;
+    }
+    
+    .editorial-title.large {
+        font-size: 1.8rem;
+    }
+
+    .editorial-date {
+        color: #6e6e7d;
+        font-size: 0.85rem;
+    }
+
+    /* Sección Latest News (Estilo Lista Ejecutiva) */
+    .newsDivLatest-premium {
+        background-color: #141415;
+        padding: 60px 0;
+        border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .news-main-title {
+        font-family: 'Georgia', serif;
+        font-size: 2.2rem;
+        color: #ffffff;
+        margin-bottom: 40px;
+        border-left: 4px solid #E50914; /* Borde izquierdo rojo */
+        padding-left: 15px;
+    }
+
+    .news-row-premium {
+        padding: 20px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        transition: background 0.4s ease;
+        align-items: center; /* Alinea verticalmente imagen y texto */
+    }
+
+    .news-row-premium:hover {
+        background: rgba(255,255,255,0.03);
+    }
+
+    .news-row-premium .category-tag {
+        color: #E50914; /* Rojo corporativo Vilpa */
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+
+    .news-row-premium h4 {
+        font-family: 'Georgia', serif;
+        font-size: 1.6rem;
+        color: #ffffff;
+        margin: 0 0 10px 0;
+        line-height: 1.3;
+    }
+
+    .news-row-premium .date-text {
+        color: #6e6e7d;
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    hr.lineStyle {
+        border: 0;
+        height: 1px;
+        background: rgba(255,255,255,0.05);
+        margin: 10px 0;
+    }
+</style>
+
+<div class="newsDiv">
+    <div class="container">
+        
+        <!-- BREAKING NEWS: VILPA ORACLE (Diseño Hero) -->
+        <div class="row">
+            <div class="col s12">
+                <div class="breaking-news-card pointer" onclick="location.href='/articles/vilpa-oracle-launch';">
+                    <span class="breaking-news-tag">Breaking News</span>
+                    <h4>Vilpa Films to Launch "Vilpa Oracle."</h4>
+                    <h5>The next generation intelligence for film production</h5>
+                    <div style="margin-top: 20px;">
+                        <span class="read-more-link">Read Full Announcement</span>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- NOTICIA DESTACADA (Full Width) -->
         <div class="row">
             <div class="col s12 m12">
-                <div class="card borderCardsNews overflowHidden pointer ">
-                    <div class="card-image zoom">
-                        <img src="/assets/images/howAloneNews.jpg" class="imageBorderNews ">
-
+                <div class="editorial-card pointer">
+                    <div class="editorial-img-container">
+                        <img src="/assets/images/howAloneNews.jpg" alt="How To Be Alone">
                     </div>
-                    <div class="borderCardsNews2 card-action #212121 grey darken-4">
-                        <span class="card-title orange-text bolderFont" style="font-size: 15px;">Premiere on Vilpa
-                            Max</span> <br>
-
-                        <span class="card-title white-text">How To Be Alone - Featuring Stranger Things Star Joe Keery
-                            <br> <span class="dateAesteticTitle">July 24, 2026</span></span>
-
+                    <div class="editorial-content">
+                        <span class="editorial-tag">Premiere on Vilpa Max</span>
+                        <h3 class="editorial-title large">How To Be Alone - Featuring Stranger Things Star Joe Keery</h3>
+                        <span class="editorial-date">July 24, 2026</span>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- GRILLA DE 3 COLUMNAS (FILA 1) -->
         <div class="row">
+            <!-- Ugly Chickens -->
             <div class="col s12 m4">
-                <div class="card borderCardsNews overflowHidden pointer ">
-                    <div class="card-image zoom">
-                        <img src="/assets/images/uglyNews.jpg" class="imageBorderNews ">
-
+                <div class="editorial-card pointer">
+                    <div class="editorial-img-container">
+                        <img src="/assets/images/uglyNews.jpg" alt="The Ugly Chickens">
                     </div>
-                    <div class="borderCardsNews2 card-action #212121 grey darken-4">
-                        <span class="card-title orange-text bolderFont" style="font-size: 15px;">Now Streaming</span>
-                        <br>
-
-                        <span class="card-title white-text">The Ugly Chickens
-                            <br> <span class="dateAesteticTitle">July 15, 2026</span></span>
-
+                    <div class="editorial-content">
+                        <span class="editorial-tag">Now Streaming</span>
+                        <h3 class="editorial-title">The Ugly Chickens</h3>
+                        <span class="editorial-date">July 15, 2026</span>
                     </div>
                 </div>
             </div>
+            <!-- Query -->
             <div class="col s12 m4">
-                <div class="card borderCardsNews overflowHidden pointer ">
-                    <div class="card-image zoom">
-                        <img src="/assets/images/queryNews.jpg" class="imageBorderNews ">
-
+                <div class="editorial-card pointer">
+                    <div class="editorial-img-container">
+                        <img src="/assets/images/queryNews.jpg" alt="Query">
                     </div>
-                    <div class="borderCardsNews2 card-action #212121 grey darken-4">
-                        <span class="card-title orange-text bolderFont" style="font-size: 15px;">Now Streaming</span>
-                        <br>
-
-                        <span class="card-title white-text">Query
-                            <br> <span class="dateAesteticTitle">July 07, 2026</span></span>
-
+                    <div class="editorial-content">
+                        <span class="editorial-tag">Now Streaming</span>
+                        <h3 class="editorial-title">Query</h3>
+                        <span class="editorial-date">July 07, 2026</span>
                     </div>
                 </div>
             </div>
+            <!-- Blue Shades -->
             <div class="col s12 m4">
-                <div class="card borderCardsNews overflowHidden pointer "
-                    onclick="location.href='/articles/inside-blue-shades';">
-                    <div class="card-image zoom">
-                        <img src="/assets/images/blueShadesNews.jpg" class="imageBorderNews ">
-
+                <div class="editorial-card pointer" onclick="location.href='/articles/inside-blue-shades';">
+                    <div class="editorial-img-container">
+                        <img src="/assets/images/blueShadesNews.jpg" alt="Blue Shades">
                     </div>
-                    <div class="borderCardsNews2 card-action #212121 grey darken-4">
-                        <span class="card-title orange-text bolderFont" style="font-size: 15px;">Coming Soon</span> <br>
-
-                        <span class="card-title white-text">Blue Shades
-                            <br> <span class="dateAesteticTitle">July 01, 2026</span></span>
-
+                    <div class="editorial-content">
+                        <span class="editorial-tag">Coming Soon</span>
+                        <h3 class="editorial-title">Blue Shades</h3>
+                        <span class="editorial-date">July 01, 2026</span>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- GRILLA DE 3 COLUMNAS (FILA 2) -->
         <div class="row">
+            <!-- Rock Paper Scissors -->
             <div class="col s12 m4">
-                <div class="card borderCardsNews overflowHidden pointer "
-                    onclick="location.href='/articles/rock-paper-scissors';">
-                    <div class="card-image zoom">
-                        <img src="/assets/images/rockNews.jpg" class="imageBorderNews ">
-
+                <div class="editorial-card pointer" onclick="location.href='/articles/rock-paper-scissors';">
+                    <div class="editorial-img-container">
+                        <img src="/assets/images/rockNews.jpg" alt="Rock, Paper, Scissors">
                     </div>
-                    <div class="borderCardsNews2 card-action #212121 grey darken-4">
-                        <span class="card-title orange-text bolderFont" style="font-size: 15px;">Now Streaming</span>
-                        <br>
-
-                        <span class="card-title white-text" style="font-size: 22px !important;">Rock, Paper, Scissors
-                            <br> <span class="dateAesteticTitle">July 13, 2026</span></span>
-
+                    <div class="editorial-content">
+                        <span class="editorial-tag">Now Streaming</span>
+                        <h3 class="editorial-title">Rock, Paper, Scissors</h3>
+                        <span class="editorial-date">July 13, 2026</span>
                     </div>
                 </div>
             </div>
+            <!-- SKIN -->
             <div class="col s12 m4">
-                <div class="card borderCardsNews overflowHidden pointer "
-                    onclick="location.href='/articles/skin-premiered-vilpamax';">
-                    <div class="card-image zoom">
-                        <img src="/assets/images/skinNews.jpg" class="imageBorderNews zoom">
-
+                <div class="editorial-card pointer" onclick="location.href='/articles/skin-premiered-vilpamax';">
+                    <div class="editorial-img-container">
+                        <img src="/assets/images/skinNews.jpg" alt="SKIN">
                     </div>
-                    <div class="borderCardsNews2 card-action #212121 grey darken-4">
-                        <span class="card-title orange-text bolderFont" style="font-size: 15px;">Now Streaming</span>
-                        <br>
-
-                        <span class="card-title white-text">SKIN
-                            <br> <span class="dateAesteticTitle">July 05, 2026</span></span>
-
+                    <div class="editorial-content">
+                        <span class="editorial-tag">Now Streaming</span>
+                        <h3 class="editorial-title">SKIN</h3>
+                        <span class="editorial-date">July 05, 2026</span>
                     </div>
                 </div>
             </div>
+            <!-- Jansen -->
             <div class="col s12 m4">
-                <div class="card borderCardsNews overflowHidden pointer ">
-                    <div class="card-image zoom">
-                        <img src="/assets/images/jansenNews.jpg" class="imageBorderNews ">
-
+                <div class="editorial-card pointer">
+                    <div class="editorial-img-container">
+                        <img src="/assets/images/jansenNews.jpg" alt="The Undertone of David Jansen">
                     </div>
-                    <div class="borderCardsNews2 card-action #212121 grey darken-4">
-                        <span class="card-title orange-text bolderFont" style="font-size: 15px;">Coming Soon</span> <br>
-
-                        <span class="card-title white-text" style="font-size: 22px !important;">The Undertone of David
-                            Jansen
-                            <br> <span class="dateAesteticTitle">July 01, 2026</span></span>
-
+                    <div class="editorial-content">
+                        <span class="editorial-tag">Coming Soon</span>
+                        <h3 class="editorial-title">The Undertone of David Jansen</h3>
+                        <span class="editorial-date">July 01, 2026</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="newsDivLatest">
-        <div class="container pointer">
-            <h4>Latest News</h4>
-            <div class="row pointer " onclick="location.href='/articles/entre-les-mots';">
-                <div class="col s12 m4">
-                    <div class="card borderCardsNews overflowHidden pointer ">
-                        <div class="card-image zoom">
-                            <img src="/assets/images/entrelesmots.webp" class="imageBorderNews ">
+</div>
 
-                        </div>
-                    </div>
+<!-- LATEST NEWS (Estilo Lista Ejecutiva) -->
+<div class="newsDivLatest-premium">
+    <div class="container pointer">
+        <h4 class="news-main-title">Latest News</h4>
+        
+        <!-- Entre les mots -->
+        <div class="row pointer news-row-premium" onclick="location.href='/articles/entre-les-mots';">
+            <div class="col s12 m4">
+                <div class="editorial-img-container" style="margin-bottom: 0;">
+                    <img src="/assets/images/entrelesmots.webp" alt="Entre les mots">
                 </div>
-                <div class="col s12 m8">
-                    <p>PRESS RELEASE</p>
-                    <h4>Finding a Voice: Farid Ismail on Between the Words (Entre les mots)
-                    </h4>
-                    <p>Oct 22, 2026</p>
-                </div>
-
             </div>
-            <hr class="lineStyle">
-            <div class="row pointer " onclick="location.href='/articles/script-screen-winner-finalists';">
-                <div class="col s12 m4">
-                    <div class="card borderCardsNews overflowHidden pointer ">
-                        <div class="card-image zoom">
-                            <img src="/assets/images/scripScreen.webp" class="imageBorderNews ">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m8">
-                    <p>PRESS RELEASE</p>
-                    <h4>Vilpa Films Announces Winner and Finalists of 2026 Script to Screen Competition
-                    </h4>
-                    <p>Sep 26, 2026</p>
-                </div>
-
+            <div class="col s12 m8">
+                <p class="category-tag">PRESS RELEASE</p>
+                <h4>Finding a Voice: Farid Ismail on Between the Words (Entre les mots)</h4>
+                <p class="date-text">Oct 22, 2026</p>
             </div>
-            <hr class="lineStyle">
-            <div class="row pointer " onclick="location.href='/articles/contact-hours-interview';">
-                <div class="col s12 m4">
-                    <div class="card borderCardsNews overflowHidden pointer ">
-                        <div class="card-image zoom">
-                            <img src="/assets/images/contactInterview.webp" class="imageBorderNews ">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m8">
-                    <p>PRESS RELEASE</p>
-                    <h4>Contact Hours: The cost of unspoken pain
-                    </h4>
-                    <p>Aug 17, 2026</p>
-                </div>
-
-            </div>
-
         </div>
+        <hr class="lineStyle">
+        
+        <!-- Script to Screen -->
+        <div class="row pointer news-row-premium" onclick="location.href='/articles/script-screen-winner-finalists';">
+            <div class="col s12 m4">
+                <div class="editorial-img-container" style="margin-bottom: 0;">
+                    <img src="/assets/images/scripScreen.webp" alt="Script to Screen">
+                </div>
+            </div>
+            <div class="col s12 m8">
+                <p class="category-tag">PRESS RELEASE</p>
+                <h4>Vilpa Films Announces Winner and Finalists of 2026 Script to Screen Competition</h4>
+                <p class="date-text">Sep 26, 2026</p>
+            </div>
+        </div>
+        <hr class="lineStyle">
+        
+        <!-- Contact Hours -->
+        <div class="row pointer news-row-premium" onclick="location.href='/articles/contact-hours-interview';">
+            <div class="col s12 m4">
+                <div class="editorial-img-container" style="margin-bottom: 0;">
+                    <img src="/assets/images/contactInterview.webp" alt="Contact Hours">
+                </div>
+            </div>
+            <div class="col s12 m8">
+                <p class="category-tag">PRESS RELEASE</p>
+                <h4>Contact Hours: The cost of unspoken pain</h4>
+                <p class="date-text">Aug 17, 2026</p>
+            </div>
+        </div>
+
     </div>
 </div>

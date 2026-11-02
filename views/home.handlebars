@@ -1,260 +1,226 @@
+<style>
+    /* CSS Premium para el resto de la página */
+    .incioDiv {
+        background-color: #141415 !important;
+        color: #ffffff;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    /* Ajustes para los Banners de películas (ej. The Card Counter, After Yang, Ava) */
+    .vilpa-poster-card {
+        background: transparent;
+        border: none;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        margin-bottom: 30px;
+    }
+    
+    .vilpa-poster-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(41, 121, 255, 0.2);
+    }
+    
+    .vilpa-poster-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+    }
+
+    /* Títulos de sección */
+    h5.section-title {
+        color: #a0a0b0;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin: 40px 0 20px 0;
+    }
+    
+    /* El bloque central de texto (Hero / About) */
+    .aboutDiv {
+        padding: 60px 20px;
+        text-align: center;
+        background: linear-gradient(180deg, #0a0a0f 0%, #030305 100%);
+    }
+
+    .titleVilpa-hero {
+        font-family: 'Georgia', serif;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 1.4;
+        color: #e0e0e0;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .titleVilpa-hero span.highlight {
+        color: #ffffff;
+        font-size: 2.2rem;
+    }
+
+    hr.premium-divider {
+        border: 0;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+        margin: 40px 0;
+    }
+
+    /* Grid asimétrica de imágenes / Galería */
+    .vilpa-gallery-img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+        transition: transform 0.4s ease;
+    }
+    
+    .vilpa-gallery-img:hover {
+        transform: scale(1.02);
+    }
+
+    /* Contenedores de Video */
+    .video-container-premium {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        border: 1px solid rgba(255,255,255,0.05);
+        margin-bottom: 20px;
+    }
+</style>
+
 <div class="incioDiv">
     <div class="divBannerMovies"></div>
-    {{!-- <div class="bannerStory1"></div>
-    <div class="bannerStory2"></div> --}}
+
     <div class="aboutDiv">
-        <div class="row">
-            <br>
-            <h5 class="titleVilpa"> <span style="font-weight: bolder; font-size: 3rem;">Vilpa Films</span> production
-                studio and the parent company of the premium streaming platform Vilpa Max, which distributes <span
-                    style="font-weight: bolder; font-size: 2rem;">Cannes and Oscar-winning cinema </span> across the
-                MENA and UK regions. <br><br>
-
-                We oversee the end-to-end creative process, including <span
-                    style="font-weight: bolder; font-size: 2rem;">the production, publishing, and distribution of
-                    original soundtracks</span>, scores, and theme songs for our proprietary slate of animated and
-                live-action
-                originals.
-            </h5>
-
+        <div class="container">
+            <h1 class="titleVilpa-hero">
+                <span class="highlight">Vilpa Films</span> is an international production and distribution company. Owner of the premium streaming platform Vilpa Max, distributing <span class="">Cannes and Oscar-winning cinema</span>.
+            </h1>
         </div>
     </div>
-    <hr>
+    
+    <hr class="premium-divider">
+
     <div class="divProducts">
+        
+        <!-- COMING SOON SECTION -->
         <div class="container">
-            <!-- Título de la fila -->
             <div class="row" style="margin-bottom: 5px;">
-                <div class="col s12">
-                    <h5 class="section-title bolderFont">COMING SOON ON VILPA MAX</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12 m4">
-                    <div class="card pointer">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="/assets/images/cardCounterPoster.webp">
-                        </div>
-                        {{!-- <div class="card-content">
-                            <span class="card-title activator white-text">The Card Counter<br> 2019 - 11 min<i
-                                    class="material-icons right">more_vert</i></span>
-                            <p><a
-                                    class="white-text activator waves-effect waves-light btn-large #bf360c deep-orange darken-4">Watch
-                                    Trailer</a></p>
-                        </div> --}}
-                        {{!-- <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4 ">How to Be Alone<br> 2019 - 11 min <i
-                                    class="material-icons right">close</i></span>
-                            <hr>
-                            <h6>Spoken Language: English</h6>
-                            <h6>Subtitles (CC): English</h6>
-                            <h6>Festival Highlights: (Nominee) SXSW Film Festival </h6>
-                            <hr>
-                            <h6>How To Be Alone follows Lucy, as she struggles to survive an increasingly bizarre and
-                                horrifying night. Lucy most secret fears begin to manifest and attack her, she must
-                                fight for control of her mind, and ultimately her life.
-                                <br> <br>
-                                <div class="vilpa-trailer-card">
-                                    <iframe src="https://www.youtube.com/embed/rNYaWm9y1RA?si=rXB4v9HCoKS8K_rg"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                            </h6>
-                            <div class="center">
-                                <a onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';"
-                                    class="waves-effect waves-light "
-                                    style="background-color: #E50914; color: white; padding: 8px 16px; border-radius: 4px; font-weight: 600; font-size: 1rem; letter-spacing: 0.5px; text-decoration: none; display: inline-block; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">
-                                    Continue watching on Vilpa Max
-                                </a>
-                            </div>
-
-                        </div> --}}
-                    </div>
-
-                </div>
-                <div class="col s12 m4">
-                    <div class="card pointer">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="/assets/images/afterYangPoster.webp">
-                        </div>
-                        {{!-- <div class="card-content">
-                            <span class="card-title activator white-text">The Letter Room<br> 2020 - 33 min<i
-                                    class="material-icons right">more_vert</i></span>
-                            <p><a
-                                    class="white-text activator waves-effect waves-light btn-large #bf360c deep-orange darken-4">Watch
-                                    Trailer</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4 ">The Letter Room<br> 2020 - 33 min <i
-                                    class="material-icons right">close</i></span>
-                            <hr>
-                            <h6>Spoken Language: English</h6>
-                            <h6>Subtitles: English & Arabic</h6>
-                            <h6>Festival Highlights: (Nominee) Academy Awards </h6>
-                            <hr>
-                            <h6>When a corrections officer is transferred to the letter room, he soon finds himself
-                                enmeshed in a prisoner's deeply private life.
-                                <br> <br>
-                                <div class="vilpa-trailer-card">
-                                    <iframe src="https://www.youtube.com/embed/UR3mZbC1_qU?si=G9rdkEGGq3t9UvPN"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                            </h6> <br>
-                            <div class="center">
-                                <a onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';"
-                                    class="waves-effect waves-light "
-                                    style="background-color: #E50914; color: white; padding: 8px 16px; border-radius: 4px; font-weight: 600; font-size: 1rem; letter-spacing: 0.5px; text-decoration: none; display: inline-block; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">
-                                    Continue watching on Vilpa Max
-                                </a>
-                            </div>
-                        </div> --}}
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="card pointer">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="/assets/images/avaPoster.webp">
-                        </div>
-                        {{!-- <div class="card-content">
-                            <span class="card-title activator white-text">Mr. Hublot<br> 2013 - 11 min<i
-                                    class="material-icons right">more_vert</i></span>
-                            <p><a
-                                    class="white-text activator waves-effect waves-light btn-large #bf360c deep-orange darken-4">Watch
-                                    Trailer</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4 ">Mr. Hublot<br> 2013 - 11 min <i
-                                    class="material-icons right">close</i></span>
-                            <hr>
-                            <h6>Spoken Language: No Dialogues</h6>
-                            <h6>Subtitles: No dialogues</h6>
-                            <h6>Festival Highlights: (Winner) Academy Awards </h6>
-                            <hr>
-                            <h6>Mr Hublot is a withdrawn, idiosyncratic character with OCD, scared of change and the
-                                outside world. Robot Pet's arrival turns his life upside down: he has to share his home
-                                with this very invasive companion.
-                                <br> <br>
-                                <div class="vilpa-trailer-card">
-                                    <iframe src="https://www.youtube.com/embed/YOEgFevDFMo?si=f62LNSar7gXGy6Fb"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                            </h6>
-                            <div class="center">
-                                <a onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';"
-                                    class="waves-effect waves-light "
-                                    style="background-color: #E50914; color: white; padding: 8px 16px; border-radius: 4px; font-weight: 600; font-size: 1rem; letter-spacing: 0.5px; text-decoration: none; display: inline-block; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">
-                                    Continue watching on Vilpa Max
-                                </a>
-                            </div>
-
-                        </div> --}}
-                    </div>
+                <div class="col s12 center-align">
+                    <h5 class="section-title">Coming Soon On Vilpa Max</h5>
                 </div>
             </div>
             
-
-
-        </div>
-        <br>
-        <div class="container">
-            <h2 class="centered titleVilpa" style="font-weight: bolder; font-size: 3rem;">Award-winning films.</h2> <br>
-            <div class="row">
-                <div class="col s12 m6">
-                    <img class="crowsWebHome" src="/assets/images/letterRoomWebHome.jpg" alt="The Letter Room">
-                    <img class="crowsWebHome" src="/assets/images/loveBlindFooterHome.jpg"
-                        alt="All the Crows in the World">
-
-                </div>
-                <div class="col s12 m6">
-                    <div style="padding:176.67% 0 0 0;position:relative;"><iframe
-                            src="https://player.vimeo.com/video/1132877145?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1"
-                            frameborder="0"
-                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                            title="The Undertone of David Jansen - Teaser"></iframe></div>
-                    <script src="https://player.vimeo.com/api/player.js"></script>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12 m6">
-                    <div style="padding:176.67% 0 0 0;position:relative;"><iframe
-                            src="https://player.vimeo.com/video/1212889403?h=5eb0d922f4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;muted=1&amp;loop=1"
-                            frameborder="0"
-                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                            title="How To Be Alone"></iframe></div>
-                    <script src="https://player.vimeo.com/api/player.js"></script>
-                </div>
-                <div class="col s12 m6">
-                    <img class="crowsWebHome" src="/assets/images/hublotWebHome.jpg" alt="Poof">
-                    <img class="crowsWebHome" src="/assets/images/yardBirdFooterHome.jpg" alt="Yardbird">
-
-                </div>
-            </div>
-            <div class="row"> <br> <br>
-                <div class="col s12 m12">
-                    <img class="nocturneFooterBanner" src="/assets/images/theTalentFooterBanner.jpg"
-                        alt="Nocturne in Black">
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
             <div class="row">
                 <div class="col s12 m4">
-                    <span style="font-weight: bolder; font-size: 2rem;">FILMS FROM THE OSCARS AND CANNES</span> <br><br>
-                </div>
-                <div class="col s12 m8">
-                    <div style="padding:56.6% 0 0 0;position:relative;"><iframe
-                            src="https://player.vimeo.com/video/1132880479?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1"
-                            frameborder="0"
-                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                            title="All the Crows in the world"></iframe></div>
-                    <script src="https://player.vimeo.com/api/player.js"></script>
-                </div>
-            </div>
-
-        </div>
-        <div class="container">
-            <div class="row">
-
-                <div class="col s12 m4">
-                    <div class="card pointer serviceCard">
-                        <div class="card-image" onclick="location.href='/submissions';">
-                            <img src="/assets/images/broadkst.jpg">
+                    <div class="card pointer vilpa-poster-card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/assets/images/cardCounterPoster.webp" alt="The Card Counter">
                         </div>
-
                     </div>
                 </div>
                 <div class="col s12 m4">
-                    <div class="card pointer serviceCard">
-                        <div class="card-image" onclick="window.open('https://vilpamax.com/','_blank');">
-                            <img src="/assets/images/vilpaMaxButton.jpg">
-
-
+                    <div class="card pointer vilpa-poster-card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/assets/images/afterYangPoster.webp" alt="After Yang">
                         </div>
-
                     </div>
                 </div>
                 <div class="col s12 m4">
-                    <div class="card pointer serviceCard">
-                        <div class="card-image" onclick="location.href='https://filmfreeway.com/VilpaFilmsKOVERAGE';">
-                            <img src="/assets/images/koverage.jpg">
-
-
+                    <div class="card pointer vilpa-poster-card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/assets/images/avaPoster.webp" alt="Ava">
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- AWARD-WINNING FILMS GALLERY -->
+        <div class="container">
+            <h2 class="center-align" style="font-family: 'Georgia', serif; font-size: 2.8rem; margin-bottom: 50px; letter-spacing: -0.5px;">Award-winning films.</h2>
+            
+            <div class="row">
+                <div class="col s12 m6">
+                    <img class="vilpa-gallery-img" src="/assets/images/letterRoomWebHome.jpg" alt="The Letter Room">
+                    <img class="vilpa-gallery-img" src="/assets/images/loveBlindFooterHome.jpg" alt="All the Crows in the World">
+                </div>
+                <div class="col s12 m6">
+                    <!-- The Undertone Video (Vertical) -->
+                    <div class="video-container-premium" style="padding:176.67% 0 0 0;">
+                        <iframe src="https://player.vimeo.com/video/1132877145?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="The Undertone of David Jansen - Teaser"></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col s12 m6">
+                    <!-- How to be alone Video (Vertical) -->
+                    <div class="video-container-premium" style="padding:176.67% 0 0 0;">
+                        <iframe src="https://player.vimeo.com/video/1212889403?h=5eb0d922f4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;muted=1&amp;loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="How To Be Alone"></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+                <div class="col s12 m6">
+                    <img class="vilpa-gallery-img" src="/assets/images/hublotWebHome.jpg" alt="Poof">
+                    <img class="vilpa-gallery-img" src="/assets/images/yardBirdFooterHome.jpg" alt="Yardbird">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col s12">
+                    <img class="vilpa-gallery-img" src="/assets/images/theTalentFooterBanner.jpg" alt="Nocturne in Black" style="margin-top: 20px;">
+                </div>
+            </div>
+        </div>
+
+        <hr class="premium-divider">
+
+        <!-- HORIZONTAL TRAILER (Centrado estético) -->
+        <div class="container">
+            <div class="row" style="text-align: center; margin-bottom: 60px;">
+                <div class="col s12">
+                    <span style="font-family: 'Georgia', serif; font-size: 2.2rem; display: block; margin-bottom: 30px; letter-spacing: 1px;">
+                        FILMS FROM THE OSCARS AND CANNES
+                    </span>
+                </div>
+                <div class="col s12 m10 offset-m1 l8 offset-l2">
+                    <div class="video-container-premium" style="padding:56.6% 0 0 0;">
+                        <iframe src="https://player.vimeo.com/video/1132880479?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="All the Crows in the world"></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <!-- TARJETAS DE ECOSISTEMA (Tu código exacto) -->
+        <div class="container">
+            <div class="row" style="display: flex; align-items: stretch; flex-wrap: wrap;">
+                <!-- Columna 1: Tarjeta Premium (Ahora con diseño editorial) -->
+                <div class="col s12 m6" style="margin-bottom: 20px; display: flex;">
+                    <div class="vilpa-sqp-access-card" onclick="location.href='/submissions';" style="flex: 1;">
+                        <div class="card-content-wrapper">
+                            <span class="highlight-text">For Filmmakers</span>
+                            <h3>Streaming Qualifying Program</h3>
+                            <p>Submit your short film for a chance to share the screen alongside Oscar and Cannes-winning cinema.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Imagen para Vilpa Max App -->
+                <div class="col s12 m6" style="margin-bottom: 20px; display: flex;">
+                    <div class="card pointer serviceCard vilpa-max-img-card" onclick="window.open('https://vilpamax.com/','_blank');" style="flex: 1;">
+                        <div class="card-image">
+                            <img src="/assets/images/officialLogoBlack.webp" alt="Vilpa Max Platform">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
 </div>

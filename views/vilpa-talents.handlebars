@@ -1,109 +1,243 @@
-<div class="incioDiv fontTalent ">
+<style>
+    /* --- VILPA TALENTS PREMIUM STYLES --- */
+    .vilpa-talents-wrapper {
+        background-color: #030305;
+        color: #ffffff;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        padding-bottom: 80px;
+    }
+
+    /* Declaración de la Agencia */
+    .talents-statement {
+        font-family: 'Georgia', serif;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        color: #d1d1db;
+        max-width: 900px;
+        margin: 60px auto 70px;
+        text-align: center;
+        font-weight: 300;
+        padding: 0 20px;
+    }
+
+    /* Tarjetas de Talento (Estilo Headshot de Agencia) */
+    .talent-card-premium {
+        background: #0a0a0f;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+        cursor: pointer;
+        margin-bottom: 30px;
+    }
+
+    .talent-card-premium:hover {
+        transform: translateY(-10px);
+        border-color: rgba(229, 9, 20, 0.4); /* Resplandor rojo Vilpa */
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Forzar proporción 4:5 para que todos los retratos midan exactamente lo mismo */
+    .talent-img-wrapper {
+        width: 100%;
+        padding-top: 125%; 
+        position: relative;
+        overflow: hidden;
+    }
+
+    .talent-img-wrapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top; /* Enfoca en los rostros */
+        transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+        filter: grayscale(20%) contrast(110%); /* Le da un tono ligeramente más dramático */
+    }
+
+    .talent-card-premium:hover .talent-img-wrapper img {
+        transform: scale(1.05);
+        filter: grayscale(0%) contrast(110%);
+    }
+
+    .talent-info {
+        padding: 25px 20px;
+        text-align: center;
+    }
+
+    .talent-name {
+        font-family: 'Georgia', serif;
+        font-size: 1.4rem;
+        color: #ffffff;
+        margin: 0 0 5px 0;
+        letter-spacing: 0.5px;
+    }
+
+    .talent-role {
+        color: #E50914; /* Rojo Vilpa */
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    /* Encabezados de Sección */
+    .talents-section-title {
+        text-align: center;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #8c8c9b;
+        margin: 80px 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+    }
+
+    .talents-section-title::before,
+    .talents-section-title::after {
+        content: '';
+        height: 1px;
+        width: 60px;
+        background: rgba(255, 255, 255, 0.1);
+        margin: 0 20px;
+    }
+
+    /* Proyectos (Film & TV) */
+    .project-card-premium {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        transition: transform 0.4s ease;
+        margin-bottom: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        cursor: pointer;
+        background: #000;
+    }
+
+    .project-card-premium:hover {
+        transform: translateY(-5px);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .project-card-premium img {
+        width: 100%;
+        display: block;
+        transition: opacity 0.3s;
+    }
+
+    .project-card-premium:hover img {
+        opacity: 0.9;
+    }
+    
+    /* Contenedor Iframes de Música */
+    .music-embed-container {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        background: #0a0a0f;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="vilpa-talents-wrapper fontTalent">
     <div class="divBannerAds"></div>
-    {{!-- <div class="bannerStory1"></div>
-    <div class="bannerStory2"></div> --}}
+    
     <div class="aboutDiv">
-        <div class="container"> <br>
-            <div class="row">
-                <h4 class="fontTalent center gray-text">Vilpa Talents represents a very exclusive group of actors,
-                    filmmakers, and creative
-                    professionals with global potential. Our mission is to provide our talent with world-class
-                    opportunities and international exposure.</h4>
-
-            </div>
-
+        <div class="container">
+            <!-- Declaración de Misión -->
+            <h4 class="talents-statement">
+                Vilpa Talents represents a very exclusive group of actors, filmmakers, and creative professionals with global potential. Our mission is to provide our talent with world-class opportunities.
+            </h4>
         </div>
+
+        <!-- ROSTER DE TALENTOS -->
         <div class="container">
             <div class="row">
+                <!-- Carla -->
                 <div class="col s12 m4">
-                    <div class="card" onclick="location.href='/talents/carlaaguilarlopez';">
-                        <div class="card-image pointer" >
-                            <img src="/assets/images/carlita.jpg">
-
+                    <div class="talent-card-premium" onclick="location.href='/talents/carlaaguilarlopez';">
+                        <div class="talent-img-wrapper">
+                            <img src="/assets/images/carlita.jpg" alt="Carla Aguilar López">
                         </div>
-                        <div class="card-content #212121 grey darken-4">
-                            <span class="card-title activator lightVilpaColor  bolderFont ">Carla Aguilar López<br>
-                                <span class="redVilpaColor ">Actress</span></span>
-
+                        <div class="talent-info">
+                            <h3 class="talent-name">Carla Aguilar López</h3>
+                            <p class="talent-role">Actress</p>
                         </div>
-
                     </div>
                 </div>
+
+                <!-- Dimitri -->
                 <div class="col s12 m4">
-                    <div class="card" onclick="location.href='/talents/dimitrifontaine';">
-                        <div class="card-image pointer">
-                            <img src="/assets/images/dimitrito.jpg">
-
+                    <div class="talent-card-premium" onclick="location.href='/talents/dimitrifontaine';">
+                        <div class="talent-img-wrapper">
+                            <img src="/assets/images/dimitrito.jpg" alt="Dimitri Fontaine">
                         </div>
-                        <div class="card-content #212121 grey darken-4">
-                            <span class="card-title activator lightVilpaColor  bolderFont ">Dimitri Fontaine <br> <span
-                                    class="redVilpaColor ">Actor</span></span>
-
+                        <div class="talent-info">
+                            <h3 class="talent-name">Dimitri Fontaine</h3>
+                            <p class="talent-role">Actor</p>
                         </div>
-
                     </div>
                 </div>
+
+                <!-- Alejandro -->
                 <div class="col s12 m4">
-                    <div class="card" onclick="location.href='/talents/alejandrovilpa';">
-                        <div class="card-image pointer" >
-                            <img src="/assets/images/alejito.jpg">
-
+                    <div class="talent-card-premium" onclick="location.href='/talents/alejandrovilpa';">
+                        <div class="talent-img-wrapper">
+                            <img src="/assets/images/alejito.jpg" alt="Alejandro Vilpa">
                         </div>
-                        <div class="card-content #212121 grey darken-4">
-                            <span class="card-title activator lightVilpaColor  bolderFont ">Alejandro Vilpa <br> <span
-                                    class="redVilpaColor ">Director & Producer</span></span>
-
+                        <div class="talent-info">
+                            <h3 class="talent-name">Alejandro Vilpa</h3>
+                            <p class="talent-role">Director & Producer</p>
                         </div>
-
                     </div>
                 </div>
             </div>
-
         </div>
+
+        <!-- FILM & TV SECTION -->
         <div class="container">
-            <h3 class="center">FILM & TV</h3>
+            <div class="talents-section-title">Film & TV</div>
             <div class="row">
                 <div class="col s12 m6">
-                    <div class="card">
-                        <div class="card-image pointer">
-                            <img src="/assets/images/blueshadesPosterHor.jpg">
-
-                        </div>
-
+                    <div class="project-card-premium">
+                        <img src="/assets/images/blueshadesPosterHor.jpg" alt="Blue Shades">
                     </div>
                 </div>
                 <div class="col s12 m6">
-                    <div class="card">
-                        <div class="card-image pointer" onclick="window.open('https://www.youtube.com/watch?v=PJFA5V3S94E');" >
-                            <img src="/assets/images/jansenPosterHor.jpg">
-
-                        </div>
-
+                    <div class="project-card-premium" onclick="window.open('https://www.youtube.com/watch?v=PJFA5V3S94E');">
+                        <img src="/assets/images/jansenPosterHor.jpg" alt="The Undertone of David Jansen">
                     </div>
                 </div>
-
             </div>
-            <h3 class="center">MUSIC</h3>
-            <div class="row">
-                <div class="col s12 m6">
-                    <iframe data-testid="embed-iframe" style="border-radius:12px"
-                        src="https://open.spotify.com/embed/track/5rHewKjx4fem25mwFJRWrO?utm_source=generator&theme=0&si=281ca61929cd49d0"
-                        width="100%" height="352" frameBorder="0" allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
-                </div>
-                <div class="col s12 m6">
-                    <iframe width="100%" height="352"
-                        src="https://www.youtube.com/embed/u9vBQVfJz0g?si=w9Qx6Uc3qaCPhliH" title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                
 
+            <!-- MUSIC SECTION -->
+            <div class="talents-section-title">Music</div>
+            <div class="row" style="display: flex; align-items: stretch; flex-wrap: wrap;">
+                <div class="col s12 m6" style="margin-bottom: 20px;">
+                    <div class="music-embed-container" style="height: 100%;">
+                        <iframe data-testid="embed-iframe" style="border-radius:12px; display: block;"
+                            src="https://open.spotify.com/embed/track/5rHewKjx4fem25mwFJRWrO?utm_source=generator&theme=0&si=281ca61929cd49d0"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="col s12 m6" style="margin-bottom: 20px;">
+                    <div class="music-embed-container" style="height: 100%;">
+                        <iframe width="100%" height="352" style="border-radius:12px; display: block;"
+                            src="https://www.youtube.com/embed/u9vBQVfJz0g?si=w9Qx6Uc3qaCPhliH" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </div>
+        
     </div>
-
-
 </div>

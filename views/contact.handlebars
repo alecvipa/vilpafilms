@@ -1,142 +1,286 @@
-<div class="contactoDiv">
-    <div class="container centered titleSiguenos">
-        <div class="row">
+<style>
+    /* --- ESTÉTICA PREMIUM PARA CONTACTO --- */
+    .contactoDiv-premium {
+        background-color: #050508;
+        color: #ffffff;
+        padding: 80px 0 40px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    
+    .contact-header {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 50px;
+    }
 
-            <h3>Let's keep in touch!</h3>
-            <p style="font-style: italic; font-size: 1.5rem">You can also reach us through e-mail:
-                business@vilpafilms.com
-            </p>
+    .contact-header h3 {
+        font-family: 'Georgia', serif;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: #ffffff;
+        letter-spacing: -0.5px;
+    }
 
+    .contact-header p {
+        color: #8c8c9b;
+        font-size: 1.1rem;
+        font-weight: 300;
+        margin-bottom: 0;
+    }
+
+    .contact-header a {
+        color: #2979FF;
+        text-decoration: none;
+        transition: opacity 0.3s;
+    }
+
+    .contact-header a:hover {
+        opacity: 0.8;
+    }
+
+    /* Estilos del Formulario Sobreescribiendo Materialize */
+    .vilpa-form .input-field input {
+        border-bottom: 1px solid rgba(255,255,255,0.15) !important;
+        color: #ffffff !important;
+        box-shadow: none !important;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .vilpa-form .input-field input:focus {
+        border-bottom: 1px solid #2979FF !important;
+        box-shadow: 0 1px 0 0 #2979FF !important;
+    }
+
+    .vilpa-form .input-field label {
+        color: #6e6e7d !important;
+    }
+
+    .vilpa-form .input-field label.active {
+        color: #2979FF !important;
+    }
+
+    .vilpa-checkbox-wrap span {
+        color: #8c8c9b !important;
+        font-size: 0.9rem;
+    }
+    
+    .vilpa-checkbox-wrap a {
+        color: #2979FF;
+        text-decoration: underline;
+    }
+
+    .btn-vilpa-submit {
+        background: #101015 !important;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #ffffff !important;
+        letter-spacing: 1.5px;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 4px;
+        padding: 0 40px;
+        height: 50px;
+        line-height: 50px;
+        transition: all 0.3s ease;
+        margin-top: 20px;
+    }
+
+    .btn-vilpa-submit:hover {
+        background: rgba(41, 121, 255, 0.1) !important;
+        border-color: #2979FF;
+    }
+
+    /* --- ESTÉTICA PREMIUM PARA NEWS --- */
+    .newsDivLatest-premium {
+        background-color: #030305;
+        padding: 60px 0;
+        border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .news-main-title {
+        font-family: 'Georgia', serif;
+        font-size: 2.2rem;
+        color: #ffffff;
+        margin-bottom: 40px;
+        border-left: 4px solid #2979FF;
+        padding-left: 15px;
+    }
+
+    /* Contenedor de cada noticia */
+    .news-row-premium {
+        padding: 20px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        transition: background 0.4s ease;
+    }
+
+    .news-row-premium:hover {
+        background: rgba(255,255,255,0.03);
+    }
+
+    .news-row-premium .category-tag {
+        color: #2979FF;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+
+    .news-row-premium h4 {
+        font-family: 'Georgia', serif;
+        font-size: 1.6rem;
+        color: #ffffff;
+        margin: 0 0 10px 0;
+        line-height: 1.3;
+    }
+
+    .news-row-premium .date-text {
+        color: #6e6e7d;
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .borderCardsNews {
+        background: transparent !important;
+        box-shadow: none !important;
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .imageBorderNews {
+        border-radius: 8px;
+        transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+        width: 100%;
+        display: block;
+    }
+
+    .news-row-premium:hover .imageBorderNews {
+        transform: scale(1.05);
+    }
+
+    hr.lineStyle {
+        border: 0;
+        height: 1px;
+        background: rgba(255,255,255,0.05);
+        margin: 10px 0;
+    }
+</style>
+
+<div class="contactoDiv-premium">
+    <div class="container">
+        
+        <!-- Header de Contacto Ejecutivo -->
+        <div class="contact-header">
+            <h3>For Inquiries</h3>
+            <p>For official inquiries or to reach our executive team, please contact us below or via email at <a href="mailto:business@vilpafilms.com">business@vilpafilms.com</a>.</p>
         </div>
+
         <div class="row">
-            <form class="col s12" action="/ajax/email" method="POST" onsubmit="return submitEmailForm(this);">
+            <form class="col s12 m10 offset-m1 vilpa-form" action="/ajax/email" method="POST" onsubmit="return submitEmailForm(this);">
                 <div class="row">
-                    <div class="input-field col s6">
-                        <input name="name" placeholder="Nombre" id="first_name" type="text" class="validate formInput"
-                            required="" aria-required="true">
+                    <div class="input-field col s12 m6">
+                        <input name="name" placeholder="Name" id="first_name" type="text" class="validate formInput" required="" aria-required="true">
                         <label for="first_name">Name</label>
                     </div>
-                    <div class="input-field col s6">
-                        <input name="email" id="email" type="text" class="validate formInput" required=""
-                            aria-required="true">
+                    <div class="input-field col s12 m6">
+                        <input name="email" id="email" type="email" class="validate formInput" required="" aria-required="true">
                         <label for="email">E-mail</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input name="message" id="input_text" type="text" data-length="10" required=""
-                            aria-required="true" class="formInput">
+                        <input name="message" id="input_text" type="text" data-length="10" required="" aria-required="true" class="formInput">
                         <label for="input_text">Message</label>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row vilpa-checkbox-wrap" style="padding-left: 10px;">
                     <label>
                         <input type="checkbox" required="" aria-required="true" />
                         <span>I agree with the <a href="/privacy">privacy policy</a></span>
                     </label>
                 </div>
-                <button class="btn waves-effect waves-light #212121 grey darken-4">Send
-                    <i class="material-icons right" style="color: white !important;">send</i>
-                </button>
+                <div class="center-align">
+                    <button class="btn waves-effect waves-light btn-vilpa-submit">Submit Inquiry
+                        <i class="material-icons right" style="color: white !important;">send</i>
+                    </button>
+                </div>
             </form>
         </div>
-    </div> <br>
-    <div class="newsDivLatest">
-        <div class="container pointer" >
-            <h4>Latest News</h4>
-            <div class="row pointer "onclick="location.href='/articles/dimitri-interview-blueshades';">
-                <div class="col s12 m4">
-                    <div class="card borderCardsNews overflowHidden pointer ">
-                        <div class="card-image zoom">
-                            <img src="/assets/images/dimitritoInterview.jpg" class="imageBorderNews ">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m8">
-                    <p>PRESS RELEASE</p>
-                    <h4>Interview with debut actor Dimitri Fontaine about Blue Shades
-                    </h4>
-                    <p>Aug 03, 2026</p>
-                </div>
-
-            </div>
-            <div class="row pointer "onclick="location.href='/articles/dimitri-interview-blueshades';">
-                <div class="col s12 m4">
-                    <div class="card borderCardsNews overflowHidden pointer ">
-                        <div class="card-image zoom">
-                            <img src="/assets/images/dimitritoInterview.jpg" class="imageBorderNews ">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m8">
-                    <p>PRESS RELEASE</p>
-                    <h4>Interview with debut actor Dimitri Fontaine about Blue Shades
-                    </h4>
-                    <p>Aug 03, 2026</p>
-                </div>
-
-            </div>
-            <hr class="lineStyle">
-            <div class="row pointer "onclick="location.href='/articles/vilpa-talents-grammys';">
-                <div class="col s12 m4">
-                    <div class="card borderCardsNews overflowHidden pointer ">
-                        <div class="card-image zoom">
-                            <img src="/assets/images/vilpaTalentsAds.jpg" class="imageBorderNews ">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m8">
-                    <p>PRESS RELEASE</p>
-                    <h4>Vilpa Talents Achieve Grammy Eligibility Milestone
-                    </h4>
-                    <p>Aug 02, 2026</p>
-                </div>
-
-            </div>
-            <hr class="lineStyle">
-            <div class="row pointer "onclick="location.href='/articles/vilpa-influencial-actors';">
-                <div class="col s12 m4">
-                    <div class="card borderCardsNews overflowHidden pointer ">
-                        <div class="card-image zoom">
-                            <img src="/assets/images/vilpaMaxHorizontal.png" class="imageBorderNews ">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m8">
-                    <p>PRESS RELEASE</p>
-                    <h4>15 of Hollywood’s Most Influential Actors and Directors Are Coming to Vilpa Max
-                    </h4>
-                    <p>Aug 01, 2026</p>
-                </div>
-
-            </div>
-            
-            <hr class="lineStyle">
-            <div class="row pointer "onclick="location.href='/articles/vilpa-talents-launch';">
-                <div class="col s12 m4">
-                    <div class="card borderCardsNews overflowHidden pointer ">
-                        <div class="card-image zoom">
-                            <img src="/assets/images/vilpaTalentsNews.jpg" class="imageBorderNews ">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m8">
-                    <p>PRESS RELEASE</p>
-                    <h4>Vilpa Films Launches Vilpa Talents, a New Initiative to Discover and Develop Emerging
-                        Artists
-                    </h4>
-                    <p>Jun 24, 2026</p>
-                </div>
-
-            </div>
-            
-            <hr class="lineStyle">
-
-        </div>
     </div> 
+</div>
+
+<div class="newsDivLatest-premium">
+    <div class="container">
+        <h4 class="news-main-title">Latest News</h4>
+        
+        <!-- Noticia 1 -->
+        <div class="row pointer news-row-premium" onclick="location.href='/articles/dimitri-interview-blueshades';">
+            <div class="col s12 m4">
+                <div class="card borderCardsNews overflowHidden pointer">
+                    <div class="card-image zoom">
+                        <img src="/assets/images/dimitritoInterview.jpg" class="imageBorderNews">
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m8">
+                <p class="category-tag">PRESS RELEASE</p>
+                <h4>Interview with debut actor Dimitri Fontaine about Blue Shades</h4>
+                <p class="date-text">Aug 03, 2026</p>
+            </div>
+        </div>
+        <hr class="lineStyle">
+        
+        <!-- Noticia 2 -->
+        <div class="row pointer news-row-premium" onclick="location.href='/articles/vilpa-talents-grammys';">
+            <div class="col s12 m4">
+                <div class="card borderCardsNews overflowHidden pointer">
+                    <div class="card-image zoom">
+                        <img src="/assets/images/vilpaTalentsAds.jpg" class="imageBorderNews">
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m8">
+                <p class="category-tag">PRESS RELEASE</p>
+                <h4>Vilpa Talents Achieve Grammy Eligibility Milestone</h4>
+                <p class="date-text">Aug 02, 2026</p>
+            </div>
+        </div>
+        <hr class="lineStyle">
+        
+        <!-- Noticia 3 -->
+        <div class="row pointer news-row-premium" onclick="location.href='/articles/vilpa-influencial-actors';">
+            <div class="col s12 m4">
+                <div class="card borderCardsNews overflowHidden pointer">
+                    <div class="card-image zoom">
+                        <img src="/assets/images/vilpaMaxHorizontal.png" class="imageBorderNews">
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m8">
+                <p class="category-tag">PRESS RELEASE</p>
+                <h4>15 of Hollywood’s Most Influential Actors and Directors Are Coming to Vilpa Max</h4>
+                <p class="date-text">Aug 01, 2026</p>
+            </div>
+        </div>
+        <hr class="lineStyle">
+        
+        <!-- Noticia 4 -->
+        <div class="row pointer news-row-premium" onclick="location.href='/articles/vilpa-talents-launch';">
+            <div class="col s12 m4">
+                <div class="card borderCardsNews overflowHidden pointer">
+                    <div class="card-image zoom">
+                        <img src="/assets/images/vilpaTalentsNews.jpg" class="imageBorderNews">
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m8">
+                <p class="category-tag">PRESS RELEASE</p>
+                <h4>Vilpa Films Launches Vilpa Talents, a New Initiative to Discover and Develop Emerging Artists</h4>
+                <p class="date-text">Jun 24, 2026</p>
+            </div>
+        </div>
+        <hr class="lineStyle">
+
+    </div>
 </div>

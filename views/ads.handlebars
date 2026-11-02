@@ -1,35 +1,237 @@
-<div class="bgBlack adsMaster">
+<style>
+    /* --- VILPA ADS - PREMIUM CORPORATE STYLES --- */
+    .adsMaster-premium {
+        background-color: #030305;
+        color: #ffffff;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    /* Ocultamos tu div repetitivo 'heroBannerAds' porque ya tienes un Hero Section con el iframe de Vimeo */
+    .hide-duplicate-banner {
+        display: none;
+    }
+
+    /* Ajustes del Hero Principal (Hero Netflix Style) */
+    .vilpa-ads-hero {
+        position: relative;
+        width: 100%;
+        height: 85vh;
+        background-color: #000;
+        overflow: hidden;
+        padding-top: 70px;
+        box-sizing: border-box;
+    }
+
+    /* Redefinimos el título principal para máxima autoridad */
+    .vilpa-ads-hero-title {
+        font-family: 'Georgia', serif;
+        font-weight: 400;
+        font-size: 4rem;
+        margin: 0 0 20px 0;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        color: #ffffff;
+    }
+
+    /* Metadatos en el Hero */
+    .vilpa-ads-meta {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+
+    .vilpa-ads-meta span {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .vilpa-ads-meta .highlight {
+        color: #E50914; /* Rojo corporativo en lugar de verde */
+        font-weight: 600;
+    }
+
+    .vilpa-ads-meta .border-tag {
+        border: 1px solid rgba(255,255,255,0.3);
+        padding: 4px 10px;
+        border-radius: 2px;
+    }
+
+    /* Botón de Acción Principal (Premium) */
+    .btn-vilpa-action {
+        background: #E50914 !important; /* Rojo Vilpa */
+        color: #ffffff !important;
+        letter-spacing: 1.5px;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 4px;
+        padding: 0 35px;
+        height: 54px;
+        line-height: 54px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3) !important;
+    }
+
+    .btn-vilpa-action:hover {
+        background: #b80710 !important;
+        box-shadow: 0 6px 20px rgba(229, 9, 20, 0.5) !important;
+        transform: translateY(-2px);
+    }
+
+    /* Sección de Infraestructura (Viñetas y Video) */
+    .infrastructure-section {
+        padding: 80px 0;
+        background: linear-gradient(180deg, #030305 0%, #0a0a0f 100%);
+        border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .infrastructure-title {
+        font-family: 'Georgia', serif;
+        font-size: 2.5rem;
+        color: #ffffff;
+        margin-bottom: 40px;
+        letter-spacing: -0.5px;
+    }
+
+    .vilpa-bullet-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .vilpa-bullet-list li {
+        margin-bottom: 40px;
+        position: relative;
+        padding-left: 40px;
+    }
+
+    .vilpa-bullet-list li i {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #E50914 !important; /* Chevron en rojo */
+        font-size: 2rem;
+    }
+
+    .vilpa-bullet-list li strong {
+        display: block;
+        font-size: 1.3rem;
+        color: #ffffff;
+        margin-bottom: 8px;
+        font-family: 'Georgia', serif;
+    }
+
+    .vilpa-bullet-list li span {
+        font-size: 1.05rem;
+        color: #8c8c9b;
+        line-height: 1.6;
+        display: block;
+    }
+
+    /* Video Embed Containers Premium */
+    .premium-video-embed {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* Sección Call to Action Intermedia */
+    .cta-mid-section {
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .cta-mid-section h2 {
+        font-family: 'Georgia', serif;
+        font-size: 3rem;
+        margin-bottom: 40px;
+    }
+
+    /* Tarjetas de Equipo (Crew) */
+    .crew-section {
+        padding: 60px 0 100px;
+        background: #030305;
+    }
+
+    .crew-card {
+        background: transparent !important;
+        box-shadow: none !important;
+        margin-bottom: 30px;
+    }
+
+    .crew-card .card-image {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    }
+
+    .crew-card .card-image img {
+        filter: grayscale(20%);
+        transition: filter 0.4s ease, transform 0.4s ease;
+    }
+
+    .crew-card:hover .card-image img {
+        filter: grayscale(0%);
+        transform: scale(1.02);
+    }
+
+    .crew-info {
+        padding: 20px 0 !important;
+        text-align: center;
+    }
+
+    .crew-name {
+        font-family: 'Georgia', serif;
+        font-size: 1.8rem;
+        color: #ffffff;
+        margin: 0 0 5px 0;
+    }
+
+    .crew-title {
+        color: #E50914;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+        display: block;
+    }
+    
+    /* Typeform container fix */
+    .adsForm {
+        margin: 40px 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+</style>
+
+<div class="adsMaster-premium">
     <div class="adsDiv">
+        
         <!-- NAV BAR STICKY (Especial para Conversión) -->
         <div id="nav-trailers"
-            style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 70px; background: linear-gradient(to bottom, rgba(20,20,20,0.95) 0%, rgba(20,20,20,0.7) 60%, transparent 100%); z-index: 100; justify-content: space-between; align-items: center; padding: 0 4%; box-sizing: border-box; transition: background-color 0.3s ease;">
-            <!-- Logo -->
+            style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 70px; background: linear-gradient(to bottom, rgba(3,3,5,0.95) 0%, rgba(3,3,5,0.7) 60%, transparent 100%); z-index: 100; justify-content: space-between; align-items: center; padding: 0 4%; box-sizing: border-box; transition: background-color 0.3s ease;">
+            
             <div style="display: flex; align-items: center; cursor: pointer;"
                 onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';">
-                <img src="/assets/images/vilpaMaxTransparent.png" alt="Vilpa Max Logo"
-                    style="height: 50px; object-fit: contain;">
+                <img src="/assets/images/vilpaMaxTransparent.png" alt="Vilpa Max Logo" style="height: 40px; object-fit: contain;">
             </div>
 
-            <!-- Botón -->
             <div>
-                <a onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';" target="_blank"
-                    class="waves-effect waves-light"
-                    style="background-color: #E50914; color: white; padding: 8px 16px; border-radius: 4px; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.5px; text-decoration: none; display: inline-block; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">
-                    Download The App
+                <a onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';" target="_blank" class="waves-effect waves-light"
+                    style="background-color: #E50914; color: white; padding: 8px 20px; border-radius: 4px; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; display: inline-block; cursor: pointer;">
+                    Get The App
                 </a>
             </div>
         </div>
-        <!-- FIN NAV BAR STICKY -->
 
+        <!-- CONTENEDOR PRINCIPAL DEL HERO -->
+        <div class="vilpa-ads-hero">
 
-        <!-- CONTENEDOR PRINCIPAL DEL HERO (Estilo Netflix) -->
-        <!-- Se añadió padding-top: 70px para que la nav bar y el Smart App Banner no tapen el contenido -->
-        <div
-            style="position: relative; width: 100%; height: 85vh; background-color: #141414; overflow: hidden; padding-top: 70px; box-sizing: border-box;">
-
-            <!-- CAPA 1: EL VIDEO DE VIMEO DE FONDO -->
-            <!-- Aquí está tu URL exacta con el hash de seguridad y el parámetro de background -->
-
+            <!-- CAPA 1: VIDEO VIMEO -->
             <iframe
                 src="https://player.vimeo.com/video/1239075189?h=13a19554b8&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1"
                 frameborder="0"
@@ -40,168 +242,146 @@
             </iframe>
             <script src="https://player.vimeo.com/api/player.js"></script>
 
-            <!-- CAPA 2: EL DEGRADADO OSCURO (OVERLAY) -->
-            <div
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(20,20,20,0.95) 0%, rgba(20,20,20,0.4) 50%, transparent 100%), linear-gradient(to top, #141414 0%, transparent 20%); z-index: 2; pointer-events: none;">
-            </div>
+            <!-- CAPA 2: DEGRADADO -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(3,3,5,0.95) 0%, rgba(3,3,5,0.4) 60%, transparent 100%), linear-gradient(to top, #030305 0%, transparent 20%); z-index: 2; pointer-events: none;"></div>
 
-            <!-- CAPA 3: EL CONTENIDO (TEXTO Y BOTONES) -->
-            <div class="container"
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; z-index: 3; padding-left: 20px;">
+            <!-- CAPA 3: CONTENIDO -->
+            <div class="container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; z-index: 3; padding-left: 20px;">
+                <div style="max-width: 700px;">
+                    
+                    <h1 class="vilpa-ads-hero-title">Commercial Storytelling for Visionary Brands.</h1>
 
-                <div style="max-width: 600px;">
-                    <!-- Logo o Título -->
-                    <h1 class="white-text titlehone"
-                        style="font-weight: 800; font-size: 4rem; margin-top: 0; line-height: 1; text-transform: uppercase;">
-                        Commercial Storytelling for Visionary Brands.</h1>
-
-                    <!-- Metadatos (Simples y reconocibles) -->
-                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px; flex-wrap: wrap;">
-                        <span class="green-text text-accent-3" style="font-weight: bold;">Boutique Creative
-                            Agency</span>
-                        <span class="white-text">Social Media</span>
-                        <span
-                            style="border: 1px solid white; padding: 2px 6px; color: white; font-size: 0.8rem;">Exclusive
-                            Content</span>
+                    <div class="vilpa-ads-meta">
+                        <span class="highlight">Boutique Creative Agency</span>
+                        <span>Social Media</span>
+                        <span class="border-tag">Exclusive Content</span>
                     </div>
 
-                    <!-- Sinopsis Clara y Directa -->
-                    <p class="white-text"
-                        style="font-size: 1.2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); margin-bottom: 30px;">
-                        We don’t shoot commercials. We bring Hollywood-level production, cinematic rigor, and global
-                        talent
-                        to elevate your brand’s narrative.
+                    <p style="color: #a0a0b0; font-size: 1.25rem; font-weight: 300; line-height: 1.6; margin-bottom: 40px;">
+                        We don’t shoot commercials. We bring Hollywood-level production, cinematic rigor, and global talent to elevate your brand’s narrative.
                     </p>
 
-                    <!-- Botones de Acción -->
-                    <div style="display: flex; gap: 15px; margin-top: 30px;">
-                        <!-- Botón principal (Blanco) -->
-                        <a class="waves-effect waves-dark btn-large #424242 red darken-3"
-                            href="#private-pitch-form"> Request a Private Consultation</a>
-                        <!-- Botón secundario (Gris translúcido) -->
-                        {{!-- <a href="#info" class="btn grey darken-3 white-text waves-effect waves-light"
-                            style="font-weight: bold; padding: 0 32px; border-radius: 4px; display: flex; align-items: center; height: 45px; opacity: 0.8;">
-                            <i class="material-icons left">info_outline</i>Más Info
-                        </a> --}}
+                    <div>
+                        <a class="waves-effect waves-light btn-large btn-vilpa-action" href="#private-pitch-form">Request a Private Consultation</a>
                     </div>
                 </div>
             </div>
-
         </div>
-        <div class="heroBannerAds">
 
-            <div class="heroBannerContent">
-                <h1>Ads Production.</h1>
-                <h5>Experience the visual depth, high-contrast aesthetics, and
-                    narrative power we bring to every frame.</h5>
-
-
-            </div>
-            {{!-- <button id="soundButton" class="sound-button" type="button" aria-label="Unmute video">
-                🔇 Unmute
-            </button> --}}
-        </div>
-    </div>
-    <div id="private-pitch-form" class="adsForm">
-        <div data-tf-live="01M65X6WAJ6WYF1F8AFRHZJR44"></div>
-        <script src="//embed.typeform.com/next/embed.js"></script>
+        <!-- Se oculta el banner redundante que tenías aquí -->
+        <div class="hide-duplicate-banner"></div>
     </div>
 
+    <!-- TYPEFORM 1 -->
     <div class="container">
-        <br><br>
-        <div class="row white-text">
-            <div class="col m6 s12 ">
-                <h3 class="bolderFont">Powered by an International Film Studio
-                </h3>
+        <div id="private-pitch-form" class="adsForm">
+            <div data-tf-live="01M65X6WAJ6WYF1F8AFRHZJR44"></div>
+            <script src="//embed.typeform.com/next/embed.js"></script>
+        </div>
+    </div>
 
-                <iframe class="marginAuto" width="100%" height="500"
-                    src="https://www.youtube.com/embed/irwYuZdpiAA?si=f_kDySwugS0f0hWf" title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="col m6 s12"> <br> <br>
-
-
-                <h5 class="">
-                    <ul>
-                        <li> <i class="material-icons white-text">navigate_next</i>Global Infrastructure:<span
-                                class="notSoWhite"> Backed by Vilpa Films and the Vilpa Max
-                                streaming ecosystem, we
-                                provide the logistical and creative muscle of a full-scale movie studio.</span></li>
-                        <br> <br>
-                        <li><i class="material-icons white-text">navigate_next</i>Elite Talent Network: <span
-                                class="notSoWhite"> Access to world-class directors, cinematographers, and talent
-                                connected to the highest tiers of the entertainment industry, including the Grammy
-                                ecosystem.</span> </li> <br> <br>
-                        <li><i class="material-icons white-text">navigate_next</i>Boutique Focus: <span
-                                class="notSoWhite"> We take on a strictly limited number of corporate clients in Dubai
-                                to ensure
-                                absolute premium quality and cinematic integrity in every project.</span> </li>
-
+    <!-- INFRAESTRUCTURA Y VIDEO -->
+    <div class="infrastructure-section">
+        <div class="container">
+            <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
+                
+                <div class="col m6 s12" style="margin-bottom: 40px;">
+                    <h3 class="infrastructure-title">Powered by an International Film Studio.</h3>
+                    
+                    <div class="premium-video-embed">
+                        <iframe width="100%" height="400"
+                            src="https://www.youtube.com/embed/irwYuZdpiAA?si=f_kDySwugS0f0hWf" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <div class="col m5 offset-m1 s12">
+                    <ul class="vilpa-bullet-list">
+                        <li> 
+                            <i class="material-icons">navigate_next</i>
+                            <strong>Global Infrastructure</strong>
+                            <span>Backed by Vilpa Films and the Vilpa Max streaming ecosystem, we provide the logistical and creative muscle of a full-scale movie studio.</span>
+                        </li>
+                        <li>
+                            <i class="material-icons">navigate_next</i>
+                            <strong>Elite Talent Network</strong>
+                            <span>Access to world-class directors, cinematographers, and talent connected to the highest tiers of the entertainment industry.</span> 
+                        </li>
+                        <li>
+                            <i class="material-icons">navigate_next</i>
+                            <strong>Boutique Focus</strong>
+                            <span>We take on a strictly limited number of corporate clients in Dubai to ensure absolute premium quality and cinematic integrity in every project.</span> 
+                        </li>
                     </ul>
-                </h5>
+                </div>
+
             </div>
-
-
         </div>
     </div>
-    <div class="container">
-        <div class="row overflowHidden pointer">
-            <div class="col m12 s12">
-                <h2 class="white-text ">Elevate Your Next Campaign <a
-                        class="waves-effect waves-dark btn-large #424242 red darken-3"
-                        href="#private-pitch-form-two"> Request a Private Consultation</a></h2> <br> <br>
-                <div style="padding:56.25% 0 0 0;position:relative;"><iframe
-                        src="https://player.vimeo.com/video/1218376058?h=0d21b4757c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;muted=1&amp;loop=1"
-                        frameborder="0"
-                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                        title="Dubai Ads - Vilpa Films"></iframe></div>
-                <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <!-- CTA & DUBAI ADS VIDEO -->
+    <div class="cta-mid-section">
+        <div class="container">
+            <h2>Elevate Your Next Campaign.</h2>
+            <div style="margin-bottom: 60px;">
+                <a class="waves-effect waves-light btn-large btn-vilpa-action" href="#private-pitch-form-two">Request a Private Consultation</a>
             </div>
-
-        </div>
-
-
-    </div> <br> <br>
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m6">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="/assets/images/dopShivam.webp">
+            
+            <div class="row">
+                <div class="col s12 m10 offset-m1">
+                    <div class="premium-video-embed" style="padding:56.25% 0 0 0; position:relative;">
+                        <iframe
+                            src="https://player.vimeo.com/video/1218376058?h=0d21b4757c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;muted=1&amp;loop=1"
+                            frameborder="0"
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                            title="Dubai Ads - Vilpa Films"></iframe>
                     </div>
-                    <div class="card-content">
-                        <span class="card-title activator white-text centered">Shivam Rattan
-                            <hr> Director of Photography
-                            <hr>
-                        </span>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col s12 m6">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="/assets/images/directorVilpa.webp">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator white-text centered">Alejandro Vilpa
-                            <hr> Film Director & Producer
-                            <hr>
-                        </span>
-                    </div>
-
+                    <script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
             </div>
         </div>
     </div>
-    <div id="private-pitch-form-two" class="adsForm">
-        <div data-tf-live="01M65X6WAJ6WYF1F8AFRHZJR44"></div>
-        <script src="//embed.typeform.com/next/embed.js"></script>
+
+    <!-- CREW / DIRECTORS -->
+    <div class="crew-section">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m5 offset-m1">
+                    <div class="card crew-card">
+                        <div class="card-image waves-effect waves-block waves-light pointer">
+                            <img src="/assets/images/dopShivam.webp" alt="Shivam Rattan">
+                        </div>
+                        <div class="crew-info">
+                            <h4 class="crew-name">Shivam Rattan</h4>
+                            <span class="crew-title">Director of Photography</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m5">
+                    <div class="card crew-card">
+                        <div class="card-image waves-effect waves-block waves-light pointer">
+                            <img src="/assets/images/directorVilpa.webp" alt="Alejandro Vilpa">
+                        </div>
+                        <div class="crew-info">
+                            <h4 class="crew-name">Alejandro Vilpa</h4>
+                            <span class="crew-title">Film Director & Producer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- TYPEFORM 2 -->
+    <div class="container" style="padding-bottom: 80px;">
+        <div id="private-pitch-form-two" class="adsForm">
+            <div data-tf-live="01M65X6WAJ6WYF1F8AFRHZJR44"></div>
+            <script src="//embed.typeform.com/next/embed.js"></script>
+        </div>
+    </div>
 
 </div>
