@@ -1,0 +1,760 @@
+<!-- NAV BAR STICKY (Especial para Conversión) -->
+<div id="nav-trailers"
+    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 70px; background: linear-gradient(to bottom, rgba(20,20,20,0.95) 0%, rgba(20,20,20,0.7) 60%, transparent 100%); z-index: 100; justify-content: space-between; align-items: center; padding: 0 4%; box-sizing: border-box; transition: background-color 0.3s ease;">
+    <!-- Logo -->
+    <div style="display: flex; align-items: center; cursor: pointer;"
+        onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';">
+        <img src="/assets/images/vilpaMaxTransparent.png" alt="Vilpa Max Logo"
+            style="height: 50px; object-fit: contain;">
+    </div>
+
+    <!-- Botón -->
+    <div>
+        <a onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';" target="_blank"
+            class="waves-effect waves-light"
+            style="background-color: #E50914; color: white; padding: 8px 16px; border-radius: 4px; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.5px; text-decoration: none; display: inline-block; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+            Download The App
+        </a>
+    </div>
+</div>
+<!-- FIN NAV BAR STICKY -->
+
+
+<!-- CONTENEDOR PRINCIPAL DEL HERO (Estilo Netflix) -->
+<!-- Se añadió padding-top: 70px para que la nav bar y el Smart App Banner no tapen el contenido -->
+<div
+    style="position: relative; width: 100%; height: 85vh; background-color: #141414; overflow: hidden; padding-top: 70px; box-sizing: border-box;">
+
+    <!-- CAPA 1: EL VIDEO DE VIMEO DE FONDO -->
+    <!-- Aquí está tu URL exacta con el hash de seguridad y el parámetro de background -->
+    <iframe
+        src="https://player.vimeo.com/video/1228369738?h=1e8c4be865&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1"
+        frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        style="position: absolute; top: 50%; left: 50%; width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.77vh; transform: translate(-50%, -50%); z-index: 1;"
+        title="Edge of Space | Preview | Vilpa Max">
+    </iframe>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <!-- CAPA 2: EL DEGRADADO OSCURO (OVERLAY) -->
+    <div
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(20,20,20,0.95) 0%, rgba(20,20,20,0.4) 50%, transparent 100%), linear-gradient(to top, #141414 0%, transparent 20%); z-index: 2; pointer-events: none;">
+    </div>
+
+    <!-- CAPA 3: EL CONTENIDO (TEXTO Y BOTONES) -->
+    <div class="container"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; z-index: 3; padding-left: 20px;">
+
+        <div style="max-width: 600px;">
+            <!-- Logo o Título -->
+            <h1 class="white-text"
+                style="font-weight: 800; font-size: 4rem; margin-top: 0; line-height: 1; text-transform: uppercase;">
+                Vilpa Max Catalogue</h1>
+
+            <!-- Metadatos (Simples y reconocibles) -->
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px; flex-wrap: wrap;">
+                <span class="green-text text-accent-3" style="font-weight: bold;">New Releases</span>
+                <span class="white-text">Original Series</span>
+                <span style="border: 1px solid white; padding: 2px 6px; color: white; font-size: 0.8rem;">Exclusive
+                    Content</span>
+            </div>
+
+            <!-- Sinopsis Clara y Directa -->
+            <p class="white-text"
+                style="font-size: 1.2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); margin-bottom: 30px;">
+                Enjoy a premium selection of movies, original series, and captivating short films. Stream it all
+                anytime, anywhere on the Vilpa Max app.
+            </p>
+
+            <!-- Botones de Acción -->
+            <div style="display: flex; gap: 15px; margin-top: 30px;">
+                <!-- Botón principal (Blanco) -->
+                <a onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';" target="_blank"
+                    class="btn white black-text waves-effect waves-light"
+                    style="font-weight: bold; padding: 0 32px; border-radius: 4px; display: flex; align-items: center; height: 45px;">
+                    <i class="material-icons left" style="color: black;">play_arrow</i>Download The App
+                </a>
+                <!-- Botón secundario (Gris translúcido) -->
+                {{!-- <a href="#info" class="btn grey darken-3 white-text waves-effect waves-light"
+                    style="font-weight: bold; padding: 0 32px; border-radius: 4px; display: flex; align-items: center; height: 45px; opacity: 0.8;">
+                    <i class="material-icons left">info_outline</i>Más Info
+                </a> --}}
+            </div>
+        </div>
+    </div>
+
+</div>
+<div style="background-color: #141414; overflow: hidden; padding-bottom: 60px;">
+    <br><br>
+
+    <!-- Estilos personalizados para el efecto Netflix -->
+    <style>
+        .vilpa-trailer-card {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* Forza la proporción 16:9 perfecta */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            /* Bordes suaves */
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .vilpa-trailer-card iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: auto;
+        }
+
+        /* El salto visual al pasar el mouse */
+        .vilpa-trailer-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+            z-index: 10;
+        }
+
+        .section-title {
+            color: #e5e5e5;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+    </style>
+
+    <div class="DivCards">
+
+        <div class="container">
+            <!-- Título de la fila -->
+            <div class="row" style="margin-bottom: 5px;">
+                <div class="col s12">
+                    <h5 class="section-title">Films available for distribution</h5>
+                    <hr>
+                    <h5 class="section-title">Arabic titles</h5>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card pointer">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/assets/images/ghalyVertical.webp">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator white-text">GHALY<br> 2024 - 15 min<i
+                                    class="material-icons right">more_vert</i></span>
+                            <p><a
+                                    class="white-text activator waves-effect waves-light btn-large #bf360c deep-orange darken-4">Watch
+                                    Trailer</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4 ">GHALY<br> 2024 - 15 min <i
+                                    class="material-icons right">close</i></span>
+                            <hr>
+                            <h6>Spoken Language: Arabic (Egypt)</h6>
+                            <h6>Subtitles : English</h6>
+                            <h6>Festival Highlights: Jury Award - Port Said International Film Festival</h6>
+                            <hr>
+                            <h6>The film documents the journey of Muhammad Ghaly, a man who dedicated his life to
+                                preserving the Simsimiyya heritage, and the challenges he faces along the way.
+                                <br> <br>
+                                <div class="">
+                                    <div class="ghaly-trailer-card">
+                                        <a href="https://www.dropbox.com/scl/fi/dsmh4rx0054xy11t1pb75/trilerGhaly-translated.mov?rlkey=eqt32ttvd7wkah2ptq4ofxip7&amp;dl=0"
+                                            target="_blank" rel="noopener noreferrer" class="ghaly-trailer-link"
+                                            aria-label="Watch Ghaly Official Trailer">
+
+
+                                            <div class="ghaly-trailer-center">
+                                                <div class="ghaly-trailer-play">
+                                                    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"
+                                                        aria-hidden="true">
+                                                        <path d="M8 5v14l11-7z" />
+                                                    </svg>
+                                                </div>
+
+                                                <h2>TRAILER</h2>
+                                                <p>WATCH NOW</p>
+                                            </div>
+
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </h6>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col s12 m4">
+                    <div class="card pointer">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/assets/images/aintFromVertical.webp">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator white-text">It Ain't Where You From<br> 2023 - 50 min<i
+                                    class="material-icons right">more_vert</i></span>
+                            <p><a
+                                    class="white-text activator waves-effect waves-light btn-large #bf360c deep-orange darken-4">Watch
+                                    Trailer</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4 ">It Ain't Where You From<br> 2023 - 50 min
+                                <i class="material-icons right">close</i></span>
+                            <hr>
+                            <h6>Spoken Language: Arabic & English</h6>
+                            <h6>Subtitles : English</h6>
+                            <h6>Festival Highlights: Oscar qualifying festival selected</h6>
+                            <hr>
+                            <h6>In the vibrant cities of the Gulf, a new generation of hip-hop artists finds its voice
+                                through music, dance and street art. As they navigate identity, belonging and cultural
+                                expectations, their stories reveal how hip-hop becomes more than an art form — it
+                                becomes a place to call home.
+                                <br> <br>
+                                <div class="">
+                                    <div class="ghaly-trailer-card">
+                                        <a href="https://www.dropbox.com/scl/fi/sqoyap887u61hrz46h3w6/Trailer-2025_Subs.mov?rlkey=kls0552rj2tq8xhj01azw2ros&st=fkyw9iz7&dl=0"
+                                            target="_blank" rel="noopener noreferrer" class="ghaly-trailer-link"
+                                            aria-label="Watch Ghaly Official Trailer">
+
+
+                                            <div class="ghaly-trailer-center">
+                                                <div class="ghaly-trailer-play">
+                                                    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"
+                                                        aria-hidden="true">
+                                                        <path d="M8 5v14l11-7z" />
+                                                    </svg>
+                                                </div>
+
+                                                <h2>TRAILER</h2>
+                                                <p>WATCH NOW</p>
+                                            </div>
+
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </h6>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card pointer">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/assets/images/animationWaves.webp">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator white-text">Waves 98'<br> 2023 - 15 min<i
+                                    class="material-icons right">more_vert</i></span>
+                            <p><a
+                                    class="white-text activator waves-effect waves-light btn-large #bf360c deep-orange darken-4">Watch
+                                    Trailer</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4 ">Waves 98'<br> 2023 - 15 min
+                                <i class="material-icons right">close</i></span>
+                            <hr>
+                            <h6>Spoken Language: Arabic & English</h6>
+                            <h6>Subtitles : English</h6>
+                            <h6>Festival Highlights: Winner of the Palme D'or in Cannes Film Festival</h6>
+                            <hr>
+                            <h6>Disillusioned with his life in the suburbs of a segregated Beirut, Omar is drawn deep
+                                into the city by a new discovery. Immersed in a world so close yet so far removed from
+                                his own reality, he eventually loses his way and finds himself struggling to hold on to
+                                his connections and his sense of home.
+                                <br> <br>
+                                <div class="">
+                                    <div class="ghaly-trailer-card">
+                                        <a href="https://www.dropbox.com/scl/fi/3mzzomvobkwmbm9tuey75/Waves-98_Trailer.mp4?rlkey=5jpm0m80ndc23jt8syupga9cn&st=u4zl1zeq&dl=0"
+                                            target="_blank" rel="noopener noreferrer" class="ghaly-trailer-link"
+                                            aria-label="Watch Ghaly Official Trailer">
+
+
+                                            <div class="ghaly-trailer-center">
+                                                <div class="ghaly-trailer-play">
+                                                    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"
+                                                        aria-hidden="true">
+                                                        <path d="M8 5v14l11-7z" />
+                                                    </svg>
+                                                </div>
+
+                                                <h2>TRAILER</h2>
+                                                <p>WATCH NOW</p>
+                                            </div>
+
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </h6>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Título de la fila -->
+                    <div class="row" style="margin-bottom: 5px;">
+                        <div class="col s12">
+                            <h5 class="section-title">Films available for distribution</h5>
+                            <hr>
+                            <h5 class="section-title">International titles</h5>
+
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="card pointer">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/assets/images/talentPosterVertical.webp">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator white-text">The Talent<br> 2023 - 15 min<i
+                                        class="material-icons right">more_vert</i></span>
+                                <p><a
+                                        class="white-text activator waves-effect waves-light btn-large #bf360c deep-orange darken-4">Watch
+                                        Trailer</a></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4 ">The Talent<br> 2023 - 15 min <i
+                                        class="material-icons right">close</i></span>
+                                <hr>
+                                <h6>Spoken Language: English</h6>
+                                <h6>Subtitles: English & Arabic</h6>
+                                <h6>Festival Highlights: (Nominee) Clermont-Ferrand International Short Film Festival
+                                </h6>
+                                <hr>
+                                <h6>On the set of a luxury car commercial, an overlooked assistant seizes his chance to
+                                    get
+                                    noticed by the star.
+                                    <br> <br>
+                                    <div class="">
+                                        <div class="ghaly-trailer-card">
+                                            <a href="https://www.youtube.com/watch?v=RYLTIDhalRM" target="_blank"
+                                                rel="noopener noreferrer" class="ghaly-trailer-link"
+                                                aria-label="Watch Ghaly Official Trailer">
+
+
+                                                <div class="ghaly-trailer-center">
+                                                    <div class="ghaly-trailer-play">
+                                                        <svg width="26" height="26" viewBox="0 0 24 24"
+                                                            fill="currentColor" aria-hidden="true">
+                                                            <path d="M8 5v14l11-7z" />
+                                                        </svg>
+                                                    </div>
+
+                                                    <h2>TRAILER</h2>
+                                                    <p>WATCH NOW</p>
+                                                </div>
+
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                </h6> <br>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="card pointer">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/assets/images/cafeVertical.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator white-text">Café<br> 2025 - 3 min<i
+                                        class="material-icons right">more_vert</i></span>
+                                <p><a
+                                        class="white-text activator waves-effect waves-light btn-large #bf360c deep-orange darken-4">Watch
+                                        Trailer</a></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4 ">Café<br> 2025 - 3 min <i
+                                        class="material-icons right">close</i></span>
+                                <hr>
+                                <h6>Spoken Language: English</h6>
+                                <h6>Subtitles: English & Arabic</h6>
+                                <h6>Festival Highlights: - </h6>
+                                <hr>
+                                <h6>A girl writes her phone number on a window, sparking a rivalry between her boyfriend
+                                    and another guy who texts her. What begins as a simple gesture quickly escalates
+                                    into a tense confrontation.
+                                    <br> <br>
+                                    <div class="">
+                                        <div class="ghaly-trailer-card">
+                                            <a href="https://www.dropbox.com/scl/fi/b4m7icgh4qvs9qhtkns3b/treiler-cafe.mp4?rlkey=r6dy1zx3cqawmq6guyxlhz52t&st=5lxa6b06&dl=0"
+                                                target="_blank" rel="noopener noreferrer" class="ghaly-trailer-link"
+                                                aria-label="Watch Ghaly Official Trailer">
+
+
+                                                <div class="ghaly-trailer-center">
+                                                    <div class="ghaly-trailer-play">
+                                                        <svg width="26" height="26" viewBox="0 0 24 24"
+                                                            fill="currentColor" aria-hidden="true">
+                                                            <path d="M8 5v14l11-7z" />
+                                                        </svg>
+                                                    </div>
+
+                                                    <h2>TRAILER</h2>
+                                                    <p>WATCH NOW</p>
+                                                </div>
+
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                </h6>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="card pointer">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/assets/images/davidJansenVerticals.webp">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator white-text">The Undertone of David Jansen <br> 2026 -
+                                    15 min<i class="material-icons right">more_vert</i></span>
+                                <p><a
+                                        class="white-text activator waves-effect waves-light btn-large #bf360c deep-orange darken-4">Watch
+                                        Trailer</a></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4 ">The Undertone of David Jansen <br>
+                                    2026
+                                    - 15 min <i class="material-icons right">close</i></span>
+                                <hr>
+                                <h6>Spoken Language: English</h6>
+                                <h6>Subtitles: English & Arabic</h6>
+                                <h6>Festival Highlights: Academy Awards long-listed </h6>
+                                <hr>
+                                <h6>Set against the world of classical music and psychological pressure, the film
+                                    follows David Jansen, a gifted yet deeply troubled violinist who loses the lead role
+                                    in a major production of Saint-Saëns’ Danse Macabre. Consumed by the need to reclaim
+                                    his place, David descends into an intense emotional spiral where art, ego, and
+                                    madness begin to blur together.
+                                    <br> <br>
+                                    <div class="">
+                                        <div class="ghaly-trailer-card">
+                                            <a href="https://www.youtube.com/watch?v=PJFA5V3S94E" target="_blank"
+                                                rel="noopener noreferrer" class="ghaly-trailer-link"
+                                                aria-label="Watch Ghaly Official Trailer">
+
+
+                                                <div class="ghaly-trailer-center">
+                                                    <div class="ghaly-trailer-play">
+                                                        <svg width="26" height="26" viewBox="0 0 24 24"
+                                                            fill="currentColor" aria-hidden="true">
+                                                            <path d="M8 5v14l11-7z" />
+                                                        </svg>
+                                                    </div>
+
+                                                    <h2>TRAILER</h2>
+                                                    <p>WATCH NOW</p>
+                                                </div>
+
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                </h6>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col s12 m4">
+                        <div class="card pointer">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/assets/images/wonderlandVertical.webp">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator white-text">The Wonderland Stalker<br> 2025 - 4 min<i
+                                        class="material-icons right">more_vert</i></span>
+                                <p><a
+                                        class="white-text activator waves-effect waves-light btn-large #bf360c deep-orange darken-4">Watch
+                                        Trailer</a></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4 ">The Wonderland Stalker<br> 2025 - 4
+                                    min <i class="material-icons right">close</i></span>
+                                <hr>
+                                <h6>Spoken Language: English</h6>
+                                <h6>Subtitles: English & Arabic</h6>
+                                <h6>Festival Highlights: -
+                                </h6>
+                                <hr>
+                                <h6>Alone in the forest, Alice encounters the enigmatic Cheshire Cat, a
+                                    grinning phantom whose riddles lead her deeper into the unknown..
+                                    <br> <br>
+                                    <div class="">
+                                        <div class="ghaly-trailer-card">
+                                            <a href="https://www.dropbox.com/scl/fi/2knvew0lfdnf5nikkd5wv/Trailer.mp4?rlkey=y1wzyk9ksv6d1bbb3x8d79tvz&st=3qinuiaa&dl=0"
+                                                target="_blank" rel="noopener noreferrer" class="ghaly-trailer-link"
+                                                aria-label="Watch Ghaly Official Trailer">
+
+
+                                                <div class="ghaly-trailer-center">
+                                                    <div class="ghaly-trailer-play">
+                                                        <svg width="26" height="26" viewBox="0 0 24 24"
+                                                            fill="currentColor" aria-hidden="true">
+                                                            <path d="M8 5v14l11-7z" />
+                                                        </svg>
+                                                    </div>
+
+                                                    <h2>TRAILER</h2>
+                                                    <p>WATCH NOW</p>
+                                                </div>
+
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                </h6> <br>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="card pointer">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/assets/images/adaDocVert.webp">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator white-text">Ada and the Doc<br> 2023 - 15 min<i
+                                        class="material-icons right">more_vert</i></span>
+                                <p><a
+                                        class="white-text activator waves-effect waves-light btn-large #bf360c deep-orange darken-4">Watch
+                                        Trailer</a></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4 ">Ada and the Doc<br> 2023 - 15 min <i
+                                        class="material-icons right">close</i></span>
+                                <hr>
+                                <h6>Spoken Language: English</h6>
+                                <h6>Subtitles: English & Arabic</h6>
+                                <h6>Festival Highlights: - </h6>
+                                <hr>
+                                <h6>In 1927, in southern Louisiana, rebellious housewife Ada LeBoeuf stands trial
+                                    alongside her alleged lover for the brutal murder of her husband, in one of the most
+                                    sensational sex-related murder trials ever reported.
+                                    <br> <br>
+                                    <div class="">
+                                        <div class="ghaly-trailer-card">
+                                            <a href="https://www.dropbox.com/scl/fi/g9fuhevrapibetq9gh0fq/adaAnTheDocTrailer.mp4?rlkey=m87ggklvo42tvf3xgpddb5jg4&st=96rdygpu&dl=0"
+                                                target="_blank" rel="noopener noreferrer" class="ghaly-trailer-link"
+                                                aria-label="Watch Ghaly Official Trailer">
+
+
+                                                <div class="ghaly-trailer-center">
+                                                    <div class="ghaly-trailer-play">
+                                                        <svg width="26" height="26" viewBox="0 0 24 24"
+                                                            fill="currentColor" aria-hidden="true">
+                                                            <path d="M8 5v14l11-7z" />
+                                                        </svg>
+                                                    </div>
+
+                                                    <h2>TRAILER</h2>
+                                                    <p>WATCH NOW</p>
+                                                </div>
+
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                </h6>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="card pointer">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/assets/images/blueShadesVert.webp">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator white-text">Blue Shades
+                                    <hr> <span style="font-size: 20px ;">In development 1 season 10 x 15</span>
+                                    <hr> 2026 -
+                                    5 min "Available"<i class="material-icons right">more_vert</i>
+                                </span>
+                                <p><a
+                                        class="white-text activator waves-effect waves-light btn-large #bf360c deep-orange darken-4">Watch
+                                        Trailer</a></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4 ">Blue Shades<br> 2026
+                                    - 5 min <i class="material-icons right">close</i></span>
+                                <hr>
+                                <h6>Spoken Language: English</h6>
+                                <h6>Subtitles: English & Arabic</h6>
+                                <h6>Festival Highlights: Academy Awards long-listed </h6>
+                                <hr>
+                                <h6>In a dystopian future where artificial intelligence dominates entertainment and
+                                    human creativity is outlawed, a young underground artist named Elisa uncovers a
+                                    dangerous secret linking a powerful tech corporation, a mysterious virtual world and
+                                    her missing brother. Now hunted by the authorities, she must unravel a conspiracy
+                                    that could change humanity forever.
+                                    <br> <br>
+                                    <div class="">
+                                        <div class="ghaly-trailer-card">
+                                            <a href="https://vimeo.com/1239918422/24ac4440ca?share=copy&fl=sv&fe=ci"
+                                                target="_blank" rel="noopener noreferrer" class="ghaly-trailer-link"
+                                                aria-label="Watch Ghaly Official Trailer">
+
+
+                                                <div class="ghaly-trailer-center">
+                                                    <div class="ghaly-trailer-play">
+                                                        <svg width="26" height="26" viewBox="0 0 24 24"
+                                                            fill="currentColor" aria-hidden="true">
+                                                            <path d="M8 5v14l11-7z" />
+                                                        </svg>
+                                                    </div>
+
+                                                    <h2>TRAILER</h2>
+                                                    <p>WATCH NOW</p>
+                                                </div>
+
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                </h6>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div>
+            <div class="container">
+                <h4 class="white-text center">Download the Vilpa Max app and watch amazing films online</h4> <br>
+                <div class="row" onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';">
+                    <div class="col s6 m3">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/assets/images/davidJansenVerticals.webp">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator white-text centered">CAFE<i
+                                        class="material-icons right">more_vert</i></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col s6 m3">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/assets/images/starlingVertical.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator white-text centered">STARLING<i
+                                        class="material-icons right">more_vert</i></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col s6 m3">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/assets/images/candyBarVert.webp">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator white-text centered">Candy Bar<i
+                                        class="material-icons right">more_vert</i></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col s6 m3">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/assets/images/queryVert.webp">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator white-text centered">Query<i
+                                        class="material-icons right">more_vert</i></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row" onclick="location.href='https://apps.apple.com/mx/app/vilpamax/id6755437114';">
+                    <div class="col s6 m3">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/assets/images/chickensVertical.webp">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator white-text centered">The Ugly Chickens<i
+                                        class="material-icons right">more_vert</i></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col s6 m3">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/assets/images/toylandVertical.webp">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator white-text centered">Toyland<i
+                                        class="material-icons right">more_vert</i></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col s6 m3">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/assets/images/wavesVertical.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator white-text centered">Waves 98<i
+                                        class="material-icons right">more_vert</i></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col s6 m3">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/assets/images/brunchersHorizontal.webp">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator white-text centered">The Brunchers<i
+                                        class="material-icons right">more_vert</i></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

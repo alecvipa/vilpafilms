@@ -244,6 +244,10 @@ app.get('/vilpa-max-trailers', function (req, res) {
     var params = req.params.params;
     res.render('vilpa-max-trailers');
 });
+app.get('/catalogue', function (req, res) {
+    var params = req.params.params;
+    res.render('catalogue');
+});
 app.get('/sitemap.xml', function (req, res) {
     res.header('Content-Type', 'application/xml');
     res.sendFile(path.join(__dirname, 'sitemap.xml'));
